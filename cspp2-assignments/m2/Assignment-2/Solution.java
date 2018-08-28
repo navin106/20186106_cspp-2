@@ -1,20 +1,23 @@
 import java.util.Scanner;
 
 public class Solution {
-	/*
-	Do not modify this main function.
+	/**
+	*Do not modify this main function.
 	*/
 	private Solution() {
 
 	}
-	public static void main(String[] args) {
+	/**
+	*@param args for command line input
+	*/
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int a = scan.nextInt();
 		int b = scan.nextInt();
 		int c = scan.nextInt();
 		rootsOfQuadraticEquation(a, b, c);
 	}
-	/*
+	/**
 	Need to write the rootsOfQuadraticEquation function and print the output.
 	*/
 	/**
