@@ -11,9 +11,9 @@ public final class DegreeToFarehn {
     }
     /**@param args command line arguments*/
     public static void main(final String[] args) {
-        final int degree = 10;
-        final int farehn = degree + 32;
-        System.out.println("degree =" + degree + "farehn =" + farehn);
+        final double degree = 1;
+        final double farehn = degree * 1.8 + 32;
+        System.out.println("degree =" + degree + " farehn =" + farehn);
     }
 
 }
