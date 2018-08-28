@@ -29,7 +29,9 @@ public final class Solution {
     *@param y int
     *@param z int
     */
-    public static void rootsOfQuadraticEquation(final int x, final int y, final int z) {
+    public static void rootsOfQuadraticEquation(final int x,
+        final int y,
+                                                final int z) {
         double d = (y * y) - (2 * 2 * x * z);
         double qua = Math.sqrt(d);
         double r1 = ((-y + qua) / (2 * x));
