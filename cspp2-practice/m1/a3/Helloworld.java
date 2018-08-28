@@ -12,6 +12,6 @@ public final class Helloworld {
     *
     */
     public static void main(final String[] args) {
-        System.out.println(2*3.0);
+        System.out.println(5/2 == 5/2.0);
     }
 }

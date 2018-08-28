@@ -1,11 +1,13 @@
 /**
+*date:21-08-2018.
+*author: navin106.
 *swap class.
 */
 public final class Swap {
     /**
     * private constructor.
     */
-    private wap() {
+    private Swap() {
 
     }
     /**
