@@ -28,8 +28,7 @@ public final class Solution {
     public static long power(final long a, final long b) {
         if (b == 0) {
             return 1;
-        }
-        else {
+        } else {
             return (a * power(a, b - 1));
         }
     }
