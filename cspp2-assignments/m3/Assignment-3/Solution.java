@@ -4,7 +4,7 @@ import java.util.Scanner;
     Do not modify this main function.
     @author : navin106
     */
-public class Solution {
+public final class Solution {
 /**
 *constructor.
 */
@@ -12,9 +12,9 @@ public class Solution {
 
     }
     /**
-    *@param args 
+    *@param args
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
         Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
@@ -26,8 +26,9 @@ public class Solution {
     *Need to write the gcd function and print the output.
     *@param n1 is integer.
     *@param n2 is integer.
+    *@return int 
     */
-    public static int gcd(final int n1,final int n2) {
+    public static int gcd(final int n1, final int n2) {
         if (n1 == 0 || n2 == 0) {
             return 0;
         }
