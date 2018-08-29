@@ -21,9 +21,9 @@ public final class Solution {
     }
     /**
     *Need to write the power function and print the output.
-    *@param a 
-    *@param b
-    *@return
+    *@param a for base
+    *@param b for exponent
+    *@return the result of power
     */
     public static long power(final long a, final long b) {
         if (b == 0) {
