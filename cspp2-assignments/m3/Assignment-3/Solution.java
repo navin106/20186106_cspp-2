@@ -12,7 +12,7 @@ public final class Solution {
 
     }
     /**
-    *@param args
+    *@param args command line argument.
     */
     public static void main(final String[] args) {
 
@@ -26,7 +26,7 @@ public final class Solution {
     *Need to write the gcd function and print the output.
     *@param n1 is integer.
     *@param n2 is integer.
-    *@return int 
+    *@return int
     */
     public static int gcd(final int n1, final int n2) {
         if (n1 == 0 || n2 == 0) {
