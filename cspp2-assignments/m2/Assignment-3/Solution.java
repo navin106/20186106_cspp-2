@@ -19,7 +19,7 @@ public class Solution {
             return 1;
         }
         else {
-            return(a * power(a, b - 1));
+            return (a * power(a, b - 1));
         }
     }
 }
