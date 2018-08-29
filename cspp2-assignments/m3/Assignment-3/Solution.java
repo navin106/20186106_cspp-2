@@ -23,7 +23,9 @@ public class Solution {
         System.out.println(gcd);
     }
     /**
-    Need to write the gcd function and print the output.
+    *Need to write the gcd function and print the output.
+    *@param n1 is integer.
+    *@param n2 is integer.
     */
     public static int gcd(final int n1,final int n2) {
         if (n1 == 0 || n2 == 0) {
