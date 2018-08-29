@@ -1,8 +1,9 @@
 
 import java.util.Scanner;
-/*
-    Do not modify this main function.
-    */
+/**
+*@author:navin106
+*Do not modify this main function.
+*/
 public final class Solution {
 /* Fill the main function to print the number of 7's between 1 to n*/
     private Solution() {
@@ -29,6 +30,5 @@ public final class Solution {
 
         }
     System.out.println(cnt);
-        
     }
 }
