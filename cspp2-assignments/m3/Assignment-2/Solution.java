@@ -15,6 +15,9 @@ public final class Solution {
     * d is a integer.
     */
     private static int d = 7;
+    /**
+    * k is a character.
+    */
     private static char k = '7';
     /**
     *@param args for command line argument.
