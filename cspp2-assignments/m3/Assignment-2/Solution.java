@@ -12,18 +12,19 @@ public final class Solution {
     /**
     * d is a integer.
     */
-    public static int d = 7;
+    private static int d = 7;
+    private static char k = '7';
     /**
     *@param args for command line argument.
     */
     public static void main(final String[] args) {
 
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int cnt = 0;
         for (int i = d; i <= n; i++) {
             for (char a : (String.valueOf(i)).toCharArray()) {
-                if (a == '7') {
+                if (a == k) {
                     cnt += 1;
                 }
             }
