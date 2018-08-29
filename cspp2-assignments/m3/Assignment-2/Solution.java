@@ -14,11 +14,11 @@ public final class Solution {
     /**
     * d is a integer.
     */
-    private static final int d = 7;
+    private static final int D = 7;
     /**
     * k is a character.
     */
-    private static final char k = '7';
+    private static final char K = '7';
     /**
     *@param args for command line argument.
     */
@@ -27,9 +27,9 @@ public final class Solution {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int cnt = 0;
-        for (int i = d; i <= n; i++) {
+        for (int i = D; i <= n; i++) {
             for (char a : (String.valueOf(i)).toCharArray()) {
-                if (a == k) {
+                if (a == K) {
                     cnt += 1;
                 }
             }
