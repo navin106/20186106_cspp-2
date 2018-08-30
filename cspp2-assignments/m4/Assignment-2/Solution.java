@@ -73,7 +73,7 @@ public final class Solution {
 					empmatadd[i][j] += m1[i][j] + m2[i][j];
 				}
 			}
-		System.out.println(matout(empmatadd));
+			System.out.println(matout(empmatadd));
 		} else {
 			System.out.println("not possible");
 		}
