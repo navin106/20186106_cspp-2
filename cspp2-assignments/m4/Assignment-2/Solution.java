@@ -17,19 +17,26 @@ public final class Solution {
         Scanner inp = new Scanner(System.in);
         matadd(matinp(inp), matinp(inp));
     }
-
     /**
-     * Creates a matrix.
+     * Gets the row size.
      *
-     * @param      a     { parameter_description }
-     * @param      b     { parameter_description }
+     * @param      mat  The mat
      *
-     * @return     { description_of_the_return_value }
+     * @return     The row size.
      */
-    public static int[][] buildmat(final int a, final int b) {
-        return new int[a][b];
+    public static int rowlen(final int[][] mat) {
+        return mat.length;
     }
-
+    /**
+     * Gets the column size.
+     *
+     * @param      mat  The mat
+     *
+     * @return     The column size.
+     */
+    public static int collen(final int[][] mat) {
+        return mat[0].length;
+    }
     /**
      * { function_description }.
      *
@@ -40,29 +47,28 @@ public final class Solution {
     public static int[][] matinp(final Scanner inp) {
         int a = inp.nextInt();
         int b = inp.nextInt();
-        int[][] matrix = buildmat(a, b);
+        int[][] mat = buildmat(a, b);
         for (int i = 0; i < a; i++) {
             for (int j = 0; j < b; j++) {
-                matrix[i][j] = inp.nextInt();
+                mat[i][j] = inp.nextInt();
             }
         }
-        return matrix;
+        return mat;
     }
-
     /**
-     * Adds a matrix.
+     * Adds a mat.
      *
-     * @param      matrix1  The matrix 1
-     * @param      matrix2  The matrix 2
+     * @param      m1  The mat 1
+     * @param      m2  The mat 2
      */
-    public static void matadd(final int[][] matrix1, final int[][] matrix2) {
-        if (rowlen(matrix1) == rowlen(matrix2)
-                    && collen(matrix1) == collen(matrix2)) {
-            int[][] sumMatrix = buildmat(rowlen(matrix1),
-                                            collen(matrix1));
+    public static void matadd(final int[][] m1, final int[][] m2) {
+        if (rowlen(m1) == rowlen(m2)
+                    && collen(m1) == collen(m2)) {
+            int[][] sumMatrix = buildmat(rowlen(m1),
+                                            collen(m1));
             for (int i = 0; i < rowlen(sumMatrix); i++) {
                 for (int j = 0; j < collen(sumMatrix); j++) {
-                    sumMatrix[i][j] += matrix2[i][j] + matrix1[i][j];
+                    sumMatrix[i][j] += m2[i][j] + m1[i][j];
                 }
             }
             System.out.println(matout(sumMatrix));
@@ -70,45 +76,36 @@ public final class Solution {
             System.out.println("not possible");
         }
     }
-
-    /**
-     * Gets the row size.
-     *
-     * @param      matrix  The matrix
-     *
-     * @return     The row size.
-     */
-    public static int rowlen(final int[][] matrix) {
-        return matrix.length;
-    }
-
-    /**
-     * Gets the column size.
-     *
-     * @param      matrix  The matrix
-     *
-     * @return     The column size.
-     */
-    public static int collen(final int[][] matrix) {
-        return matrix[0].length;
-    }
-
     /**
      * { function_description }.
      *
-     * @param      matrix  The matrix
+     * @param      mat  The mat
      *
      * @return     { description_of_the_return_value }
      */
-    public static String matout(final int[][] matrix) {
+    public static String matout(final int[][] mat) {
         String temp = "";
-        for (int i = 0; i < rowlen(matrix); i++) {
-            for (int j = 0; j < collen(matrix); j++) {
-                temp += matrix[i][j] + " ";
+        for (int i = 0; i < rowlen(mat); i++) {
+            for (int j = 0; j < collen(mat); j++) {
+                temp += mat[i][j] + " ";
             }
             temp = temp.trim();
             temp += "\n";
         }
         return temp;
     }
+    /**
+     * Creates a mat.
+     *
+     * @param      a     { parameter_description }
+     * @param      b     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public static int[][] buildmat(final int a, final int b) {
+        return new int[a][b];
+    }
 }
+
+
+
