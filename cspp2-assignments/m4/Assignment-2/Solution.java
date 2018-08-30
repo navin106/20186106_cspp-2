@@ -23,8 +23,6 @@ public final class Solution {
 		int x = inp.nextInt();
 		int y = inp.nextInt();
 		int[][] m2 = buildmat(x, y);
-		System.out.println(m1);
-		System.out.println(m2);
 		addmat(m1, m2);
 	}
 	/**
@@ -35,14 +33,26 @@ public final class Solution {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
+	/**
+	 * { function_description }
+	 *
+	 * @param      a     { parameter_description }
+	 * @param      b     { parameter_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public static int[][] empmatrix(final int a,final int b) {
+		return new int[a][b];
+	}
 	public static int[][] buildmat(final int a,final int b) {
 		Scanner inp1 = new Scanner(System.in);
 		int[][] k = empmatrix(a, b);
 		for (int i = 0; i < a; i++) {
-			for (int j = 0;j < b; j++) {
+			for (int j = 0; j < b; j++) {
 				k[i][j] = inp1.nextInt();
 			}
 		}
+		System.out.println(k);
 		return k;
 	}
 	/**
@@ -68,17 +78,6 @@ public final class Solution {
 			System.out.println("not possible");
 		}
 
-	}
-	/**
-	 * { function_description }
-	 *
-	 * @param      a     { parameter_description }
-	 * @param      b     { parameter_description }
-	 *
-	 * @return     { description_of_the_return_value }
-	 */
-	public static int[][] empmatrix(final int a,final int b) {
-		return new int[a][b];
 	}
 	/**
 	 * { function_description }
