@@ -23,6 +23,8 @@ public final class Solution {
 		int x = inp.nextInt();
 		int y = inp.nextInt();
 		int[][] m2 = buildmat(x, y);
+		System.out.println(m1);
+		System.out.println(m2);
 		addmat(m1, m2);
 	}
 	/**
