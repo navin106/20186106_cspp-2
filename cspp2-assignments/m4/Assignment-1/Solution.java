@@ -3,15 +3,15 @@ import java.util.Scanner;
  * Class for solution.
  * @author:navin106
  */
-public final class Solution
-{/**
+public final class Solution {
+/**
     Fill this main function to print maximum of given array.
     */
     private static int temp = 0;
     /**
      * Constructs the object.
      */
-    private Solution () {
+    private Solution() {
     }
     /**
      * main method to print largest number in the array.
