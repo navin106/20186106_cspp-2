@@ -1,100 +1,114 @@
 import java.util.Scanner;
 /**
- * @author : navin106
+ * Class for solution.
+ * @author Gsingh
  */
-
 public final class Solution {
-	/**
-	 * Constructs the object.
-	 */
-	private Solution() {
+    /**
+     * Constructs the object.
+     */
+    private Solution() { }
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner scan = new Scanner(System.in);
+        addMatrix(takingInput(scan), takingInput(scan));
+    }
 
-	}
-	/**
-	 * { function_description }
-	 *
-	 * @param      args  The arguments
-	 */
-	public static void main(final String[] args) {
-		Scanner inp = new Scanner(System.in);
-		int a = inp.nextInt();
-		int b = inp.nextInt();
-		int[][] m1 = buildmat(a, b);
-		int x = inp.nextInt();
-		int y = inp.nextInt();
-		int[][] m2 = buildmat(x, y);
-		addmat(m1, m2);
-	}
-	/**
-	 * { function_description }
-	 *
-	 * @param      a     { parameter_description }
-	 * @param      b     { parameter_description }
-	 *
-	 * @return     { description_of_the_return_value }
-	 */
-	/**
-	 * { function_description }
-	 *
-	 * @param      a     { parameter_description }
-	 * @param      b     { parameter_description }
-	 *
-	 * @return     { description_of_the_return_value }
-	 */
-	public static int[][] empmatrix(final int a,final int b) {
-		return new int[a][b];
-	}
-	public static int[][] buildmat(final int a,final int b) {
-		Scanner inp1 = new Scanner(System.in);
-		int[][] k = empmatrix(a, b);
-		for (int i = 0; i < a; i++) {
-			for (int j = 0; j < b; j++) {
-				k[i][j] = inp1.nextInt();
-			}
-		}
-		System.out.println(k);
-		return k;
-	}
-	/**
-	 * Constructs the object.
-	 *
-	 * @param      m1    The m 1
-	 * @param      m2    The m 2
-	 */
-	public static void addmat(final int[][] m1,final int[][] m2) {
-		int rowm1 = m1.length;
-		int rowm2 = m2.length;
-		int colm1 = m1[0].length;
-		int colm2 = m2[0].length;
-		if (rowm1 == rowm2  && colm1 == colm2) {
-			int[][] empmatadd = buildmat(rowm1, colm1);
-			for (int i = 0; i < rowm1; i++) {
-				for (int j = 0; j < colm1; j++) {
-					empmatadd[i][j] += m1[i][j] + m2[i][j];
-				}
-			}
-			System.out.println(matout(empmatadd));
-		} else {
-			System.out.println("not possible");
-		}
+    /**
+     * Creates a matrix.
+     *
+     * @param      a     { parameter_description }
+     * @param      b     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public static int[][] createMatrix(final int a, final int b) {
+        return new int[a][b];
+    }
 
-	}
-	/**
-	 * { function_description }
-	 *
-	 * @param      resmat  The resmat
-	 *
-	 * @return     { description_of_the_return_value }
-	 */
-	public static String matout(final int[][] resmat) {
-		String mat = "";
-		for (int i = 0; i < resmat.length; i++) {
-			for (int j = 0; j < resmat[0].length; j++) {
-				mat += resmat[i][j] + " ";
-			}
-			mat = mat.trim();
-			mat +="\n";
-		}
-		return mat;
-	}
+    /**
+     * { function_description }.
+     *
+     * @param      scan  The scan
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public static int[][] takingInput(final Scanner scan) {
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int[][] matrix = createMatrix(a, b);
+        for (int i = 0; i < a; i++) {
+            for (int j = 0; j < b; j++) {
+                matrix[i][j] = scan.nextInt();
+            }
+        }
+        return matrix;
+    }
+
+    /**
+     * Adds a matrix.
+     *
+     * @param      matrix1  The matrix 1
+     * @param      matrix2  The matrix 2
+     */
+    public static void addMatrix(final int[][] matrix1, final int[][] matrix2) {
+        if (getRowSize(matrix1) == getRowSize(matrix2)
+                    && getColumnSize(matrix1) == getColumnSize(matrix2)) {
+            int[][] sumMatrix = createMatrix(getRowSize(matrix1),
+                                            getColumnSize(matrix1));
+            for (int i = 0; i < getRowSize(sumMatrix); i++) {
+                for (int j = 0; j < getColumnSize(sumMatrix); j++) {
+                    sumMatrix[i][j] += matrix2[i][j] + matrix1[i][j];
+                }
+            }
+            System.out.println(printMatrix(sumMatrix));
+        } else {
+            System.out.println("not possible");
+        }
+    }
+
+    /**
+     * Gets the row size.
+     *
+     * @param      matrix  The matrix
+     *
+     * @return     The row size.
+     */
+    public static int getRowSize(final int[][] matrix) {
+        return matrix.length;
+    }
+
+    /**
+     * Gets the column size.
+     *
+     * @param      matrix  The matrix
+     *
+     * @return     The column size.
+     */
+    public static int getColumnSize(final int[][] matrix) {
+        return matrix[0].length;
+    }
+
+    /**
+     * { function_description }.
+     *
+     * @param      matrix  The matrix
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public static String printMatrix(final int[][] matrix) {
+        String temp = "";
+        for (int i = 0; i < getRowSize(matrix); i++) {
+            for (int j = 0; j < getColumnSize(matrix); j++) {
+                temp += matrix[i][j] + " ";
+            }
+            temp = temp.trim();
+            temp += "\n";
+        }
+        return temp;
+    }
 }
