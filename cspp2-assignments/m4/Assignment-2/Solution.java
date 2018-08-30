@@ -70,7 +70,7 @@ public final class Solution {
 			int[][] empmatadd = buildmat(rowm1, colm1);
 			for (int i = 0; i < rowm1; i++) {
 				for (int j = 0; j < colm1; j++) {
-					empmatadd[i][j] = m1[i][j] + m2[i][j];
+					empmatadd[i][j] += m1[i][j] + m2[i][j];
 				}
 			}
 		System.out.println(matout(empmatadd));
