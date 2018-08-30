@@ -11,12 +11,15 @@ public class Solution
 	{
 		Scanner sc=new Scanner(System.in);
 		int n= sc.nextInt();
+		int temp = 0;
 		int arr[] = new int[n];
-		int k[] = new int[n];
 		for (int i = 0; i<n; i++) {
 			arr[i] = sc.nextInt();
+			if (temp < arr[i]) {
+				temp = arr[i]; 
+			}
 		}
-		System.out.println(arr);
+		System.out.println(temp);
 
 	}
 }
