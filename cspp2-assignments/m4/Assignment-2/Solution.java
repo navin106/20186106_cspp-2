@@ -1,7 +1,7 @@
 import java.util.Scanner;
 /**
  * Class for solution.
- * @author Gsingh
+ * @author navin106
  */
 public final class Solution {
     /**
@@ -14,8 +14,8 @@ public final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Scanner scan = new Scanner(System.in);
-        addMatrix(takingInput(scan), takingInput(scan));
+        Scanner inp = new Scanner(System.in);
+        matadd(matinp(inp), matinp(inp));
     }
 
     /**
@@ -26,24 +26,24 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int[][] createMatrix(final int a, final int b) {
+    public static int[][] buildmat(final int a, final int b) {
         return new int[a][b];
     }
 
     /**
      * { function_description }.
      *
-     * @param      scan  The scan
+     * @param      inp  The inp
      *
      * @return     { description_of_the_return_value }
      */
-    public static int[][] takingInput(final Scanner scan) {
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        int[][] matrix = createMatrix(a, b);
+    public static int[][] matinp(final Scanner inp) {
+        int a = inp.nextInt();
+        int b = inp.nextInt();
+        int[][] matrix = buildmat(a, b);
         for (int i = 0; i < a; i++) {
             for (int j = 0; j < b; j++) {
-                matrix[i][j] = scan.nextInt();
+                matrix[i][j] = inp.nextInt();
             }
         }
         return matrix;
@@ -55,17 +55,17 @@ public final class Solution {
      * @param      matrix1  The matrix 1
      * @param      matrix2  The matrix 2
      */
-    public static void addMatrix(final int[][] matrix1, final int[][] matrix2) {
-        if (getRowSize(matrix1) == getRowSize(matrix2)
-                    && getColumnSize(matrix1) == getColumnSize(matrix2)) {
-            int[][] sumMatrix = createMatrix(getRowSize(matrix1),
-                                            getColumnSize(matrix1));
-            for (int i = 0; i < getRowSize(sumMatrix); i++) {
-                for (int j = 0; j < getColumnSize(sumMatrix); j++) {
+    public static void matadd(final int[][] matrix1, final int[][] matrix2) {
+        if (rowlen(matrix1) == rowlen(matrix2)
+                    && collen(matrix1) == collen(matrix2)) {
+            int[][] sumMatrix = buildmat(rowlen(matrix1),
+                                            collen(matrix1));
+            for (int i = 0; i < rowlen(sumMatrix); i++) {
+                for (int j = 0; j < collen(sumMatrix); j++) {
                     sumMatrix[i][j] += matrix2[i][j] + matrix1[i][j];
                 }
             }
-            System.out.println(printMatrix(sumMatrix));
+            System.out.println(matout(sumMatrix));
         } else {
             System.out.println("not possible");
         }
@@ -78,7 +78,7 @@ public final class Solution {
      *
      * @return     The row size.
      */
-    public static int getRowSize(final int[][] matrix) {
+    public static int rowlen(final int[][] matrix) {
         return matrix.length;
     }
 
@@ -89,7 +89,7 @@ public final class Solution {
      *
      * @return     The column size.
      */
-    public static int getColumnSize(final int[][] matrix) {
+    public static int collen(final int[][] matrix) {
         return matrix[0].length;
     }
 
@@ -100,10 +100,10 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static String printMatrix(final int[][] matrix) {
+    public static String matout(final int[][] matrix) {
         String temp = "";
-        for (int i = 0; i < getRowSize(matrix); i++) {
-            for (int j = 0; j < getColumnSize(matrix); j++) {
+        for (int i = 0; i < rowlen(matrix); i++) {
+            for (int j = 0; j < collen(matrix); j++) {
                 temp += matrix[i][j] + " ";
             }
             temp = temp.trim();
