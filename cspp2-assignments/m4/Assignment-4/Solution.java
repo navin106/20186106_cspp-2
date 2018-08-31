@@ -3,6 +3,13 @@ import java.util.Scanner;
  * @author:navin106
  */
 public final class Solution {
+    
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
     /**
      * { function_description }.
      *
