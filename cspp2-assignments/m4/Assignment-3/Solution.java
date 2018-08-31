@@ -21,13 +21,14 @@ public class Solution {
 		int sum = 0;
 		String k = " ";
 		System.out.println(s.toCharArray());
-		/*for (char a : s.toCharArray()) {
+		for (char a : s.toCharArray()) {
 			if (a == '1') {
 				sum += Math.pow(2, i);
+				System.out.println(sum);
 			}
 			i--;
 		}
-		k = k + sum;*/
+		k = k + sum;
 		return k.trim();
 	}
 }
