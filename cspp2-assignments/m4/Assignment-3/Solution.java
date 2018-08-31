@@ -1,4 +1,4 @@
-import java.util.Scanner;
+    import java.util.Scanner;
 /**
  * @author:navin106
  */
@@ -36,7 +36,7 @@ public final class Solution {
     public static String binaryToDecimal(final String s) {
         int i = s.length() - 1;
         int sum = 0;
-        String k = " ";
+        String k = "";
         for (char a : s.toCharArray()) {
             if (a == '1') {
                 sum += Math.pow(2, i);
@@ -44,6 +44,6 @@ public final class Solution {
             i--;
         }
         k = k + sum;
-        return k.trim();
+        return k;
     }
 }
