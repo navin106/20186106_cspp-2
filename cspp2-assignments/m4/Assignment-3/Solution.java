@@ -1,11 +1,11 @@
-import java.lang.Math;
 import java.util.Scanner;
 /**
  * @author:navin106
  */
-// Given an String, Write a java method that returns the decimal value for the given binary string.
-public class Solution {
-    /*
+// Given an String, Write a java method that\
+// returns the decimal value for the given binary string.
+public final class Solution {
+    /**
     Do not modify this main function.
     */
     private Solution() {
