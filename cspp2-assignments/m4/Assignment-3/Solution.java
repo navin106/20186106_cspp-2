@@ -22,7 +22,6 @@ public class Solution {
 		for (char a : s.toCharArray()) {
 			if (a == '1') {
 				sum += Math.pow(2, i);
-				System.out.println(a);
 			}
 			i--;
 		}
