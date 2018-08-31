@@ -17,15 +17,17 @@ public class Solution {
 	}
 	public static String binaryToDecimal(String s) {
 		int i = s.length();
+		System.out.println(i);
 		int sum = 0;
 		String k = " ";
-		for(char a:s.toCharArray()) {
+		System.out.println(s.toCharArray());
+		/*for (char a : s.toCharArray()) {
 			if (a == '1') {
-				sum += Math.pow(2,i);
+				sum += Math.pow(2, i);
 			}
 			i--;
 		}
-		k = k + sum;
+		k = k + sum;*/
 		return k.trim();
 	}
 }
