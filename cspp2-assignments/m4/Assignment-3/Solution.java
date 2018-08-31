@@ -16,7 +16,7 @@ public class Solution {
 		}
 	}
 	public static String binaryToDecimal(String s) {
-		int i = s.length();
+		int i = s.length() - 1;
 		System.out.println(i);
 		int sum = 0;
 		String k = " ";
