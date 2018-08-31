@@ -1,6 +1,8 @@
-
 import java.lang.Math;
 import java.util.Scanner;
+/**
+ * @author:navin106
+ */
 // Given an String, Write a java method that returns the decimal value for the given binary string.
 public class Solution {
     /*
@@ -10,11 +12,11 @@ public class Solution {
 
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         sc.nextLine();
@@ -25,13 +27,13 @@ public class Solution {
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      s     { parameter_description }
      *
      * @return     { description_of_the_return_value }
      */
-    public static String binaryToDecimal(String s) {
+    public static String binaryToDecimal(final String s) {
         int i = s.length() - 1;
         int sum = 0;
         String k = " ";
