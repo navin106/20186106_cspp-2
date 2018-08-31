@@ -26,6 +26,6 @@ public class Solution {
 			i--;
 		}
 		k = k + sum;
-		return k.trim();
+		return k;
 	}
 }
