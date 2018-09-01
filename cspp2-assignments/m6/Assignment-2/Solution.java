@@ -13,6 +13,30 @@ final class Solution {
      * replace num.
      */
     public static final int RNUM1 = 100;
+    /**
+     * { var_description }
+     */
+    public static final int Two = 2;
+    /**
+     * { var_description }.
+     */
+    public static final int Three = 3;
+    /**
+     * { var_description }.
+     */
+    public static final int Four = 4;
+    /**
+     * { var_description }.
+     */
+    public static final int Five = 5;
+    /**
+     * { var_description }.
+     */
+    public static final int Seven = 7;
+    /**
+     * { var_description }.
+     */
+    public static final int Nine = 9;
 
 
     /**
@@ -31,27 +55,27 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int[][] a, 
+    static int[][] roundHundred(final int[][] a,
                                 final int rows, final int columns) {
 
         // write ypur code here
         int[][] temp = new int[rows][columns];
-        for (int i = 0; i < rows ; i++ ) {
-            for (int j = 0; j < columns ; j++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
                 if (a[i][j] < NUM1) {
                     temp[i][j] = 0;
-                } else if (a[i][j] < 3 * NUM1) {
+                } else if (a[i][j] < Three * NUM1) {
                     temp[i][j] = RNUM1;
-                } else if (a[i][j] < 5 * NUM1) {
-                    temp[i][j] = 2 * RNUM1;
-                } else if (a[i][j] < (7 * NUM1)) {
-                    temp[i][j] = 3 * RNUM1;
+                } else if (a[i][j] < Five * NUM1) {
+                    temp[i][j] = Two * RNUM1;
+                } else if (a[i][j] < (Seven * NUM1)) {
+                    temp[i][j] = Three * RNUM1;
 
-                } else if (a[i][j] < 9 * NUM1) {
-                    temp[i][j] = 4 * RNUM1;
+                } else if (a[i][j] < Nine * NUM1) {
+                    temp[i][j] = Four * RNUM1;
 
                 } else {
-                    temp[i][j] = 5 * RNUM1;
+                    temp[i][j] = Five * RNUM1;
                 }
             }
         }
