@@ -14,6 +14,7 @@ final class Solution {
      */
     public static final int RNUM1 = 100;
 
+
     /**
      * Constructs the object.
      */
@@ -30,7 +31,8 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
+    static int[][] roundHundred(final int[][] a, 
+                                final int rows, final int columns) {
 
         // write ypur code here
         int[][] temp = new int[rows][columns];
@@ -42,7 +44,7 @@ final class Solution {
                     temp[i][j] = RNUM1;
                 } else if (a[i][j] < 5 * NUM1) {
                     temp[i][j] = 2 * RNUM1;
-                } else if (a[i][j] < 7 * NUM1) {
+                } else if (a[i][j] < (7 * NUM1)) {
                     temp[i][j] = 3 * RNUM1;
 
                 } else if (a[i][j] < 9 * NUM1) {
