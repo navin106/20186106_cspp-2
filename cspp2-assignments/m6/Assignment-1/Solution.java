@@ -40,11 +40,11 @@ public final class Solution {
 			}
 
 		}
-		for (int k= 0;k<a.length ;k++ ) {
-			if (a[k] != 0 && a[k]%2 !=0) {
+		for (int k = 0; k < a.length ; k++ ) {
+			if (a[k] != 0 && a[k] % 2 != 0) {
 				System.out.println(a[k]);
 			}
-			
+
 		}
 	}
 	/**
