@@ -28,7 +28,21 @@ final class Solution {
         int[][] temp = new int[rows][columns];
         for (int i = 0;i<rows ;i++ ) {
             for (int j = 0;j<columns ;j++) {
-                System.out.println(a[i][j]);
+                if (a[i][j] <50) {
+                    temp[i][j] = 0;
+                } else if (a[i][j] <150){
+                    temp[i][j] = 100;
+                } else if (a[i][j] < 250) {
+                    temp[i][j] = 200;
+                } else if (a[i][j] <350) {
+                    temp[i][j] = 300;
+
+                }else if(a[i][j] <450) {
+                    temp[i][j] = 400;
+
+                }else {
+                    temp[i][j] = 500;
+                }
             }   
         }
         return temp;
