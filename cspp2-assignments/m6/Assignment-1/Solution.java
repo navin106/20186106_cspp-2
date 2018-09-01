@@ -27,7 +27,12 @@ public final class Solution {
 			for (int j = 1; j <= i ; j++ ) {
 					if (i % j == 0) {
 						cnt += 1;
+				}else {
+					if (j*j == i){
+						cnt -=2;
+					}
 				}
+
 
 			}
 			// System.out.println(cnt);
