@@ -30,8 +30,7 @@ final class Solution {
         for (int i = 0; i < charArray.length; i++ ) {
             if (charArray[i] == oldChar) {
                 k[i] += newChar;
-            }
-            else {
+            } else {
                 k[i] += charArray[i];
             }
         }
