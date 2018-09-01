@@ -38,18 +38,18 @@ final class Solution {
             for (int j = 0; j < columns ; j++) {
                 if (a[i][j] < NUM1) {
                     temp[i][j] = 0;
-                } else if (a[i][j] < 3*NUM1) {
+                } else if (a[i][j] < 3 * NUM1) {
                     temp[i][j] = RNUM1;
-                } else if (a[i][j] < 5*NUM1) {
-                    temp[i][j] = 2*RNUM1;
-                } else if (a[i][j] < 7*NUM1) {
-                    temp[i][j] = 3*RNUM1;
+                } else if (a[i][j] < 5 * NUM1) {
+                    temp[i][j] = 2 * RNUM1;
+                } else if (a[i][j] < 7 * NUM1) {
+                    temp[i][j] = 3 * RNUM1;
 
-                } else if (a[i][j] < 9*NUM1) {
-                    temp[i][j] = 4*RNUM1;
+                } else if (a[i][j] < 9 * NUM1) {
+                    temp[i][j] = 4 * RNUM1;
 
                 } else {
-                    temp[i][j] = 5*RNUM1;
+                    temp[i][j] = 5 * RNUM1;
                 }
             }
         }
