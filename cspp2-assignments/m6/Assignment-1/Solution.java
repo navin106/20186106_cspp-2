@@ -30,19 +30,19 @@ public final class Solution {
 				}
 
 			}
-			System.out.println(cnt);
+			// System.out.println(cnt);
 			if (cnt == 4) {
 				a[l] = i;
 				l++;
 			}
 
 		}
-		System.out.println("---------");
+		// System.out.println("---------");
 		for (int k= 0;k<a.length ;k++) {
-			System.out.println(a[k]);
-			/*if (a[k] != 0 && a[k]%2 !=0) {
+			// System.out.println(a[k]);
+			if (a[k] != 0 && a[k]%2 !=0) {
 				System.out.println(a[k]);
-			}*/
+			}
 			
 		}
 	}
