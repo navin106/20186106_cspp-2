@@ -27,7 +27,7 @@ final class Solution {
                              final char oldChar, final char newChar) {
         // write your code here
         char[] k = new char[charArray.length];
-        for (int i = 0; i < charArray.length; i++ ) {
+        for(int i = 0; i < charArray.length; i++ ) {
             if (charArray[i] == oldChar) {
                 k[i] += newChar;
             } else {
