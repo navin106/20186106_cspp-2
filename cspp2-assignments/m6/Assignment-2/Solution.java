@@ -11,6 +11,11 @@ final class Solution {
     public static final int NUM3 = 250;
     public static final int NUM4 = 350;
     public static final int NUM5 = 450;
+    public static final int RNUM1 = 100;
+    public static final int RNUM2 = 200;
+    public static final int RNUM3 = 300;
+    public static final int RNUM4 = 400;
+
     /**
      * Constructs the object.
      */
@@ -36,14 +41,14 @@ final class Solution {
                 if (a[i][j] < NUM1) {
                     temp[i][j] = 0;
                 } else if (a[i][j] < NUM2) {
-                    temp[i][j] = 100;
+                    temp[i][j] = RNUM1;
                 } else if (a[i][j] < NUM3) {
-                    temp[i][j] = 200;
+                    temp[i][j] = RNUM2;
                 } else if (a[i][j] < NUM4) {
-                    temp[i][j] = 300;
+                    temp[i][j] = RNUM3;
 
                 } else if (a[i][j] < NUM5) {
-                    temp[i][j] = 400;
+                    temp[i][j] = RNUM4;
 
                 } else {
                     temp[i][j] = 500;
