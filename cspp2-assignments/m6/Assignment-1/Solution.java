@@ -29,7 +29,11 @@ public final class Solution {
 					cnt += 2;
 				} else {
 					if (i % j == 0) {
-						cnt += 1;
+						if (Math.sqrt(i)*Math.sqrt(i) == i) {
+							cnt -= 2;
+						} else {
+							cnt += 1;
+						}
 					}
 				}
 
