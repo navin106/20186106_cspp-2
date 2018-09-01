@@ -6,6 +6,11 @@ import java.util.Scanner;
  * @author :
  */
 final class Solution {
+    public static final int NUM1 = 50;
+    public static final int NUM2 = 150;
+    public static final int NUM3 = 250;
+    public static final int NUM4 = 350;
+    public static final int NUM5 = 450;
     /**
      * Constructs the object.
      */
@@ -28,16 +33,16 @@ final class Solution {
         int[][] temp = new int[rows][columns];
         for (int i = 0; i < rows ; i++ ) {
             for (int j = 0; j < columns ; j++) {
-                if (a[i][j] < 50) {
+                if (a[i][j] < NUM1) {
                     temp[i][j] = 0;
-                } else if (a[i][j] < 150) {
+                } else if (a[i][j] < NUM2) {
                     temp[i][j] = 100;
-                } else if (a[i][j] < 250) {
+                } else if (a[i][j] < NUM3) {
                     temp[i][j] = 200;
-                } else if (a[i][j] < 350) {
+                } else if (a[i][j] < NUM4) {
                     temp[i][j] = 300;
 
-                } else if (a[i][j] < 450) {
+                } else if (a[i][j] < NUM5) {
                     temp[i][j] = 400;
 
                 } else {
