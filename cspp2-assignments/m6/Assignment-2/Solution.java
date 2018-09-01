@@ -14,7 +14,7 @@ final class Solution {
      */
     public static final int RNUM1 = 100;
     /**
-     * { var_description }
+     * { var_description }.
      */
     public static final int TWO = 2;
     /**
