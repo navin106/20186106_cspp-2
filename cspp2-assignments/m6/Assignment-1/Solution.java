@@ -19,26 +19,33 @@ public final class Solution {
 	 */
 	public static void oddComposites(final int n) {
 		// write your code here
+		int[] a = new int[n];
+		int l = 0;
 		int cnt = 0;
-		          int[] a = new int[n];
-		for (int i = 0; i < n ; i++ ) {
-			for (int j = 2; j < i ; j++) {
-				if (n % i == 0) {
-					cnt += 1;
+		for (int i = 1; i <= n ; i++ ) {
+			cnt = 0;
+			for (int j = 1; j <= i ; j++ ) {
+				if (j * j == i) {
+					cnt += 2;
+				} else {
+					if (i % j == 0) {
+						cnt += 1;
+					}
 				}
-				if (cnt == 2) {
-					a[j] = i;
-					j++;
-				}
+
+			}
+			if (cnt == 4) {
+				a[l] = i;
+				l++;
 			}
 
 		}
-		for (int i = 0; i < a.length; i++) {
-			if (a[i] % 2 != 0 && a[i] > 0) {
-				System.out.println(a[i]);
+		for (int k= 0;k<a.length ;k++ ) {
+			if (a[k] != 0 && a[k]%2 !=0) {
+				System.out.println(a[k]);
 			}
+			
 		}
-
 	}
 	/**
 	* main method as driver program.
