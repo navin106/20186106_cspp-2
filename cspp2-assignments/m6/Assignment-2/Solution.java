@@ -16,27 +16,27 @@ final class Solution {
     /**
      * { var_description }
      */
-    public static final int Two = 2;
+    public static final int TWO = 2;
     /**
      * { var_description }.
      */
-    public static final int Three = 3;
+    public static final int THREE = 3;
     /**
      * { var_description }.
      */
-    public static final int Four = 4;
+    public static final int FOUR = 4;
     /**
      * { var_description }.
      */
-    public static final int Five = 5;
+    public static final int FIVE = 5;
     /**
      * { var_description }.
      */
-    public static final int Seven = 7;
+    public static final int SEVEN = 7;
     /**
      * { var_description }.
      */
-    public static final int Nine = 9;
+    public static final int NINE = 9;
 
 
     /**
@@ -64,18 +64,18 @@ final class Solution {
             for (int j = 0; j < columns; j++) {
                 if (a[i][j] < NUM1) {
                     temp[i][j] = 0;
-                } else if (a[i][j] < Three * NUM1) {
+                } else if (a[i][j] < THREE * NUM1) {
                     temp[i][j] = RNUM1;
-                } else if (a[i][j] < Five * NUM1) {
-                    temp[i][j] = Two * RNUM1;
-                } else if (a[i][j] < (Seven * NUM1)) {
-                    temp[i][j] = Three * RNUM1;
+                } else if (a[i][j] < FIVE * NUM1) {
+                    temp[i][j] = TWO * RNUM1;
+                } else if (a[i][j] < (SEVEN * NUM1)) {
+                    temp[i][j] = THREE * RNUM1;
 
-                } else if (a[i][j] < Nine * NUM1) {
-                    temp[i][j] = Four * RNUM1;
+                } else if (a[i][j] < NINE * NUM1) {
+                    temp[i][j] = FOUR * RNUM1;
 
                 } else {
-                    temp[i][j] = Five * RNUM1;
+                    temp[i][j] = FIVE * RNUM1;
                 }
             }
         }
