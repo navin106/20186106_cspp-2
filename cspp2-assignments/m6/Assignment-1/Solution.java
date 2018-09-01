@@ -22,27 +22,17 @@ public final class Solution {
 		int[] a = new int[n];
 		int l = 0;
 		int cnt = 0;
-		for (int i = 1; i <= n ; i++ ) {
+		for (int i = 2; i <= n; i++ ) {
 			cnt = 0;
-			for (int j = 1; j <= i ; j++ ) {
-				if (j * j == i) {
-					cnt += 2;
-				} else {
-					if (i % j == 0) {
-						if (Math.sqrt(i)*Math.sqrt(i) == i) {
-							cnt -= 2;
-						} else {
-							cnt += 1;
-						}
-					}
+			for (int j = 2; j <= Math.sqrt(i); j++) {
+				if (i%j == 0) {
+					cnt +=1;
 				}
-
 			}
-			if (cnt == 4) {
+			if (cnt != 0) {
 				a[l] = i;
 				l++;
 			}
-
 		}
 		for (int k = 0; k < a.length ; k++ ) {
 			if (a[k] != 0 && a[k] % 2 != 0) {
