@@ -26,7 +26,7 @@ public final class Solution {
 			cnt = 0;
 			for (int j = 1; j <= i ; j++ ) {
 				if (j * j == i) {
-					cnt -= 2;
+					cnt += 2;
 				} else {
 					if (i % j == 0) {
 						cnt += 1;
