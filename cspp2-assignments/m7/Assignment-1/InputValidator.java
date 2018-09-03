@@ -19,11 +19,7 @@ public class InputValidator {
      * @return     { description_of_the_return_value }
      */
     public boolean validateData() {
-        if (ka.length() >= 6) {
-            return true;
-        } else {
-            return false;
-        }
+        return (ka.length() >= 6);
 
     }
 }
