@@ -13,7 +13,7 @@ public class Solution {
      * { item_description }.
      * @param args
      */
-    public static void main(final String args[]) {
+    public static void main(final String[] args) {
 
         Scanner s = new Scanner(System.in);
 
