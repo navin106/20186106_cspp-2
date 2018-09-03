@@ -10,8 +10,9 @@ public final class Solution {
 
     }
     /**
-     * { item_description }.
-     * @param args
+     * { function_description }.
+     *
+     * @param      args  The arguments
      */
     public static void main(final String[] args) {
 
