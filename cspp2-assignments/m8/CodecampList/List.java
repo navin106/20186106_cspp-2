@@ -181,7 +181,7 @@ public class List {
 		// Replace the code below
 		String s= "[";
 
-		for (int i = 0; i <= size ; i++ ){
+		for (int i = 0; i < size ; i++ ){
 			s += a[i] +",";
 		}
 
