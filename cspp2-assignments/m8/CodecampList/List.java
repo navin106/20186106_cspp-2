@@ -181,12 +181,12 @@ public class List {
 		// Replace the code below
 		String s= "[";
 
-		for (int i = 0; i < size ; i++ ){
-			if (i <size-1) {
+		for (int i = 0; i <= size ; i++ ){
+			if (i <size) {
 				s += a[i] +",";
 			}
-			if (i == size-1) {
-				s += "]";
+			if (i == size) {
+				s += a[i]+"]";
 				}
 			}
 		return s;
