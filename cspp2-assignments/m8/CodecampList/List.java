@@ -129,10 +129,8 @@ public class List {
 		// write the logic for remove here.
 		// Think about what to do to the size variable.
 		a[index] = 0;
-		if (index > 0) {
-			for (int i = index; i <= size; i++) {
-				a[i] = a[i + 1];
-			}
+		for (int i = index; i <= size; i++) {
+			a[i] = a[i + 1];
 		}
 		size -= 1;
 	}
