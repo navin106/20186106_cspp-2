@@ -109,11 +109,12 @@ public class List {
     }
 
     /**
-     * The size method returns the value of the size.
-     * The purpose of the method is to announce the size of the list
-     * to the objects outside the list
+     * The size method returns the value of the size. The purpose of the method.
+     * is to announce the size of the list to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         // replace the code below to implement the size method
@@ -121,29 +122,24 @@ public class List {
     }
 
     /**
-     * The remove method does what the name suggests.
-     * Removes an int item, specified by the index argument, from the list
-     * It also does an additional step.
-     * Think about what happens when
-     * an item is removed from the middle of the list
-     * It creates a hole in the list, right?
-     * This would mean, all the items that are
-     * to the right side of the removed item should be
-     * moved to the left by one position.
-     * Here is an example:
-     * array = [1,2,3,0,0,0,0,0,0,0]
-     * remove(2) would remove the item 2
-     * But how do you remove the item from an array?
-     * Well, the way to remove it is to move all
-     * the items, that are to the right of the removed item, to the left
-     * So, the new array looks like this.
-     * array = [1,3,0,0,0,0,0,0,0,0]
-     * The method returns void (nothing)
+     * The remove method does what the name suggests. Removes an int item.
+     * specified by the index argument, from the list It also does an additional
+     * step. Think about what happens when an item is removed from the middle of
+     * the list It creates a hole in the list, right? This would mean, all the
+     * items that are to the right side of the removed item should be moved to
+     * the left by one position. Here is an example: array =
+     * [1,2,3,0,0,0,0,0,0,0] remove(2) would remove the item 2 But how do you
+     * remove the item from an array? Well, the way to remove it is to move all
+     * the items, that are to the right of the removed item, to the left So, the
+     * new array looks like this. array = [1,3,0,0,0,0,0,0,0,0] The method
+     * returns void (nothing)
+     *
+     * @param      index  The index
      */
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (index < 10) {
+        if (index < ANUM) {
 
             for (int i = index; i <= size; i++) {
                 a[i] = a[i + 1];
@@ -204,7 +200,7 @@ public class List {
         // Replace the code below
         String s = "[";
 
-        for (int i = 0; i < size; i++ ) {
+        for (int i = 0; i < size; i++) {
             if (i < size - 1) {
                 s += a[i] + ",";
             }
