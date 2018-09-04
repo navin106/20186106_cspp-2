@@ -5,9 +5,11 @@ import java.util.Scanner;
  * class list.
  */
 public class List {
-    private int Asize = 10;
+    /**
+    *AsiZe is size of array.
+    */
+    private int AsiZe = 10;
     //Implement all the methods mentioned to build a ListADT
-
     /**
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -81,7 +83,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        this.a = new int[Asize];
+        this.a = new int[AsiZe];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
@@ -91,15 +93,14 @@ public class List {
     }
 
     /**
-     * The add method does what the name suggests.
-     * Add an int item to the list.
-     * The assumption is to store the item at the end of the list
-     * What is the end of the list?
-     * Is it the same as the end of the array?
-     * Think about how you can use the size variable to add item
-     * to the list.
+     * The add method does what the name suggests. Add an int item to the list.
+     * The assumption is to store the item at the end of the list What is the
+     * end of the list? Is it the same as the end of the array? Think about how
+     * you can use the size variable to add item to the list.
      *
      * The method returns void (nothing)
+     *
+     * @param      item  The item
      */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
@@ -154,16 +155,18 @@ public class List {
 
     }
 
-    /*
-     * Get method has to return the items that is
-     * at the index position passed as an argument to the method.
-     * If the item doesn't exist then return a -1 to indicate that
-     * there is no element at that index.
-     * How can an element not be there at a given position?
-     * Well, if the position is greater than the number of items
-     * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the
-     * number of items in the list? Would size variable be useful?
+    /**
+     * Get method has to return the items that is at the index position passed.
+     * as an argument to the method. If the item doesn't exist then return a -1
+     * to indicate that there is no element at that index. How can an element
+     * not be there at a given position? Well, if the position is greater than
+     * the number of items in the list then that would mean the item doesn't
+     * exist. How do we check if the position is greater than the number of
+     * items in the list? Would size variable be useful?
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
      */
     public int get(final int index) {
         // Replace the code below to write the code for get
@@ -201,7 +204,7 @@ public class List {
         // Replace the code below
         String s = "[";
 
-        for (int i = 0; i < size ; i++ ) {
+        for (int i = 0; i < size; i++ ) {
             if (i < size - 1) {
                 s += a[i] + ",";
             }
@@ -228,12 +231,15 @@ public class List {
         return false;
     }
 
-    /*
-     * Returns the index of the first occurrence
-     * of the specified element in this list,
-     * or -1 if this list does not contain the element.
+    /**
+     * Returns the index of the first occurrence of the specified element in.
+     * this list, or -1 if this list does not contain the element.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i <= size; i++) {
             if (a[i] == item) {
@@ -243,7 +249,12 @@ public class List {
         return -1;
     }
 
-    public static void main(String[] args) {
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
