@@ -176,25 +176,20 @@ public class List {
         }
     }
 
-    /*
-     * What happens when you print an object using println?
-     * Java provides a method named toString that is internally
-     * invoked when an object variable is used in println.
-     * For example:
-     * List l = new List();
-     * System.out.println(l);
-     * This statement is a shortcut for
+    /**
+     * What happens when you print an object using println? Java provides a.
+     * method named toString that is internally invoked when an object variable
+     * is used in println. For example: List l = new List();
+     * System.out.println(l); This statement is a shortcut for
      * System.out.println(l.toString());
      *
-     * So, implement the toString method to display the items
-     * in the list in the square brackets notation.
-     * i.e., if the list has numbers 1, 2, 3
-     * return the string [1,2,3]
-     * Caution: The array may be having other elements
-     * Example: [1,2,3,0,0,0,0,0,0,0]
-     * toString should only return the items in the list and
-     * not all the elements of the array.
+     * So, implement the toString method to display the items in the list in the
+     * square brackets notation. i.e., if the list has numbers 1, 2, 3 return
+     * the string [1,2,3] Caution: The array may be having other elements
+     * Example: [1,2,3,0,0,0,0,0,0,0] toString should only return the items in
+     * the list and not all the elements of the array.
      *
+     * @return     String representation of the object.
      */
     public String toString() {
         // Replace the code below
@@ -211,13 +206,16 @@ public class List {
         return s;
     }
 
-    /*
-     * Contains return true if the list has
-     * the item passed as an argument to the method
-     * So, iterate through the list and return true if
-     * the item exists and otherwise false
+    /**
+     * Contains return true if the list has the item passed as an argument to.
+     * the method So, iterate through the list and return true if the item
+     * exists and otherwise false
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i <= size; i++) {
             if (a[i] == item) {
@@ -292,6 +290,9 @@ public class List {
                 break;
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
+                System.out.println("invalid");
                 break;
             }
         }
