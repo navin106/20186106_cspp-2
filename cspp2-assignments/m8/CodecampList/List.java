@@ -182,14 +182,14 @@ public class List {
 	public String toString() {
 		// Replace the code below
 		String s= "[";
-		String k = "]";
-		for (int i = 0; i < size ; i++ ) {
-			if (a[i] != 0) {
+		for (int i = 0; i <= size ; i++ ) {
+			if (a[i] != 0 ) {
 				s += a[i]+",";
 			}
 		}
+
 		s += "]";
-		return s.trim();
+		return s;
 	}
 
 	/*
