@@ -182,10 +182,9 @@ public class List {
 	public String toString() {
 		// Replace the code below
 		String s= "[";
-		for (int i = 0; i <= size ; i++ ) {
-			if (a[i] != 0 ) {
-				s += a[i]+",";
-			}
+
+		for (int i = 0; i <= size ; i++ ){
+			s += a[i];
 		}
 
 		s += "]";
