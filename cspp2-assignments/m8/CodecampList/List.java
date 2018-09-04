@@ -72,7 +72,7 @@ public class List {
 		// How many items do we have in the list when you create it?
 		// An empty list has how many items?
 		// That is the initial value to use for size.
-		this.size = 0;
+		this.size = 1;
 
 	}
 
@@ -183,7 +183,7 @@ public class List {
 		// Replace the code below
 		String s= "[";
 
-		for (int i = 0; i < size ; i++ ){
+		for (int i = 0; i <= size ; i++ ){
 			s += a[i] +",";
 		}
 
