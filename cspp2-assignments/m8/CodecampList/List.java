@@ -132,9 +132,7 @@ public class List {
 			a[i] = a[i + 1];
 		}
 		size -= 1;
-		for (int i = index; i <= size; i++) {
-			a[i] = a[i + 1];
-		}
+		
 	}
 
 	/*
