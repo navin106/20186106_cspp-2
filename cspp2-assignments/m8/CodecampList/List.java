@@ -185,7 +185,7 @@ public class List {
 		String k = "]";
 		for (int i = 0; i < size ; i++ ) {
 			if (a[i] != 0) {
-				s += a[i];
+				s += a[i]+",";
 			}
 		}
 		s += "]";
