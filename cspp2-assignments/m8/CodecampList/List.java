@@ -189,7 +189,7 @@ public class List {
 			}
 		}
 		s += "]";
-		return s;
+		return s.trim();
 	}
 
 	/*
