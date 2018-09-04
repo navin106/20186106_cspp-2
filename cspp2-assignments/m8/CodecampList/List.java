@@ -66,7 +66,7 @@ public class List {
     /**
     * int size.
     */
-    private static int size;
+    private int size;
 
     /**
      * The purpose of the constructor is to initialize the class variables with.
@@ -83,7 +83,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        this.a = new int[ANUM];
+        a = new int[ANUM];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
@@ -284,7 +284,7 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
             case "get":
-                if (l.get(Integer.parseInt(tokens[1])) < size) {
+                if (l.get(Integer.parseInt(tokens[1])) != -1) {
                     System.out.println(l.get(Integer.parseInt(tokens[1])));
                 }
                 break;
