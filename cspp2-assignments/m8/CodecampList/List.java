@@ -5,9 +5,10 @@ import java.util.Scanner;
  * class list.
  */
 public class List {
+    private int Asize = 10;
     //Implement all the methods mentioned to build a ListADT
 
-    /*
+    /**
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
      * An array would be good. Right?
@@ -33,7 +34,7 @@ public class List {
     // don't create the array yet using new
     // that's the job of the List constructor
     /**
-    * array a
+    * array a.
     */
     private int[] a;
 
@@ -69,7 +70,6 @@ public class List {
      * The purpose of the constructor is to initialize the class variables with.
      * some default values.
      */
-    private int ASIZE = 10;
 
     /**
      * Constructs the object.
@@ -81,7 +81,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        this.a = new int[ASIZE];
+        this.a = new int[Asize];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
