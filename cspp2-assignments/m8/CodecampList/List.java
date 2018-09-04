@@ -181,11 +181,11 @@ public class List {
 		// Replace the code below
 		String s= "[";
 
-		for (int i = 0; i <= size ; i++ ){
-			if (i <size) {
+		for (int i = 0; i < size ; i++ ){
+			if (i <size-1) {
 				s += a[i] +",";
 			}
-			if (i == size) {
+			if (i == size-1) {
 				s += a[i]+"]";
 				}
 			}
