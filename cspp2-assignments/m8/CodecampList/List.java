@@ -153,14 +153,16 @@ public class List {
 	 */
 	public int get(int index) {
 		// Replace the code below to write the code for get
-		if (index > size) {
 
-			return -1;
+		if (index < size) {
+
+			return a[index];
 		} else {
 
 			return a[index];
 		}
-	}
+
+		}
 
 	/*
 	 * What happens when you print an object using println?
