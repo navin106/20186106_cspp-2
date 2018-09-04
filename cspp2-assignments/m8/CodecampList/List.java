@@ -66,7 +66,7 @@ public class List {
     /**
     * int size.
     */
-    private int size;
+    private static int size;
 
     /**
      * The purpose of the constructor is to initialize the class variables with.
@@ -284,7 +284,7 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
             case "get":
-                if (l.get(Integer.parseInt(tokens[1])) != -1) {
+                if (l.get(Integer.parseInt(tokens[1])) > size) {
                     System.out.println(l.get(Integer.parseInt(tokens[1])));
                 }
                 break;
