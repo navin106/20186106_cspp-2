@@ -102,7 +102,7 @@ public class List {
 	 */
 	public int size() {
 		// replace the code below to implement the size method
-		return size;
+		return size-1;
 	}
 
 	/*
