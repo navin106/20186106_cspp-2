@@ -72,7 +72,7 @@ public class List {
 		// How many items do we have in the list when you create it?
 		// An empty list has how many items?
 		// That is the initial value to use for size.
-		this.size = 1;
+		this.size = 0;
 
 	}
 
@@ -132,7 +132,7 @@ public class List {
 			a[i] = a[i + 1];
 		}
 		size -= 1;
-		
+
 	}
 
 	/*
