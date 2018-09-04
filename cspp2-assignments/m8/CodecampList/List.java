@@ -284,7 +284,7 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
             case "get":
-                if (l.get(Integer.parseInt(tokens[1])) > size) {
+                if (l.get(Integer.parseInt(tokens[1])) < size) {
                     System.out.println(l.get(Integer.parseInt(tokens[1])));
                 }
                 break;
