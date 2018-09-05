@@ -29,7 +29,7 @@ public class Fibonacci {
      */
 
     public static List fib(int n) {
-        if (n > FibList.size()) {
+        if (n > 10) {
             List FibList = new List(n);   
         }
         int a = 0;
@@ -37,7 +37,7 @@ public class Fibonacci {
         int c = 0;
         FibList.add(0);
         FibList.add(1);
-        for (int i = 2; i < n ; i++ ) {
+        for (int i = 2; i < n ; i++) {
             c = a + b;
             a = b;
             b = c;
