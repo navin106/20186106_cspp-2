@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class List {
 	//Implement all the methods mentioned to build a ListADT
-
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -32,23 +31,18 @@ public class List {
     private int[] list;
 
     /*
-     * What are the other class variables needed for creating a list?
-     * How about keeping track of the size of the list?
-     * If you add 2 items to the list then the size should be 2.
-     * Let's think about the size of the list by comparing it to the
-     * length of the array. Do they mean the same?
-     * No, Array length signifies the maximum number of items
-     * you can store in the list. Whereas, the size of the list
-     * denotes the number of items in the list. Makes sense?
-     * Here is an example:
-     * array = [1,2,3,0,0,0,0,0,0,0]
-     * The length of the array is 10 and size is 3.
-     * This means you can store 10 items in the list and
-     * currently it has 3 items.
-     * So, to keep track of the size we need a variable called size
-     * Again, we use private as we don't want that size variable
-     * to be accessed by the methods that are outside of the List class.
-     * 
+     * What are the other class variables needed for creating a list? How about
+     * keeping track of the size of the list? If you add 2 items to the list
+     * then the size should be 2. Let's think about the size of the list by
+     * comparing it to the length of the array. Do they mean the same? No, Array
+     * length signifies the maximum number of items you can store in the list.
+     * Whereas, the size of the list denotes the number of items in the list.
+     * Makes sense? Here is an example: array = [1,2,3,0,0,0,0,0,0,0] The length
+     * of the array is 10 and size is 3. This means you can store 10 items in
+     * the list and currently it has 3 items. So, to keep track of the size we
+     * need a variable called size Again, we use private as we don't want that
+     * size variable to be accessed by the methods that are outside of the List
+     * class.
      */
 
     // declare a private int size
@@ -65,36 +59,33 @@ public class List {
 
     public List() {
 
-        // what are the two variables to be initialized here?
-        // think about the private variables described above.
-        // What should be the default values?
-        // In the case of the list, it should be empty but
-        // it should be initialized with an array size like 10
+        // what are the two variables to be initialized here? think about the
+        // private variables described above. What should be the default values?
+        // In the case of the list, it should be empty but it should be
+        // initialized with an array size like 10
         list = new int[10];
 
-        // Think about the initial value for size.
-        // How many items do we have in the list when you create it?
-        // An empty list has how many items?
-        // That is the initial value to use for size.
+        // Think about the initial value for size. How many items do we have in
+        // the list when you create it? An empty list has how many items? That
+        // is the initial value to use for size.
         size = 0;
     }
 
     /*
-     * Overloaded constructor with list capacity as argument
-     * The default constructor sets the list capacity to 10
-     * So, adding an item when the list size is 10
-     * raises a Index Out of Bounds Exception
-     * There will be some clients of the ADT that will require
-     * the list to contain n elements which is known
-     * at the time of creating the list.
-     * 
-     * The overloaded constructor is a way to initialize a list with
-     * a list capacity of n items where n is given as an argument to
-     * constructor.
-     * 
+     * Overloaded constructor with list capacity as argument The default
+     * constructor sets the list capacity to 10 So, adding an item when the list
+     * size is 10 raises a Index Out of Bounds Exception There will be some
+     * clients of the ADT that will require the list to contain n elements which
+     * is known at the time of creating the list.
+     *
+     * The overloaded constructor is a way to initialize a list with a list
+     * capacity of n items where n is given as an argument to constructor.
      */
-
-    // todo - add an overloaded constructor here
+    public List(int n) {
+        list = new int[n];
+        size  = 0;
+    }
+    
 
     
     /*

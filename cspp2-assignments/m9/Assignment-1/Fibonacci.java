@@ -27,13 +27,13 @@ public class Fibonacci {
      *
      * @return     { description_of_the_return_value }
      */
+    
     public static List fib(int n) {
         int a = 0;
         int b = 1;
         int c = 0;
         FibList.add(0);
         FibList.add(1);
-
         for (int i = 2; i < n ; i++ ) {
             c = a + b;
             a = b;
