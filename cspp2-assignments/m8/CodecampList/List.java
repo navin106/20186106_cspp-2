@@ -38,7 +38,7 @@ public class List {
     /**
     * array a.
     */
-    private int[] a;
+    private int[] a = new int[];
 
     /**
      * What are the other class variables needed for creating a list?.
@@ -83,7 +83,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        a = new int[ANUM];
+        this.a = new int[ANUM];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
@@ -102,6 +102,7 @@ public class List {
      *
      * @param      item  The item
      */
+    
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         a[size] = item;
@@ -129,7 +130,8 @@ public class List {
      * items that are to the right side of the removed item should be moved to
      * the left by one position. Here is an example: array =
      * [1,2,3,0,0,0,0,0,0,0] remove(2) would remove the item 2 But how do you
-     * remove the item from an array? Well, the way to remove it is to move all
+     * remove the item 
+     * from an array? Well, the way to remove it is to move all
      * the items, that are to the right of the removed item, to the left So, the
      * new array looks like this. array = [1,3,0,0,0,0,0,0,0,0] The method
      * returns void (nothing)
