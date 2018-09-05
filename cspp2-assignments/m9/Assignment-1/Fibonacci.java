@@ -14,7 +14,7 @@ import java.util.Scanner;
  * method provided in the List ADT.
  */
 
-public class Fibonacci {
+public final class Fibonacci {
     /**
      * Constructs the object.
      */
@@ -33,24 +33,29 @@ public class Fibonacci {
      * @return     { description_of_the_return_value }
      */
 
-    public static List fib(int n) {
-        List FibList = new List(n);
+    public static List fib(final int n) {
+        List fiblist = new List(n);
         int a = 0;
         int b = 1;
         int c = 0;
-        FibList.add(0);
-        FibList.add(1);
-        for (int i = 2; i < n ; i++) {
+        fiblist.add(0);
+        fiblist.add(1);
+        for (int i = 2; i < n; i++) {
             c = a + b;
             a = b;
             b = c;
-            FibList.add(c);
+            fiblist.add(c);
         }
-    return FibList;
+    return fiblist;
 
     }
 
-    public static void main(String[] args) {
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
