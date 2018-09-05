@@ -15,7 +15,6 @@ import java.util.Scanner;
  */
 
 public class Fibonacci {
-    static List FibList = new List();
     /**
      * fib is a static method takes a argument n n is the count of the fibonacci.
      * numbers to be generated. The method returns a List with the n fibonacci
@@ -29,9 +28,7 @@ public class Fibonacci {
      */
 
     public static List fib(int n) {
-        if (n > 10) {
-            List FibList = new List(n);   
-        }
+        List FibList = new List(n);
         int a = 0;
         int b = 1;
         int c = 0;
