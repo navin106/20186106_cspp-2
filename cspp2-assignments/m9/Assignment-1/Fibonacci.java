@@ -27,8 +27,11 @@ public class Fibonacci {
      *
      * @return     { description_of_the_return_value }
      */
-    
+
     public static List fib(int n) {
+        if (n > FibList.size()) {
+            List FibList = new List(n);   
+        }
         int a = 0;
         int b = 1;
         int c = 0;
