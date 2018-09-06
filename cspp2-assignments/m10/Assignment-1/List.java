@@ -2,7 +2,7 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 
 /**
- * List of .
+ * List of.
  */
 public class List {
     /**
@@ -74,7 +74,7 @@ public class List {
         size = 0;
     }
 
-    /**
+    /**.
      * . Overloaded constructor with list capacity as argument The default
      * constructor sets the list capacity to 10 So, adding an item when the list
      * size is 10 raises a Index Out of Bounds Exception There will be some
@@ -270,6 +270,9 @@ public class List {
         for (int i = 0; i < items.length; i++) {
             list[size] = items[i];
             size++;
+            if (size > list.length/2) {
+                list = resize();
+            }
         }
     }
 
