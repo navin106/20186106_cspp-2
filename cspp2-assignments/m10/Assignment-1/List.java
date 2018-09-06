@@ -196,12 +196,14 @@ public class List {
     public int get(final int index) {
         if (index < 0) {
             System.out.println("Negative Index Exception");
-        }
-        if (index < 0 || index >= size) {
-            return -1;
         } else {
-            return list[index];
+            if (index < 0 || index >= size) {
+                return -1;
+            } else {
+                return list[index];
+            }
         }
+    return -1; 
     }
 
     /**
