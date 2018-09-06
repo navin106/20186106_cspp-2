@@ -289,8 +289,6 @@ public class List {
         }
         return cnt;
     }
-
-
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
