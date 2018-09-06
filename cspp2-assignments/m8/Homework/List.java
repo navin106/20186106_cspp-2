@@ -190,6 +190,9 @@ public class List {
      * @return     { description_of_the_return_value }
      */
     public int get(int index) {
+        if (index < 0) {
+            System.out.println("Negative Index Exception");
+        }
         if (index < 0 || index >= size) {
             return -1;
         } else {
