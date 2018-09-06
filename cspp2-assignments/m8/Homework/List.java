@@ -28,7 +28,7 @@ public class List {
     // that's the job of the List constructor
     private int[] list;
 
-    /*
+    /**.
      * What are the other class variables needed for creating a list? How about
      * keeping track of the size of the list? If you add 2 items to the list
      * then the size should be 2. Let's think about the size of the list by
@@ -42,19 +42,18 @@ public class List {
      * size variable to be accessed by the methods that are outside of the List
      * class.
      */
+    private int size;
 
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    private int size;
 
-    /*
-     * The purpose of the constructor is to initialize the
-     * class variables with some default values.
+    /** . The purpose of the constructor is to initialize the class variables
+     * with some default values.
      */
-
-
-
+    /**
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -71,8 +70,8 @@ public class List {
         size = 0;
     }
 
-    /*
-     * Overloaded constructor with list capacity as argument The default
+    /**
+     * . Overloaded constructor with list capacity as argument The default
      * constructor sets the list capacity to 10 So, adding an item when the list
      * size is 10 raises a Index Out of Bounds Exception There will be some
      * clients of the ADT that will require the list to contain n elements which
@@ -83,7 +82,7 @@ public class List {
      *
      * @param      capacity  The capacity
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -98,17 +97,17 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;
     }
 
     /**
-     * Resize the list Sometimes the clients of the ADT won't know the expected.
-     * list capacity To solve this the list has to grow dynamically when the
-     * maximum capacity is reached and there is no room to add items. So, how do
-     * we dynamically resize the list? Java doesn't support resize of array.
-     * Here are some options.
+     * . Resize the list Sometimes the clients of the ADT won't know the
+     * expected. list capacity To solve this the list has to grow dynamically
+     * when the maximum capacity is reached and there is no room to add items.
+     * So, how do we dynamically resize the list? Java doesn't support resize of
+     * array. Here are some options.
      *
      * Option 1 Create a new array of the desired size, and copy the contents
      * from the original array to the new array, using
@@ -125,6 +124,8 @@ public class List {
      * invoke resize or is it internal to List class? Should the resize be
      * public method or private? Should the resize method return any values? You
      * know enough of Object Oriented Programming to answer these questions :-)
+     *
+     * @return     { description_of_the_return_value }
      */
 
     public int[] resize() {
@@ -162,8 +163,7 @@ public class List {
      *
      * @param      index  The index
      */
-
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
@@ -227,8 +227,8 @@ public class List {
         return str;
     }
 
-    /*
-     * Contains return true if the list has the item passed as an argument to
+    /**
+     * . Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
      *
@@ -236,7 +236,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
 
@@ -248,15 +248,17 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (item == list[i])
                 return i;
         }
         return -1;
     }
-    /* Inserts all the elements of specified int array to the end of list */
-    public void addAll(int items[]) {
+    /**
+     * @param items.
+     */
+    public void addAll(final int items[]) {
         for (int i = 0; i < items.length; i++) {
             list[size] = items[i];
             size++;
@@ -264,12 +266,14 @@ public class List {
     }
 
 
-    /*
-       Inserts the specified element at the specified index
-    by moving all the elements to the right.
-       The method returns void (nothing)
+    /**
+     . Inserts the specified element at the specified index by moving all the
+     elements to the right. The method returns void (nothing)
+    
+     @param      index  The index
+     @param      item   The item
     */
-    public void add(int index, int item) {
+    public void add(final int index,final int item) {
         if (index >= 0) {
 
             if (index > list.length) {
@@ -283,8 +287,14 @@ public class List {
         }
     }
 
-    /* Returns the count of occurances of a given item in the list*/
-    public int count(int item) {
+    /**.
+     * Returns the count of occurances of a given item in the list
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int count(final int item) {
         int cnt = 0;
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -293,6 +303,11 @@ public class List {
         }
         return cnt;
     }
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
