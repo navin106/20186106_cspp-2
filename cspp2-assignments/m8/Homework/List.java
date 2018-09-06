@@ -254,14 +254,12 @@ public class List {
     }
     /* Inserts all the elements of specified int array to the end of list */
     public void addAll(int items[]) {
-        if (size > list.length) {
-            resize();
-        }
         for (int i = 0; i < items.length; i++) {
-            list[size] = list[i];
+            list[size] = items[i];
             size++;
         }
     }
+
 
     /*
        Inserts the specified element at the specified index
@@ -269,19 +267,22 @@ public class List {
        The method returns void (nothing)
     */
     public void add(int index, int item) {
-        if (size > list.length) {
+        if (index > list.length) {
             resize();
         }
-        for (int i = size; i > index; i--) {
-            list[i] = list[i-1];
-            size++;
+        for (int i = index; i < list.length; i++) {
+            if (i + 1 < size) {
+                list[i + 1] = list[i];
+                size++;
+            }
         }
+        list[index] = item;
     }
 
     /* Returns the count of occurances of a given item in the list*/
     public int count(int item) {
         int cnt = 0;
-        for (int i = 0;i< size;i++) {
+        for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 cnt++;
             }
