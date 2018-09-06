@@ -252,7 +252,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Double[] temp = new Double[t1.length];
-                        for (int i = 0; i < t1.length ; i++ ) {
+                        for (int i = 0; i < t1.length; i++ ) {
                             temp[i] = Double.parseDouble(t1[i]);
                         }
                         listDouble.addAll(temp);
@@ -284,7 +284,7 @@ public class Solution {
                     break;
                 case "contains":
                     System.out.println(listDouble.
-                                        contains(Double.parseDouble(tokens[1])));
+                                    contains(Double.parseDouble(tokens[1])));
                     break;
                 }
             }
