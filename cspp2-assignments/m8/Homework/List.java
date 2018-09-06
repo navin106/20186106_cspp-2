@@ -189,7 +189,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         if (index < 0) {
             System.out.println("Negative Index Exception");
         }
@@ -269,18 +269,18 @@ public class List {
     /**
      . Inserts the specified element at the specified index by moving all the
      elements to the right. The method returns void (nothing)
-    
+
      @param      index  The index
      @param      item   The item
     */
-    public void add(final int index,final int item) {
+    public void add(final int index, final int item) {
         if (index >= 0) {
 
             if (index > list.length) {
                 resize();
             }
             for (int i = size; i > index; i--) {
-                    list[i] = list[i-1];
+                list[i] = list[i - 1];
             }
             list[index] = item;
             size++;
