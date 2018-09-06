@@ -129,6 +129,9 @@ public class StringList implements StringListInterface{
      * @param      items  The items
      */
     public void addAll(final String[] items) {
+        if (items.length > list.length) {
+            list = resize();
+        }
 		for (int i = 0; i < items.length; i++) {
             list[size] = items[i];
             size++;
@@ -147,32 +150,34 @@ public class StringList implements StringListInterface{
         return size;
     }
 
-    /*
-     * The remove method does what the name suggests.
-     * Removes a String item, specified by the index argument, from the list
-     * It also does an additional step.
-     * Think about what happens when 
-     * an item is removed from the middle of the list
-     * It creates a hole in the list, right?
-     * This would mean, all the items that are
-     * to the right side of the removed item should be
-     * moved to the left by one position.
-     * Here is an example:
-     * array = [1,2,3,0,0,0,0,0,0,0]
-     * remove(1) would remove the item 2 which is at index position 1.
-     * But how do you remove the item from an array?
-     * Well, the way to remove it is to move all
-     * the items, that are to the right of the removed item, to the left
-     * So, the new array looks like this.
-     * array = [1,3,0,0,0,0,0,0,0,0]
-     * The method returns void (nothing)
+    /**.
+     * The remove method does what the name suggests. Removes a String item,
+     * specified by the index argument, from the list It also does an additional
+     * step. Think about what happens when an item is removed from the middle of
+     * the list It creates a hole in the list, right? This would mean, all the
+     * items that are to the right side of the removed item should be moved to
+     * the left by one position. Here is an example: array =
+     * [1,2,3,0,0,0,0,0,0,0] remove(1) would remove the item 2 which is at index
+     * position 1. But how do you remove the item from an array? Well, the way
+     * to remove it is to move all the items, that are to the right of the
+     * removed item, to the left So, the new array looks like this. array =
+     * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
+     *
+     * @return     { description_of_the_return_value }
      */
-
+    public String[] resize() {
+        String[] list2 = new String[size * 2];
+        for (int i = 0; i < size; i++) {
+            list2[i] = list[i];
+        }
+        return list2;
+    }
     /**.
      * { function_description }
      *
      * @param      index  The index
      */
+
     public void remove(int index) {
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
