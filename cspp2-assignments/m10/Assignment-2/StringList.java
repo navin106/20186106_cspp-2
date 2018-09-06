@@ -1,19 +1,18 @@
 import java.util.Arrays;
 // An interface for ListADT of strings
-interface StringListInterface
-{
-	 public void add(String item);
-	 public void addAll(String items[]);
-	 public String get(int index);
-	 public int size();
-	 public void remove(int index);
-	 public boolean contains(String item);
-	 public int indexOf(String item);
+interface StringListInterface {
+    public void add(String item);
+    public void addAll(String items[]);
+    public String get(int index);
+    public int size();
+    public void remove(int index);
+    public boolean contains(String item);
+    public int indexOf(String item);
 }
-//Write a StringList class which implements StringListInterface 
+//Write a StringList class which implements StringListInterface
 
-public class StringList implements StringListInterface{
-	//Implement all the methods mentioned to build a ListADT
+public class StringList implements StringListInterface {
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -36,7 +35,7 @@ public class StringList implements StringListInterface{
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
+
     // declare a private String[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -59,7 +58,7 @@ public class StringList implements StringListInterface{
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
 
     // declare a private int size
@@ -71,8 +70,8 @@ public class StringList implements StringListInterface{
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    
-    
+
+
 
     public StringList() {
 
@@ -118,11 +117,11 @@ public class StringList implements StringListInterface{
      */
     public void add(final String item) {
         list[size++] = item;
-       
+
     }
-    /*Inserts all the elements of specified int 
+    /*Inserts all the elements of specified int
     array to the end of list*/
-   
+
     /**
      * Adds all.
      *
@@ -132,11 +131,11 @@ public class StringList implements StringListInterface{
         for (int i = 0; i < items.length; i++) {
             list[size] = items[i];
             size++;
-            if (size > list.length/2) {
+            if (size > list.length / 2) {
                 list = resize();
             }
         }
-	}
+    }
     /**
      * . The size method returns the value of the size. The purpose of the
      * method is to announce the size of the list to the objects outside the
@@ -229,7 +228,7 @@ public class StringList implements StringListInterface{
      * @return     String representation of the object.
      */
     public String toString() {
-       if (size == 0) {
+        if (size == 0) {
             return "[]";
         }
         String str = "[";
@@ -240,7 +239,7 @@ public class StringList implements StringListInterface{
         str = str + list[i] + "]";
         return str;
     }
-    
+
     /**.
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
@@ -269,6 +268,6 @@ public class StringList implements StringListInterface{
             }
         }
         return -1;
-        
+
     }
 }
