@@ -170,7 +170,7 @@ public class List {
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (size <= 0) {
+        if (size == 0) {
             System.out.println("Invalid Position Exception");
         } else {
             if (index >= 0 && index < size) {
