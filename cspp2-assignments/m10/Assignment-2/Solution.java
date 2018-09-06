@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -12,14 +12,15 @@ public class Solution {
 
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         StringList sl = new StringList();
-        StringListInterface l = (StringListInterface)sl; //Typecasting is done for StringListInterface
+        StringListInterface l = (StringListInterface)sl;
+         //Typecasting is done for StringListInterface
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
@@ -59,12 +60,13 @@ public class Solution {
                 System.out.println(l.indexOf(tokens[1]));
                 break;
             case "get":
-                System.out.println(l.get
-                                    (Integer.parseInt(tokens[1])));
+                System.out.println(l.get(Integer.
+                                    parseInt(tokens[1])));
                 break;
             case "contains":
                 System.out.println(l.contains(tokens[1]));
                 break;
+                default:
             }
         }
     }
