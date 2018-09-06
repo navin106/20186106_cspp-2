@@ -5,6 +5,7 @@ import java.util.Scanner;
  * List of .
  */
 public class List {
+    private final static int NUM = 10;
     //Implement all the methods mentioned to build a ListADT
 
     /**
@@ -61,7 +62,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[NUM];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -258,7 +259,9 @@ public class List {
         return -1;
     }
     /**
-     * @param items.
+     * Adds all.
+     *
+     * @param      items  The items
      */
     public void addAll(final int[] items) {
         for (int i = 0; i < items.length; i++) {
@@ -332,7 +335,7 @@ public class List {
                     } else {
                         if (t.length > 1) {
                             l.add(Integer.parseInt(t[0]),
-                                     Integer.parseInt(t[1]));
+                                  Integer.parseInt(t[1]));
                         }
                     }
                 }
@@ -374,7 +377,7 @@ public class List {
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
-                default:
+            default:
             }
         }
     }
