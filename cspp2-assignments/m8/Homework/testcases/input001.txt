@@ -1,4 +1,4 @@
-14
+13
 add 5
 add 4
 size
@@ -6,7 +6,6 @@ add 0
 add 99
 print
 add 3,9
-print
 add 2,10
 count 9
 size
