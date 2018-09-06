@@ -129,7 +129,7 @@ public class StringList implements StringListInterface{
      * @param      items  The items
      */
     public void addAll(final String[] items) {
-        if (size > list.length/2) {
+        if (size >= list.length/2) {
             list = resize();
         }
 		for (int i = 0; i < items.length; i++) {
