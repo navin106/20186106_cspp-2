@@ -272,8 +272,8 @@ public class List {
         if (size > list.length) {
             resize();
         }
-        for (int i = index; i < size; i++) {
-            list[i+1] = list[i];
+        for (int i = size; i > index; i++) {
+            list[i] = list[i-1];
             size++;
         }
     }
