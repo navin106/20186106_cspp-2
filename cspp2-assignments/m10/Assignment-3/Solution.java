@@ -275,19 +275,23 @@ public class Solution {
                     listDouble.remove(Integer.parseInt(tokens[1]));
                     break;
                 case "indexOf":
-                    System.out.println(listDouble.indexOf(Double.parseDouble(tokens[1])));
+                    System.out.println(listDouble.
+                                        indexOf(Double.parseDouble(tokens[1])));
                     break;
                 case "get":
-                    System.out.println(listDouble.get(Integer.parseInt(tokens[1])));
+                    System.out.println(listDouble.
+                                        get(Integer.parseInt(tokens[1])));
                     break;
                 case "contains":
-                    System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
+                    System.out.println(listDouble.
+                                        contains(Double.parseDouble(tokens[1])));
                     break;
                 }
             }
             break;
 
-        case "O"://This case will be executed for Student type list i.e to store List of Student Objects
+        case "O"://This case will be executed for
+                // Student type list i.e to store List of Student Objects
             List<Student> listStudent = new List();
             while (stdin.hasNext()) {
                 // read the line
@@ -303,7 +307,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Student[] temp = new Student[t1.length];
-                        for (int i = 0; i < t1.length ; i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = new Student(t1[i]);
                         }
                         listStudent.addAll(temp);
@@ -338,6 +342,7 @@ public class Solution {
                     System.out.println(listStudent.
                                        contains(new Student(tokens[1])));
                     break;
+                    default:
                 }
             }
             break;
