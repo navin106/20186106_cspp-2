@@ -194,17 +194,13 @@ public class List {
      * @return     { description_of_the_return_value }
      */
     public int get(final int index) {
-        if (index < 0) {
+        if (index < 0 || index >= size) {
             System.out.println("Negative Index Exception");
+            return -1;
         } else {
-            if (index < 0 || index >= size) {
-                return -1;
-            } else {
-                return list[index];
-            }
+            return list[index];
         }
-    return -1; 
-    }
+}
 
     /**
      * What happens when you print an object using println? Java provides a.
