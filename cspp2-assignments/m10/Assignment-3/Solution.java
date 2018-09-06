@@ -32,7 +32,7 @@ class Student {
      * @return     { description_of_the_return_value }
      */
     @Override
-    public boolean equals(final Object other) { 
+    public boolean equals(final Object other) {
     // This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
@@ -72,7 +72,8 @@ public class Solution {
      */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
-        Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+        Scanner stdin = new Scanner(new 
+                            BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
 
         switch (objectType) {
@@ -200,7 +201,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Float[] temp = new Float[t1.length];
-                        for (int i = 0; i < t1.length; i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = Float.parseFloat(t1[i]);
                         }
                         listFloat.addAll(temp);
