@@ -270,14 +270,17 @@ public class List {
        The method returns void (nothing)
     */
     public void add(int index, int item) {
-        if (index > list.length) {
-            resize();
+        if (index >= 0) {
+
+            if (index > list.length) {
+                resize();
+            }
+            for (int i = size; i > index; i--) {
+                    list[i] = list[i-1];
+            }
+            list[index] = item;
+            size++;
         }
-        for (int i = size; i > index; i--) {
-                list[i] = list[i-1];
-        }
-        list[index] = item;
-        size++;
     }
 
     /* Returns the count of occurances of a given item in the list*/
