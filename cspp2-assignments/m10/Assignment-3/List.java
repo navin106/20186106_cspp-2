@@ -19,9 +19,9 @@ import java.util.Scanner;
 */
 public class List<E> {
 
-	/**
-	 * { var_description }.
-	 */
+    /**
+     * { var_description }.
+     */
     private E[] list;
     private E[] list2;
     /**
@@ -64,7 +64,7 @@ public class List<E> {
     @param      items  The items
     */
     public void addAll(E[] items) {
-    	for (int i = 0; i < items.length; i++) {
+        for (int i = 0; i < items.length; i++) {
             list[size] = items[i];
             size++;
             if (size > list.length / 2) {
