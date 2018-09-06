@@ -272,7 +272,7 @@ public class List {
         if (size > list.length) {
             resize();
         }
-        for (int i = size; i > index; i++) {
+        for (int i = size; i > index; i--) {
             list[i] = list[i-1];
             size++;
         }
