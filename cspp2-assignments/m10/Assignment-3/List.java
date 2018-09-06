@@ -195,7 +195,7 @@ public class List<E> {
      */
     public int indexOf(E item) {
        for (int i = 0; i < size; i++) {
-            if (item == list[i]) {
+            if (item.equals(list[i])) {
                 return i;
             }
         }
