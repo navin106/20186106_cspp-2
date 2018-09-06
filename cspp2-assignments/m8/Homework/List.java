@@ -5,7 +5,7 @@ import java.util.Scanner;
  * List of .
  */
 public class List {
-    private final static int NUM = 10;
+    private static final int NUM = 10;
     //Implement all the methods mentioned to build a ListADT
 
     /**
