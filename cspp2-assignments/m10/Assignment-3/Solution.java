@@ -1,19 +1,39 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-//A Class is implemented for Student details
+/**
+ * Class for student.
+ */
 class Student {
+    /**
+     * { var_description }.
+     */
     private String name;
 
-    public Student(String name) {//A constructor used to initialize the instance variables
+    /**
+     * Constructs the object.
+     *
+     * @param      name  The name
+     */
+    public Student(final String name) {
+    //A constructor used to initialize the instance variables
         this.name = name;
     }
 
-    public String getName() {//Getter method which returns the value of instance variable
+    public String getName() {
+    //Getter method which returns the value of instance variable
         return this.name;
     }
 
+    /**
+     * { function_description }
+     *
+     * @param      other  The other
+     *
+     * @return     { description_of_the_return_value }
+     */
     @Override
-    public boolean equals(Object other) { //This method is to check if two students names are equal or not
+    public boolean equals(final Object other) { 
+    // This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
         }
@@ -22,6 +42,11 @@ class Student {
         return this.getName().equals(that.getName());
     }
 
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return this.name;
     }
