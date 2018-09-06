@@ -272,7 +272,7 @@ public class List {
         }
         for (int i = size; i >= index; i--) {
             if (i + 1 < size) {
-                list[i] = list[i+1];
+                list[i] = list[i-1];
             }
         }
         list[index] = item;
