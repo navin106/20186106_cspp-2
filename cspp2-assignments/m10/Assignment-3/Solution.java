@@ -24,7 +24,7 @@ class Student {
         return this.name;
     }
 
-    /**
+    /**.
      * { function_description }
      *
      * @param      other  The other
@@ -55,25 +55,22 @@ class Student {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
     private Solution() {
 
     }
-
-
-
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
-        Scanner stdin = new Scanner(new 
-                            BufferedInputStream(System.in));
+        Scanner stdin = new Scanner(new
+                        BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
 
         switch (objectType) {
