@@ -214,7 +214,7 @@ public class List {
 			list[size] = newArray[i];
 			size++;
 			if (size > list.length / 2) {
-				resize();
+				list = resize();
 			}
 		}
 	}
