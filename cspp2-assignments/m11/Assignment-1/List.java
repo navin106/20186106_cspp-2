@@ -275,17 +275,17 @@ public class List {
     @return     { description_of_the_return_value }
     */
     public boolean equals(final List nlist) {
-        int[] a = nlist.list;
-        
-        int cnt = 0;
-        if (nlist.size() == size) {
-            for (int i = 0; i < size; i++) {
-                if (list[i] == a[i]) {
-                    cnt++;
-                }
-            }
-        }
-        return (cnt == size);
+        return this.list.toString().equals(nlist.toString());
+        // int[] a = nlist.list;
+        // int cnt = 0;
+        // if (nlist.size() == size) {
+        //     for (int i = 0; i < size; i++) {
+        //         if (list[i] == a[i]) {
+        //             cnt++;
+        //         }
+        //     }
+        // }
+        // return (cnt == size);
     }
     /**
      * Removes all the elements from list. Think about this case and make the.
