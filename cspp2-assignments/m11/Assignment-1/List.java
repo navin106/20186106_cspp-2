@@ -278,14 +278,12 @@ public class List {
         int cnt = 0;
         if (nlist.size() == size) {
             for (int i = 0; i < size; i++) {
-                for (int j = 0; j < nlist.size; j++) {
-                    if (list[i] == a[j]) {
+                    if (list[i] == a[i]) {
                         cnt++;
                     }
         }
     }
-}
-        return (cnt == size);
+    return (cnt == size);
     }
     /**
      * Removes all the elements from list. Think about this case and make the.
