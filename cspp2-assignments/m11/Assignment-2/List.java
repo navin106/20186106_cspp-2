@@ -99,10 +99,14 @@ public class List<E> {
 	 * @param      index  The index
 	 */
 	public void remove(final int index) {
-		for (int i = index; i < size; i++) {
-			list[i] = list[i + 1];
+		if (index >= 0 && index < size) {
+			for (int i = index; i < size; i++) {
+				list[i] = list[i + 1];
+			}
+			size--;
+		} else {
+			System.out.println("Invalid Position Exception");
 		}
-		size--;
 	}
 	/*
 	 * Get method has to return the items that is
