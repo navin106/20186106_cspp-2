@@ -275,7 +275,7 @@ public class List {
     @return     { description_of_the_return_value }
     */
     public boolean equals(final List nlist) {
-        return this.list.toString().equals(nlist.toString());
+        return this.toString().equals(nlist.toString());
         // int[] a = nlist.list;
         // int cnt = 0;
         // if (nlist.size() == size) {
