@@ -119,6 +119,7 @@ public class List {
 		}
 	}
 
+
 	/**
 	 * Get method has to return the items that is at the index position passed.
 	 * as an argument to the method. If the item doesn't exist then return a -1
@@ -223,14 +224,14 @@ public class List {
 	 @param      newArray  The new array
 	*/
 	public void removeAll(final int[] newArray) {
-		for (int i = 0; i < newArray.length; i++) {
-			for (int j = 0; j < size; j++) {
-				if (newArray[i] == list[j]) {
-					list[j] = list[j + 1];
-					size--;
-				}
-			}
-		}
+		// for (int i = 0; i < newArray.length; i++) {
+		// 	for (int j = 0; j < size; j++) {
+		// 		if (newArray[i] == list[j]) {
+		// 			list[j] = list[j + 1];
+		// 			size--;
+		// 		}
+		// 	}
+		// }
 	}
 	/**
 	Returns a list object containing elements, including startIndex and.
