@@ -224,14 +224,13 @@ public class List {
 	 @param      newArray  The new array
 	*/
 	public void removeAll(final int[] newArray) {
-		// for (int i = 0; i < newArray.length; i++) {
-		// 	for (int j = 0; j < size; j++) {
-		// 		if (newArray[i] == list[j]) {
-		// 			list[j] = list[j + 1];
-		// 			size--;
-		// 		}
-		// 	}
-		// }
+		for (int i = 0; i < newArray.length; i++) {
+			for (int j = 0; j < size; j++) {
+				if (newArray[i] == list[j]) {
+					remove(j);
+				}
+			}
+		}
 	}
 	/**
 	Returns a list object containing elements, including startIndex and.
