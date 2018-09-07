@@ -324,15 +324,16 @@ public class Solution {
                 List object = l.subList
                               (Integer.parseInt(arrstring3[0]),
                                Integer.parseInt(arrstring3[1]));
-                if (object != null)
+                if (object != null) {
                     System.out.println(object);
+                }
                 break;
             }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     List l2 = new List();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add(Float.parseFloat(lt[k]));
                     }
                     System.out.println(l.equals(l2));
@@ -348,11 +349,11 @@ public class Solution {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      stdin  The stdin
      */
-    public static void executeListString(Scanner stdin) {
+    public static void executeListString(final Scanner stdin) {
         List<String> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -407,7 +408,7 @@ public class Solution {
                     l.removeAll(t2);
                 }
                 break;
-            case "subList": {
+            case "subList": 
                 if (tokens.length != 2) {
                     break;
                 }
@@ -418,7 +419,7 @@ public class Solution {
                     System.out.println(object);
                 }
                 break;
-            }
+            
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
