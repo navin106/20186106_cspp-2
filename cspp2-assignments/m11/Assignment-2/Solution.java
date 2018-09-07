@@ -5,7 +5,7 @@ import java.util.Scanner;
  */
 class Student {
     /**
-     * { var_description }
+     * { var_description }.
      */
     private String name;
     /**
