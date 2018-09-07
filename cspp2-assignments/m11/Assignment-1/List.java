@@ -273,6 +273,7 @@ public class List {
 				}
 			}
 		}
+		System.out.println(cnt);
 		return (cnt == size);
 	}
 	/**
