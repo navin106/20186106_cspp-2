@@ -408,20 +408,22 @@ public class Solution {
                 }
                 break;
             case "subList": {
-                if (tokens.length != 2) break;
+                if (tokens.length != 2) {
+                    break;
+                }
                 String[] arrstring3 = tokens[1].split(",");
-                List object = l.subList
-                              (Integer.parseInt(arrstring3[0]),
-                               Integer.parseInt(arrstring3[1]));
-                if (object != null)
+                List object = l.subList(Integer.parseInt(arrstring3[0]),
+                                        Integer.parseInt(arrstring3[1]));
+                if (object != null) {
                     System.out.println(object);
+                }
                 break;
             }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     List l2 = new List();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add((lt[k]));
                     }
                     System.out.println(l.equals(l2));
@@ -437,11 +439,11 @@ public class Solution {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      stdin  The stdin
      */
-    public static void executeListStudent(Scanner stdin) {
+    public static void executeListStudent(final Scanner stdin) {
         List<Student> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -488,7 +490,7 @@ public class Solution {
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
                     Student[] students = new Student[t1.length];
-                    for (int i = 0; i < t1.length ; i++) {
+                    for (int i = 0; i < t1.length; i++) {
                         students[i] = new Student(t1[i]);
                     }
                     l.addAll(students);
@@ -498,27 +500,29 @@ public class Solution {
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
                     Student[] students = new Student[t1.length];
-                    for (int i = 0; i < t1.length ; i++) {
+                    for (int i = 0; i < t1.length; i++) {
                         students[i] = new Student(t1[i]);
                     }
                     l.removeAll(students);
                 }
                 break;
-            case "subList": {
-                if (tokens.length != 2) break;
+            case "subList":
+                if (tokens.length != 2) {
+                    break;
+                }
                 String[] arrstring3 = tokens[1].split(",");
-                List object = l.subList
-                              (Integer.parseInt(arrstring3[0]),
-                               Integer.parseInt(arrstring3[1]));
-                if (object != null)
+                List object = l.subList(Integer.parseInt(arrstring3[0]),
+                                        Integer.parseInt(arrstring3[1]));
+                if (object != null) {
                     System.out.println(object);
+                }
                 break;
-            }
+
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     List l2 = new List();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add((lt[k]));
                     }
                     System.out.println(l.equals(l2));
@@ -534,11 +538,11 @@ public class Solution {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
