@@ -259,7 +259,6 @@ public class List {
 	*/
 	public boolean equals(List nlist){
 		int a[] = nlist.list;
-		//System.out.println(a[0]);
 		int cnt = 0;
 		for (int i=0; i< size; i++) {
 			if (nlist.size == size) {
@@ -275,6 +274,7 @@ public class List {
 	 * method the simpler.
 	 */
 	public void clear() {
+		list = new int[10];
 		size = 0;
 	}
 
