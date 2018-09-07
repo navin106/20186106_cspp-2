@@ -242,8 +242,14 @@ public class List {
 	*/
 	public List subList(int start, int end) {
 		List k = new List();
-		for (int i =start; i<end; i++) {
-			k.add(list[i]);
+		if (start < 0 || end < 0) {
+			System.out.println("Index Out of Bounds Exception");
+			return null;
+			
+		} else {
+			for (int i =start; i<end; i++) {
+				k.add(list[i]);
+			}
 		}
 		return k;
 	}
