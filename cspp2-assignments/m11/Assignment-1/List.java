@@ -234,8 +234,12 @@ public class List {
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < size; j++) {
                 if (newArray[i] == list[j]) {
-                    remove(j);
-                    j--;
+                    // remove(j);
+                    // j--;
+                    for (int k = j; j < size; j++) {
+                        list[j] = list[j + 1];
+                        }
+                    size--;
                 }
             }
         }
