@@ -1,6 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+import java.util.Arrays;
 /**
  * List of .
  */
@@ -67,8 +67,8 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        list = new int[num];
-        size  = 0;
+        this.list = new int[num];
+        this.size  = 0;
 
     }
 
@@ -176,12 +176,7 @@ public class List {
      * @return     { description_of_the_return_value }
      */
     public boolean contains(final int item) {
-        for (int i = 0; i < size; i++) {
-            if (list[i] == item) {
-                return true;
-            }
-        }
-        return false;
+        return (indexOf(item) != -1);
     }
     /**
      * Returns the index of the first occurrence of the specified element in.
@@ -200,30 +195,32 @@ public class List {
         return -1;
     }
     /**
-     * { function_description }.
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public int[] resize() {
-        int[] list2 = new int[size * 2];
-        for (int i = 0; i < size; i++) {
-            list2[i] = list[i];
-        }
-        return list2;
-    }
-    /**
     Inserts all the elements of specified int array to the end of list.
 
     @param      newArray  The new array
     */
     public void addAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
-            list[size] = newArray[i];
-            size++;
             if (size > list.length / 2) {
-                list = resize();
+                resize();
             }
+            // list[size] = newArray[i];
+            // size++;
+            add(newArray[i]);
         }
+    }
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public void resize() {
+        // int[] list2 = new int[size * 2];
+        // for (int i = 0; i < size; i++) {
+        //     list2[i] = list[i];
+        // }
+        // return list2;
+        list = Arrays.copyOf(list, list.length*2);
     }
     /**
      Removes all of its elements that are contained in the specified int array.
@@ -254,6 +251,9 @@ public class List {
     */
     public List subList(final int start, final int end) {
         List k = new List();
+
+
+
         if (start < 0 || end <= 0 || start > end
                 || start > size || end > size) {
             System.out.println("Index Out of Bounds Exception");
@@ -276,6 +276,7 @@ public class List {
     */
     public boolean equals(final List nlist) {
         int[] a = nlist.list;
+        
         int cnt = 0;
         if (nlist.size() == size) {
             for (int i = 0; i < size; i++) {
@@ -291,7 +292,7 @@ public class List {
      * method the simpler.
      */
     public void clear() {
-        list = new int[num];
+        // list = new int[num];
         size = 0;
     }
 
