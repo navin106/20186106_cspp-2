@@ -211,11 +211,11 @@ public class List {
 	*/
 	public void addAll(final int[] newArray) {
 		for (int i = 0; i < newArray.length; i++) {
+			list[size] = newArray[i];
+			size++;
 			if (size > list.length / 2) {
 				resize();
 			}
-			list[size] = newArray[i];
-			size++;
 		}
 	}
 	/**
