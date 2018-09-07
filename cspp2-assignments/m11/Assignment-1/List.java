@@ -197,6 +197,11 @@ public class List {
         }
         return -1;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int[] resize() {
         int[] list2 = new int[size * 2];
         for (int i = 0; i < size; i++) {
@@ -244,7 +249,7 @@ public class List {
 
     @return     { description_of_the_return_value }
     */
-    public List subList(int start, int end) {
+    public List subList(final int start,final int end) {
         List k = new List();
         if (start < 0 || end < 0 || start > end) {
             System.out.println("Index Out of Bounds Exception");
@@ -260,9 +265,13 @@ public class List {
     /**
     Returns a boolean indicating whether the parameter i.e a List object is.
     exactly matching with the given list or not.
+    
+    @param      nlist  The nlist
+    
+    @return     { description_of_the_return_value }
     */
-    public boolean equals(List nlist) {
-        int a[] = nlist.list;
+    public boolean equals(final List nlist) {
+        int[] a = nlist.list;
         int cnt = 0;
         if (nlist.size() == size) {
             for (int i = 0; i < size; i++) {
@@ -284,11 +293,16 @@ public class List {
      * method the simpler.
      */
     public void clear() {
-        list = new int[10];
+        list = new int[NUM];
         size = 0;
     }
 
-    public static void main(String[] args) {
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -353,13 +367,14 @@ public class List {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     int[] a = new int[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Integer.parseInt(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
             case "subList": {
-                if (tokens.length != 2) { 
+                if (tokens.length != 2) {
                     break;
                 }
                 String[] arrstring3 = tokens[1].split(",");
