@@ -254,7 +254,8 @@ public class List {
     */
     public List subList(final int start, final int end) {
         List k = new List();
-        if (start < 0 || end <= 0 || start > end || start > size || end > size) {
+        if (start < 0 || end <= 0 || start > end ||
+                start > size || end > size) {
             System.out.println("Index Out of Bounds Exception");
             return null;
 
@@ -278,12 +279,12 @@ public class List {
         int cnt = 0;
         if (nlist.size() == size) {
             for (int i = 0; i < size; i++) {
-                    if (list[i] == a[i]) {
-                        cnt++;
-                    }
+                if (list[i] == a[i]) {
+                    cnt++;
+                }
+            }
         }
-    }
-    return (cnt == size);
+        return (cnt == size);
     }
     /**
      * Removes all the elements from list. Think about this case and make the.
