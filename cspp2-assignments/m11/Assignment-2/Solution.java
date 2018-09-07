@@ -196,12 +196,14 @@ public class Solution {
                 break;
             case "get":
                 if (tokens.length == 2) {
-                    System.out.println(l.get(Integer.parseInt(tokens[1])));
+                    System.out.println(l.get(Integer
+                                             .parseInt(tokens[1])));
                 }
                 break;
             case "contains":
                 if (tokens.length == 2) {
-                    System.out.println(l.contains(Double.parseDouble(tokens[1])));
+                    System.out.println(l.contains(Double
+                                                  .parseDouble(tokens[1])));
                 }
                 break;
             case "addAll":
@@ -218,26 +220,25 @@ public class Solution {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     Double[] a = new Double[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Double.parseDouble(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
-            case "subList": {
+            case "subList":
                 if (tokens.length != 2) break;
                 String[] arrstring3 = tokens[1].split(",");
-                List object = l.subList
-                              (Integer.parseInt(arrstring3[0]),
-                               Integer.parseInt(arrstring3[1]));
+                List object = l.subList(Integer.parseInt(arrstring3[0]),
+                                        Integer.parseInt(arrstring3[1]));
                 if (object != null)
                     System.out.println(object);
                 break;
-            }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     List l2 = new List();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add(Double.parseDouble(lt[k]));
                     }
                     System.out.println(l.equals(l2));
@@ -252,11 +253,11 @@ public class Solution {
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      stdin  The stdin
      */
-    public static void executeListFloat(Scanner stdin) {
+    public static void executeListFloat(final Scanner stdin) {
         List<Float> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -313,22 +314,23 @@ public class Solution {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     Float[] a = new Float[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Float.parseFloat(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
-            case "subList": {
-                if (tokens.length != 2) break;
+            case "subList":
+                if (tokens.length != 2) {
+                    break;
+                }
                 String[] arrstring3 = tokens[1].split(",");
-                List object = l.subList
-                              (Integer.parseInt(arrstring3[0]),
-                               Integer.parseInt(arrstring3[1]));
+                List object = l.subList(Integer.parseInt(arrstring3[0]),
+                                        Integer.parseInt(arrstring3[1]));
                 if (object != null) {
                     System.out.println(object);
                 }
                 break;
-            }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
@@ -408,7 +410,7 @@ public class Solution {
                     l.removeAll(t2);
                 }
                 break;
-            case "subList": 
+            case "subList":
                 if (tokens.length != 2) {
                     break;
                 }
@@ -419,7 +421,7 @@ public class Solution {
                     System.out.println(object);
                 }
                 break;
-            
+
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
