@@ -259,7 +259,7 @@ public class List {
 	*/
 	public boolean equals(List nlist){
 		int a[] = nlist.list;
-		System.out.println(a[0]);
+		//System.out.println(a[0]);
 		int cnt = 0;
 		for (int i=0; i< size; i++) {
 			if (nlist.size == size) {
