@@ -152,6 +152,10 @@ public class List {
 	 * @return     String representation of the object.
 	 */
 	public String toString() {
+		if (size == 0) {
+			return "[]";
+		}
+
 		String str = "[";
 		for (int i = 0; i < size - 1; i++) {
 			str += list[i] + ",";
