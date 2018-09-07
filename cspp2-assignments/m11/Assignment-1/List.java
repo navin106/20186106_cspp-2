@@ -1,12 +1,14 @@
 import java.io.BufferedInputStream;
-import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * List of .
+ */
 public class List {
     /**
      * { var_description }.
      */
-    private int NUM = 10;
+    private final int NUM = 10;
     //Implement all the methods mentioned to build a ListADT
 
     /**
@@ -113,7 +115,7 @@ public class List {
      * @param      index  The index
      */
     public void remove(final int index) {
-        for (int i = index; i < size; i++ ) {
+        for (int i = index; i < size; i++) {
             list[i] = list[i + 1];
         }
         size--;
@@ -198,7 +200,7 @@ public class List {
         return -1;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -249,7 +251,7 @@ public class List {
 
     @return     { description_of_the_return_value }
     */
-    public List subList(final int start,final int end) {
+    public List subList(final int start, final int end) {
         List k = new List();
         if (start < 0 || end < 0 || start > end) {
             System.out.println("Index Out of Bounds Exception");
@@ -265,9 +267,9 @@ public class List {
     /**
     Returns a boolean indicating whether the parameter i.e a List object is.
     exactly matching with the given list or not.
-    
+
     @param      nlist  The nlist
-    
+
     @return     { description_of_the_return_value }
     */
     public boolean equals(final List nlist) {
@@ -298,7 +300,7 @@ public class List {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
