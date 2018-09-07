@@ -13,7 +13,7 @@ class Student {
      *
      * @param      name  The name
      */
-    public Student(String name) {
+    public Student(final String name) {
         //A constructor used to initialize the instance variables
         this.name = name;
     }
@@ -29,14 +29,14 @@ class Student {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      other  The other
      *
      * @return     { description_of_the_return_value }
      */
     @Override
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
         //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
@@ -67,7 +67,7 @@ public final class Solution {
 
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      stdin  The stdin
      */
