@@ -115,8 +115,8 @@ public class List {
 	public void remove(final int index) {
 		for (int i = index; i < list.length -1; i++) {
 			list[i] = list[i + 1];
-			size--;
 		}
+		size--;
 	}
 
 
