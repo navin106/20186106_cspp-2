@@ -282,14 +282,10 @@ public class List {
                     if (list[i] == a[j]) {
                         cnt++;
                     }
-                }
-                if (cnt == 0) {
-                    return false;
-                }
-                cnt = 0;
-            }
         }
-        return true;
+    }
+}
+        return (cnt == size);
     }
     /**
      * Removes all the elements from list. Think about this case and make the.
