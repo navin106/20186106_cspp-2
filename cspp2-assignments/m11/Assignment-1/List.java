@@ -198,10 +198,10 @@ public class List {
 	}
 	public int[] resize() {
 		int[] list2 = new int[size * 2];
-        for (int i = 0; i < size; i++) {
-            list2[i] = list[i];
-        }
-        return list2;
+		for (int i = 0; i < size; i++) {
+			list2[i] = list[i];
+		}
+		return list2;
 	}
 	/**
 	Inserts all the elements of specified int array to the end of list.
@@ -249,9 +249,9 @@ public class List {
 		if (start < 0 || end < 0 || start > end) {
 			System.out.println("Index Out of Bounds Exception");
 			return null;
-			
+
 		} else {
-			for (int i =start; i<end; i++) {
+			for (int i = start; i < end; i++) {
 				k.add(list[i]);
 			}
 		}
@@ -261,20 +261,20 @@ public class List {
 	Returns a boolean indicating whether the parameter i.e a List object is.
 	exactly matching with the given list or not.
 	*/
-	public boolean equals(List nlist){
+	public boolean equals(List nlist) {
 		int a[] = nlist.list;
 		int cnt = 0;
 		if (nlist.size == size) {
-			for (int i=0; i< size; i++) {
-				for (int j=0; j<nlist.size; j++) {
-					if (a[i] == list[i]) {
+			for (int i = 0; i < size; i++) {
+				for (int j = 0; j < nlist.size; j++) {
+					if (list[i] == a[j]) {
 						cnt++;
-					}				
+					}
 				}
+			}
 		}
+		return (cnt == size);
 	}
-	return (cnt == size);
-}
 	/**
 	 * Removes all the elements from list. Think about this case and make the
 	 * method the simpler.
