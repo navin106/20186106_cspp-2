@@ -11,11 +11,11 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      n     The name
      */
-    public Student(final String name) {
+    public Student(final String n) {
         //A constructor used to initialize the instance variables
-        this.name = name;
+        this.name = n;
     }
 
     /**
@@ -36,6 +36,9 @@ class Student {
      * @return     { description_of_the_return_value }
      */
     @Override
+    public int hashCode() {
+        return this.hashCode();
+    }
     public boolean equals(final Object other) {
         //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
