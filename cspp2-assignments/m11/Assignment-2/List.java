@@ -221,16 +221,20 @@ public class List<E> {
 	  i.e a List object is exactly matching with the given list or not.
 	 */
 	public boolean equals(List<E> listdata) {
-		int cnt = 0;
-		if (size == listdata.size) {
-			for (int i = 0; i < listdata.size; i++) {
-				if (listdata.get(i) == list[i]) {
-					cnt++;
-				}
-			}
+		// int cnt = 0;
+		// if (size == listdata.size) {
+		// 	for (int i = 0; i < size; i++) {
+		// 		if (listdata.get(i) == list[i]) {
+		// 			cnt++;
+		// 		}
+		// 	}
 
+		// }
+		// return (cnt == size);
+		if (Arrays.equals(listdata.list, list)) {
+			return true;
 		}
-		return (cnt == size);
+		return false;
 	}
 	/*Removes all the elements from list*/
 	public void clear() {
