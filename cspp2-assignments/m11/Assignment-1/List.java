@@ -113,7 +113,7 @@ public class List {
 	 * @param      index  The index
 	 */
 	public void remove(final int index) {
-		for (int i = index; i < size; i++ ) {
+		for (int i = index; i < list.length -1; i++) {
 			list[i] = list[i + 1];
 			size--;
 		}
