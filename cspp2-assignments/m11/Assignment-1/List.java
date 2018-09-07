@@ -264,15 +264,17 @@ public class List {
 	public boolean equals(List nlist){
 		int a[] = nlist.list;
 		int cnt = 0;
-		for (int i=0; i< size; i++) {
-			if (nlist.size == size) {
-				if (a[i] == list[i]) {
-					cnt++;
-				}				
-			}
+		if (nlist.size == size) {
+			for (int i=0; i< size; i++) {
+				for (int j=0; j<nlist.size; j++) {
+					if (a[i] == list[i]) {
+						cnt++;
+					}				
+				}
 		}
-		return (cnt == size);
 	}
+	return (cnt == size);
+}
 	/**
 	 * Removes all the elements from list. Think about this case and make the
 	 * method the simpler.
