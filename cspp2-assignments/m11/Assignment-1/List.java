@@ -8,7 +8,7 @@ public class List {
     /**
      * { var_description }.
      */
-    private final int NUM = 10;
+    private final int num = 10;
     //Implement all the methods mentioned to build a ListADT
 
     /**
@@ -67,7 +67,7 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        list = new int[NUM];
+        list = new int[num];
         size  = 0;
 
     }
@@ -295,7 +295,7 @@ public class List {
      * method the simpler.
      */
     public void clear() {
-        list = new int[NUM];
+        list = new int[num];
         size = 0;
     }
 
