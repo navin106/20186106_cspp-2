@@ -89,19 +89,19 @@ class Set {
 	}
 	public int[][] cartesianProduct(Set newArray) {
 		int k = adtlist.length * newArray.size;
+		int cnt = 0;
 		int[][] result = new int[k][2];
 		if (adtlist.length == 0 || newArray.size == 0) {
 			return null;
 		} else {
 			int m = 0;
-			int cnt = 0; 
 			for (int i = 0; i < size; i++) {
 				for (int j = 0; j < newArray.size; j++) {
 					if (cnt < k) {
 						result[m][0] = adtlist[i];
 						result[m][1] = newArray.get(j);
 						m += 1;
-						cnt +=1;
+						cnt += 1;
 					}
 				}
 			}
