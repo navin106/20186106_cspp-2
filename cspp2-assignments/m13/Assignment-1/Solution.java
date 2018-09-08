@@ -84,20 +84,24 @@ class Set {
 		}
 		return retainAll;
 	}
-	public int[][] cartesianProduct(Set newArray1) {
-		// int[][] result = new int[newArray1.length*newArray.length][newArray1.length];
-		// if(newArray1.length == 0 || newArray.length == 0) {
-		// 	return null;
-		// } else {
-		// 	for (int i = 0; i<newArray1.length; i++) {
-		// 		for (int j=0; j<newArray.length; j++) {
-		// 			result[i][j] += newArray1[i];
-		// 		}
-				
-		// 	}
-		// }
-		return null;
+	public int get(int index) {
+		return adtlist[index];
 	}
+	public int[][] cartesianProduct(Set newArray) {
+		int[][] result = new int[adtlist.length*newArray.size][adtlist.length];
+		if(adtlist.length == 0 || newArray.size == 0) {
+			return null;
+		} else {
+			for (int i = 0; i<adtlist.length; i++) {
+				result[i][0] = adtlist[i]; 
+				for (int j=0; j<newArray.size; j++) {
+					result[i][1] = newArray.get(j);
+				}
+			}
+		}
+		return result;
+	}
+
 }
 /**
  * Solution class for code-eval.
