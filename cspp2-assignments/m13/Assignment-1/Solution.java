@@ -94,8 +94,8 @@ class Set {
 		} else {
 			for (int i = 0; i<adtlist.length; i++) {
 				for (int j=0; j<newArray.size; j++) {
-					result[i][0] = adtlist[i]; 
-					result[i][1] = newArray.get(j);
+					result[0][i] = adtlist[i]; 
+					result[1][j] = newArray.get(j);
 				}
 			}
 		}
