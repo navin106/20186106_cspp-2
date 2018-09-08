@@ -90,7 +90,6 @@ class Set {
 	public int[][] cartesianProduct(Set newArray) {
 		int k = adtlist.length*newArray.size;
 		int[][] result = new int[k][2];
-		int[] temp = new int[k];
 		if(adtlist.length == 0 || newArray.size == 0) {
 			return null;
 		} else {
@@ -99,6 +98,7 @@ class Set {
 				for (int j=0; j<newArray.size; j++) {
 					result[m][0] = adtlist[i]; 
 					result[m][1] = newArray.get(j);
+					m+=1;
 				}
 			}
 
