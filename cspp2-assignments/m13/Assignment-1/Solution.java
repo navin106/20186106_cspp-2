@@ -162,7 +162,7 @@ class Set {
         int k = this.size* newArray.size();
         int cnt = 0;
         int[][] result = new int[k][2];
-        if (adtlist.length == 0 || newArray.size() == 0) {
+        if (this.size == 0 || newArray.size() == 0) {
             return null;
         } else {
             int m = 0;
