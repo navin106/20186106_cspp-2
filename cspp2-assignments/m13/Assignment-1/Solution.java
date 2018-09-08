@@ -96,14 +96,13 @@ class Set {
 		} else {
 			int m = 0;
 			for (int i = 0; i < size; i++) {
-				for (int j = 0; j < newArray.size(); j++) {
+				for (int j = 0; j < newArray.size; j++) {
 					if (cnt < k) {
 						result[m][0] = adtlist[i];
 						result[m][1] = newArray.get(j);
 						m += 1;
-						cnt += 2;
-					} else {
-						break;
+						System.out.println(cnt);
+						cnt += 1;
 					}
 				}
 			}
