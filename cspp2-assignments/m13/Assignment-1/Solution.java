@@ -154,11 +154,11 @@ class Set {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	public int[][] cartesianProduct(Set newArray) {
-		int k = adtlist.length * newArray.size;
+	public int[][] cartesianProduct(final Set newArray) {
+		int k = adtlist.length * newArray.size();
 		int cnt = 0;
 		int[][] result = new int[k][2];
-		if (adtlist.length == 0 || newArray.size == 0) {
+		if (adtlist.length == 0 || newArray.size() == 0) {
 			return null;
 		} else {
 			int m = 0;
@@ -222,13 +222,15 @@ public final class Solution {
 			String line = stdin.nextLine();
 			// split the line using space
 			String[] tokens = line.split(" ");
-			// based on the list operation invoke the corresponding method
+			// based on the list //
+			//operation invoke the corresponding method
 			switch (tokens[0]) {
 			case "size":
 				System.out.println(s.size());
 				break;
 			case "contains":
-				System.out.println(s.contains(Integer.parseInt(tokens[1])));
+				System.out.println
+				(s.contains(Integer.parseInt(tokens[1])));
 				break;
 			case "print":
 				System.out.println(s);
@@ -264,7 +266,8 @@ public final class Solution {
 				s.add(intArray);
 				intArray = intArray(tokens[2]);
 				t.add(intArray);
-				System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+				System.out.println
+				(Arrays.deepToString(s.cartesianProduct(t)));
 				break;
 			default:
 				break;
