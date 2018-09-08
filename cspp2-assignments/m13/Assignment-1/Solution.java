@@ -4,18 +4,39 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author :
+ * @author : Navin106
  */
 class Set {
+	/**
+	 * { var_description }
+	 */
 	private int[] adtlist;
+	/**
+	 * { var_description }
+	 */
 	private int size;
+	/**
+	 * Constructs the object.
+	 */
 	public Set() {
 		adtlist = new int[10];
 		size = 0;
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public int size() {
 		return size;
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      item  The item
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public boolean contains(int item) {
 		for (int i = 0; i < size; i++) {
 			if (item == adtlist[i]) {
@@ -25,6 +46,11 @@ class Set {
 		}
 		return false;
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		String str = "{";
 		if (size == 0) {
@@ -38,6 +64,11 @@ class Set {
 		return str;
 
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      item  The item
+	 */
 	public void add(int item) {
 		int cnt = 0;
 		for (int i = 0; i < size; i++) {
@@ -50,6 +81,11 @@ class Set {
 			size++;
 		}
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      items  The items
+	 */
 	public void add(int[] items) {
 		for (int i = 0; i < items.length; i++) {
 			if (size > adtlist.length / 2) {
@@ -58,9 +94,19 @@ class Set {
 			add(items[i]);
 		}
 	}
+	/**
+	 * { function_description }
+	 */
 	public void resize() {
 		adtlist = Arrays.copyOf(adtlist, adtlist.length * 2);
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      newSet  The new set
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public Set intersection(Set newSet) {
 		Set intersection = new Set();
 		int[] temp = newSet.adtlist;
@@ -73,6 +119,13 @@ class Set {
 		}
 		return intersection;
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      newArray  The new array
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public Set retainAll(int[] newArray) {
 		Set retainAll = new Set();
 		for (int i = 0; i < size; i++) {
@@ -84,13 +137,27 @@ class Set {
 		}
 		return retainAll;
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      index  The index
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public int get(int index) {
 		return adtlist[index];
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      newArray  The new array
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public int[][] cartesianProduct(Set newArray) {
 		int k = adtlist.length * newArray.size;
 		int cnt = 0;
-		int[][] result = new int[k][1];
+		int[][] result = new int[k][2];
 		if (adtlist.length == 0 || newArray.size == 0) {
 			return null;
 		} else {
@@ -106,8 +173,6 @@ class Set {
 			}
 
 		}
-		// for()
-
 		return result;
 	}
 
