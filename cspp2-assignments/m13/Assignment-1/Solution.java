@@ -90,24 +90,23 @@ class Set {
 	public int[][] cartesianProduct(Set newArray) {
 		int k = adtlist.length * newArray.size;
 		int cnt = 0;
-		int[][] result = new int[k][2];
+		int[][] result = new int[k][1];
 		if (adtlist.length == 0 || newArray.size == 0) {
 			return null;
 		} else {
 			int m = 0;
 			for (int i = 0; i < size; i++) {
 				for (int j = 0; j < newArray.size; j++) {
-					if (cnt+m < k) {
+					if (m < k) {
 						result[m][0] = adtlist[i];
 						result[m][1] = newArray.get(j);
-						System.out.println(m);
 						m += 1;
-						cnt += 1;
 					}
 				}
 			}
 
 		}
+		// for()
 
 		return result;
 	}
