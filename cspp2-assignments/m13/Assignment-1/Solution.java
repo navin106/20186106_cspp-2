@@ -94,15 +94,19 @@ class Set {
 			return null;
 		} else {
 			int m = 0;
+			int cnt = 0; 
 			for (int i = 0; i < size; i++) {
 				for (int j = 0; j < newArray.size; j++) {
-					result[m][0] = adtlist[i];
-					result[m][1] = newArray.get(j);
-					m += 1;
+					if (cnt < k) {
+						result[m][0] = adtlist[i];
+						result[m][1] = newArray.get(j);
+						m += 1;
+					}
 				}
 			}
 
 		}
+
 		return result;
 	}
 
