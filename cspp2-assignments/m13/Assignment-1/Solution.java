@@ -93,8 +93,8 @@ class Set {
 			return null;
 		} else {
 			for (int i = 0; i<adtlist.length; i++) {
-				result[i][0] = adtlist[i]; 
 				for (int j=0; j<newArray.size; j++) {
+					result[i][0] = adtlist[i]; 
 					result[i][1] = newArray.get(j);
 				}
 			}
