@@ -100,9 +100,8 @@ class Set {
 					if (cnt < k) {
 						result[m][0] = adtlist[i];
 						result[m][1] = newArray.get(j);
+						System.out.println(m);
 						m += 1;
-						System.out.println(cnt);
-						cnt += 1;
 					}
 				}
 			}
