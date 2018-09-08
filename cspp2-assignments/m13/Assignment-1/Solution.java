@@ -30,10 +30,10 @@ class Set {
 		if (size == 0) {
 			return "{}";
 		} else {
-			for (int i = 0; i < size - 1; i++) {
-				str += adtlist[i] + ", ";
+			for (int i = 0; i<size-1; i++) {
+				str += adtlist[i] +", ";
 			}
-			str += adtlist[size - 1] + "}";
+			str += adtlist[size-1] + "}";
 		}
 		return str;
 
@@ -88,14 +88,14 @@ class Set {
 		return adtlist[index];
 	}
 	public int[][] cartesianProduct(Set newArray) {
-		int[][] result = new int[adtlist.length * newArray.size][1];
-		if (newArray.size == 0 || adtlist.length == 0) {
+		int[][] result = new int[adtlist.length*newArray.size][adtlist.length];
+		if(adtlist.length == 0 || newArray.size == 0) {
 			return null;
 		} else {
-			for (int i = 0; i < adtlist.length; i++) {
-					result[i][0] = adtlist[i];
-				for (int j = 0; j < newArray.size; j++) {
-					result[j][1] = newArray.get(j);
+			for (int i = 0; i<adtlist.length; i++) {
+				for (int j=0; j<newArray.size; j++) {
+				result[i][0] = adtlist[i]; 
+					result[i][1] = newArray.get(j);
 				}
 			}
 		}
