@@ -88,14 +88,15 @@ class Set {
 		return adtlist[index];
 	}
 	public int[][] cartesianProduct(Set newArray) {
-		int[][] result = new int[adtlist.length*newArray.size][newArray.size];
+		int k = adtlist.length*newArray.size;
+		int[][] result = new int[k][newArray.size];
 		if(adtlist.length == 0 || newArray.size == 0) {
 			return null;
 		} else {
 			for (int i = 0; i<adtlist.length; i++) {
 				for (int j=0; j<newArray.size; j++) {
-					result[i][0] = adtlist[i]; 
-					result[i][1] = newArray.get(j);
+					result[k][0] = adtlist[i]; 
+					result[k][1] = newArray.get(j);
 				}
 			}
 		}
