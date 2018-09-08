@@ -101,6 +101,7 @@ class Set {
 						result[m][0] = adtlist[i];
 						result[m][1] = newArray.get(j);
 						m += 1;
+						cnt +=1;
 					}
 				}
 			}
