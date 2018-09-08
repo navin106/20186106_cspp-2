@@ -88,7 +88,7 @@ class Set {
 		return adtlist[index];
 	}
 	public int[][] cartesianProduct(Set newArray) {
-		int[][] result = new int[adtlist.length*newArray.size][adtlist.length];
+		int[][] result = new int[adtlist.length*newArray.size][newArray.size];
 		if(adtlist.length == 0 || newArray.size == 0) {
 			return null;
 		} else {
