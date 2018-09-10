@@ -67,10 +67,13 @@ public final class Solution {
             case "addAll":
                 String[] a = token[1].split(",");
                 int[] b = new int[a.length];
-                for (int i = 0; i < a.length; i++) {
-                    b[i] = Integer.parseInt(a[i]);
+                if (b.length > 0 ) {
+                    for (int i = 0; i < a.length; i++) {
+                        b[i] = Integer.parseInt(a[i]);
+                    }
+                    System.out.println(s.addAll(b));
+                    
                 }
-                System.out.println(s.addAll(b));
                 break;
             case "print":
                 System.out.println(s.toString());
