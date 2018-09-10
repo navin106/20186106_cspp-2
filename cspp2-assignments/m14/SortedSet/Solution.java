@@ -65,9 +65,8 @@ public final class Solution {
                 System.out.println(s.last());
                 break;
             case "addAll":
-                String[] a = token[1].split(",");
-
-                if (a.length > 0 ) {
+                if (token[1].length() > 0 ) {
+                    String[] a = token[1].split(",");
                     int[] b = new int[a.length];
 
                     for (int i = 0; i < a.length; i++) {
