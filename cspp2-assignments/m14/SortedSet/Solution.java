@@ -66,8 +66,10 @@ public final class Solution {
                 break;
             case "addAll":
                 String[] a = token[1].split(",");
-                int[] b = new int[a.length];
-                if (b.length > 0 ) {
+
+                if (a.length > 0 ) {
+                    int[] b = new int[a.length];
+
                     for (int i = 0; i < a.length; i++) {
                         b[i] = Integer.parseInt(a[i]);
                     }
