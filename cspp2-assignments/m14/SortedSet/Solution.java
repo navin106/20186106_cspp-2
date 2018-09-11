@@ -10,33 +10,34 @@ class SortedSet extends Set {
         return -1;
     }
     public int[] subSet(int fromElement, int toElement) {
+        int count = 0;
+        int[] subSet = new int[count];
         int index = 0;
         if (fromElement > toElement) {
             System.out.println("Invalid​ ​ Arguments​ ​ to​ Subset​ ​ Exception");
-            return null;
-        }
-        int[] empt = new int[size];
-        int count = 0;
-        for (int i = 0; i < size; i++) {
-            if (adtlist[i] >= fromElement && adtlist[i] < toElement) {
-                empt[count++] = adtlist[i];
+        } else {
+
+            int[] empt = new int[size];
+            for (int i = 0; i < size; i++) {
+                if (adtlist[i] >= fromElement && adtlist[i] < toElement) {
+                    empt[count++] = adtlist[i];
+                }
             }
-        }
-        int[] subSet = new int[count];
-        for (int i = 0; i < count; i++) {
-            subSet[i] = empt[i];
-        }
-        /*
-        if (indexOf(fromElement) != -1) {
-            index = indexOf(fromElement);
-        }
-        int[] subSet = new int[size];
-        int k = 0;
-        for (int i = index; i < size; i++) {
-            if (adtlist[i] < toElement) {
-                subSet[k++] = adtlist[i];
+            for (int i = 0; i < count; i++) {
+                subSet[i] = empt[i];
             }
-        }*/
+            /*
+            if (indexOf(fromElement) != -1) {
+                index = indexOf(fromElement);
+            }
+            int[] subSet = new int[size];
+            int k = 0;
+            for (int i = index; i < size; i++) {
+                if (adtlist[i] < toElement) {
+                    subSet[k++] = adtlist[i];
+                }
+            }*/
+        }
         return subSet;
     }
     public int[] headSet(int toElement) {
