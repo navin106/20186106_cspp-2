@@ -75,6 +75,9 @@ public class Set {
      */
     public void add(final int item) {
         int cnt = 0;
+        if (size > adtlist.length/2) {
+            resize();
+        }
         for (int i = 0; i < size; i++) {
             if (item == adtlist[i]) {
                 cnt++;
