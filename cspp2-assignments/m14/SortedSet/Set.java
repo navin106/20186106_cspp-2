@@ -91,7 +91,7 @@ public class Set {
      * @param      items  The items
      */
     public void add(final int[] items) {
-        if (size == adtlist.length) {
+        if (size == adtlist.length-1) {
             resize();
         }
         for (int i = 0; i < items.length; i++) {
