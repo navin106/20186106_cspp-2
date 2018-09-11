@@ -20,7 +20,7 @@ class SortedSet extends Set {
         return -1;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      fromElement  The from element
      * @param      toElement    To element
@@ -62,7 +62,7 @@ class SortedSet extends Set {
         return subSet;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      toElement  To element
      *
@@ -96,7 +96,7 @@ class SortedSet extends Set {
         return headSet;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -127,14 +127,14 @@ class SortedSet extends Set {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
     private Solution() {
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
