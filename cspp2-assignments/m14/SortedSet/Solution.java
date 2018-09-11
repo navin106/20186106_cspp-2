@@ -71,7 +71,7 @@ public class Solution {
 					String str = "{";
 					int[] k = b.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1]));
 					for (int i = 0; i < k.length - 1; i++) {
-						str += k[i] + ",";
+						str += k[i] + ", ";
 					}
 					str += k[k.length - 1] + "}";
 					System.out.println(str);
