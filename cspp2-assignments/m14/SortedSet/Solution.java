@@ -51,11 +51,11 @@ public class Solution {
 		Scanner sc = new Scanner(System.in);
 		SortedSet b = new SortedSet();
 		while (sc.hasNext()) {
-			String[] token = sc.next().split(" ");
+			String[] token = sc.nextLine().split(" ");
 			switch (token[0]) {
 			case "subSet":
 				String[] a = token[1].split(",");
-				if (a.length !=1) {
+				if (a.length > 1) {
 					System.out.println(b.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1])));
 				}
 				break;
@@ -66,6 +66,7 @@ public class Solution {
 				System.out.println(b.last());
 				break;
 			case "addAll":
+				System.out.println(token[1]);
 				if (token[1].length() >= 1) {
 					String[] d = token[1].split(",");
 					int[] c = new int[d.length];
