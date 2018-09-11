@@ -325,7 +325,8 @@ public class List {
                 }
                 break;
             case "size":
-                System.out.println(l.size());
+                int n = l.size();
+                System.out.println(n);
                 break;
             case "print":
                 System.out.println(l);
