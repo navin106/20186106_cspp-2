@@ -101,7 +101,7 @@ public class Solution {
                 break;
             case "headSet":
             String str = "{";
-                int[] k = b.headSet(Integer.parseInt(token[1]));
+                int[] k = b.headSet(Integer.parseInt(token[1].trim()));
                 for (int i = 0; i < k.length - 1; i++) {
                         str += k[i] + ", ";
                     }
