@@ -258,21 +258,20 @@ public class List {
     public List subList(final int start, final int end) {
         List k = new List();
         try {
-            // if (start < 0 || end <= 0 || start > end
-            //         || start > size || end > size) {
-            //     System.out.println("Index Out of Bounds Exception");
-            //     return null;
-            // } else {
+            if (start < 0 || end <= 0 || start > end
+                    || start > size || end > size) {
+                System.out.println("Index Out of Bounds Exception");
+            } else {
                 for (int i = start; i < end; i++) {
                     k.add(list[i]);
                 }
-            // }
+            }
+            return k;
         }
     catch(Exception e) {
         System.out.println("Index Out of Bounds Exception");
         return null;
     }
-    return k;
     }
     /**
     Returns a boolean indicating whether the parameter i.e a List object is.
