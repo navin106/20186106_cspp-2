@@ -56,7 +56,7 @@ class SortedSet extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public int[] headSet(final int toElement) throws Exception{
+    public int[] headSet(final int toElement) throws Exception {
         if (toElement == adtlist[0]) {
             System.out.println("{}");
             return null;
@@ -87,10 +87,9 @@ class SortedSet extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public int last() {
+    public int last() throws Exception {
         if (size == 0) {
-            System.out.println("Set Empty Exception");
-            return -1;
+            throw new Exception("Set Empty Exception");
         }
         return adtlist[size - 1];
     }
@@ -177,13 +176,18 @@ public final class Solution {
                             System.out.println(str);
                         }
                     }
-                }
-                catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
                 break;
             case "last":
+                try {
+
                     System.out.println(b.last());
+                }
+                catch(Exception e) {
+                    System.out.println(e.getMessage());
+                }
                 break;
             case "addAll":
                 if (token[1].length() >= 1) {
