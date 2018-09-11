@@ -66,7 +66,6 @@ public class Solution {
 				System.out.println(b.last());
 				break;
 			case "addAll":
-				System.out.println(token[1]);
 				if (token[1].length() >= 1) {
 					String[] d = token[1].split(",");
 					int[] c = new int[d.length];
