@@ -41,7 +41,7 @@ class SortedSet extends Set {
     }
     public int[] headSet(int toElement) {
         if (toElement == adtlist[0]) {
-            System.out.println("Invalid Arguments to Subset Exception");
+            System.out.println("Invalid​ Arguments​ to Subset​ Exception");
             return null;
         }
         if (toElement < 0) {
