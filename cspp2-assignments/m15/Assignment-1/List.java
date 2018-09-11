@@ -270,7 +270,7 @@ public class List {
             // }
         }
     catch(Exception e) {
-        System.out.println("Index Out of Bounds Exception");
+        System.out.println(e);
         return null;
     }
     }
