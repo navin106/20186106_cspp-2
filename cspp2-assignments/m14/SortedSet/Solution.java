@@ -44,12 +44,22 @@ class SortedSet extends Set {
 			System.out.println("Invalid​ ​ Arguments​ ​ to​ Subset​ ​ Exception");
 			return null;
 		}
-		int index = Arrays.asList(adtlist).indexOf(toElement);
-		int[] headSet =  new int[size - index];
+		int[] empt = new int[size];
+		int count = 0;
+		for (int i = 0; i < size; i++) {
+			if (adtlist[i] < toElement) {
+				empt[count++] = adtlist[i];
+			}
+		}
+		int[] headSet =  new int[count];
+		for (int i =0; i < count; i++) {
+			headSet[i] = empt[i];
+		}
+		/*int index = Arrays.asList(adtlist).indexOf(toElement);
 		int k = 0;
 		for (int i = 0; i < index; i++) {
 			headSet[k++] = adtlist[i];
-		}
+		}*/
 		return headSet;
 	}
 	public int last() {
