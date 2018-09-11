@@ -124,7 +124,7 @@ public class List {
      * @param      index  The index
      */
     public void remove(final int index) throws InvalidPositionException{
-        if (index < size) {
+        if (index < size && index > 0) {
             for (int i = index; i < size; i++) {
                 list[i] = list[i + 1];
             }
