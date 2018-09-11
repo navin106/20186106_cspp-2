@@ -54,8 +54,10 @@ public class Solution {
 			String[] token = sc.next().split(" ");
 			switch (token[0]) {
 			case "subSet":
-				String[] a = token[1].split(",");
-				System.out.println(b.subSet( Integer.parseInt(a[0]), Integer.parseInt(a[1])));
+				if (token[1].length() >= 1) {
+					String[] a = token[1].split(",");
+					System.out.println(b.subSet( Integer.parseInt(a[0]), Integer.parseInt(a[1])));
+				}
 				break;
 			case "headSet":
 				System.out.println(b.headSet(Integer.parseInt(token[1])));
@@ -64,15 +66,15 @@ public class Solution {
 				System.out.println(b.last());
 				break;
 			case "addAll":
-			if (token[1].length() >= 1) {
-				String[] d = token[1].split(",");
-				int[] c = new int[d.length];
-				int i = 0;
-				for (String e : d) {
-					c[i++] = Integer.parseInt(e.trim());
+				if (token[1].length() >= 1) {
+					String[] d = token[1].split(",");
+					int[] c = new int[d.length];
+					int i = 0;
+					for (String e : d) {
+						c[i++] = Integer.parseInt(e.trim());
+					}
+					b.addAll(c);
 				}
-				b.addAll(c);
-			}
 				break;
 			case "print":
 				System.out.println(b);
