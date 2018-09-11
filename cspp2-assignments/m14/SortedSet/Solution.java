@@ -16,7 +16,7 @@ class SortedSet extends Set {
             return null;
         }
         if (toElement < 0) {
-            int[] a = new int[0]; 
+            int[] a = new int[0];
             return a;
         }
         int[] empt = new int[size];
@@ -49,7 +49,7 @@ class SortedSet extends Set {
             return null;
         }
         if (toElement < 0) {
-            int[] a = new int[0]; 
+            int[] a = new int[0];
             return a;
         }
         int[] empt = new int[size];
@@ -153,9 +153,6 @@ public class Solution {
             default:
                 break;
             }
-
-
         }
-
     }
 }
