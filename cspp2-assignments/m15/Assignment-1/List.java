@@ -312,6 +312,7 @@ public class List {
         while (stdin.hasNext()) {
             // read the line
             String line = stdin.nextLine();
+            stdin.next();
             // split the line using space
             String[] tokens = line.split(" ");
             // based on the list operation invoke the corresponding method
