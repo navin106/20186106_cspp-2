@@ -123,7 +123,7 @@ public class List {
         }
         catch(Exception e) {
             // System.out.println(e);
-            System.out.println("​ Invalid Position Exception");
+            System.out.println("​Invalid Position Exception");
         }
     }
 
