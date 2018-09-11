@@ -101,6 +101,7 @@ public class Solution {
                 if (b.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1])) != null) {
                     if (b.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1])).length == 0) {
                         System.out.println("{}");
+                        break;
                     }
                     if (a.length == 2) {
                         String str = "{";
