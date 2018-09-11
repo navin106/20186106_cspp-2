@@ -1,6 +1,15 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+
+/**
+ * Exception for signaling invalid position errors.
+ */
+class InvalidPositionException extends Exception{
+    public String toString(){
+        return "Invalid Position Exception";
+    }
+}
 /**
  * List of .
  */
@@ -114,16 +123,14 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(final int index) {
-        try {
+    public void remove(final int index) throws InvalidPositionException{
+        if (index < size) {
             for (int i = index; i < size; i++) {
                 list[i] = list[i + 1];
             }
             size--;
-        }
-        catch(Exception e) {
-            // System.out.println(e);
-            System.out.println("​Invalid Position Exception");
+        } else {
+            throw new InvalidPositionException();
         }
     }
 
@@ -233,16 +240,16 @@ public class List {
 
      @param      newArray  The new array
     */
-    public void removeAll(final int[] newArray) {
-        for (int i = 0; i < newArray.length; i++) {
-            for (int j = 0; j < size; j++) {
-                if (newArray[i] == list[j]) {
-                    remove(j);
-                    j--;
-                }
-            }
-        }
-    }
+    // public void removeAll(final int[] newArray) {
+    //     for (int i = 0; i < newArray.length; i++) {
+    //         for (int j = 0; j < size; j++) {
+    //             if (newArray[i] == list[j]) {
+    //                 remove(j);
+    //                 j--;
+    //             }
+    //         }
+    //     }
+    // }
     /**
     Returns a list object containing elements, including startIndex and.
     excluding endIndex. The first parameter indicates the startIndex and the
@@ -332,8 +339,13 @@ public class List {
                 System.out.println(l);
                 break;
             case "remove":
-                if (tokens.length == 2) {
-                    l.remove(Integer.parseInt(tokens[1]));
+                try {
+                    if (tokens.length == 2) {
+                        l.remove(Integer.parseInt(tokens[1]));
+                    }
+                }
+                catch(InvalidPositionException e) {
+                    System.out.println("Invalid Position Exception");
                 }
                 break;
             case "indexOf":
@@ -364,16 +376,16 @@ public class List {
                     l.addAll(temp);
                 }
                 break;
-            case "removeAll":
-                if (tokens.length == 2) {
-                    String[] t2 = tokens[1].split(",");
-                    int[] a = new int[t2.length];
-                    for (int i = 0; i < t2.length; i++) {
-                        a[i] = Integer.parseInt(t2[i]);
-                    }
-                    l.removeAll(a);
-                }
-                break;
+            // case "removeAll":
+            //     if (tokens.length == 2) {
+            //         String[] t2 = tokens[1].split(",");
+            //         int[] a = new int[t2.length];
+            //         for (int i = 0; i < t2.length; i++) {
+            //             a[i] = Integer.parseInt(t2[i]);
+            //         }
+            //         l.removeAll(a);
+            //     }
+            //     break;
             case "subList":
             try {
                 if (tokens.length != 2) {
