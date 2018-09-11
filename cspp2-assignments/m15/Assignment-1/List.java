@@ -228,9 +228,9 @@ public class List {
     }
     /**
      Removes all of its elements that are contained in the specified int array.
-    
+
      @param      newArray   The new array
-    
+
      @throws     Exception  { exception_description }
     */
     public void removeAll(final int[] newArray) throws Exception {
@@ -249,12 +249,12 @@ public class List {
     second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
-    
+
     @param      start      The start.
     @param      end        The end.
-    
+
     @return     { description_of_the_return_value }
-    
+
     @throws     Exception  { exception_description }
     */
     public List subList(final int start, final int end) throws Exception {
