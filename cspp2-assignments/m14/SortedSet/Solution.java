@@ -7,7 +7,7 @@ class SortedSet extends Set {
 			return null;
 		}
 		int index = Arrays.asList(adtlist).indexOf(fromElement);
-		int[] subSet = new int[size - index];
+		int[] subSet = new int[size];
 		int k = 0;
 		for (int i = index; i < size; i++) {
 			if (adtlist[i] < toElement) {
