@@ -164,13 +164,17 @@ public class List {
         // if (size == 0) {
         //     return "[]";
         // }
-
-        String str = "[";
-        for (int i = 0; i < size - 1; i++) {
-            str += list[i] + ",";
+        try  {
+            String str = "[";
+            for (int i = 0; i < size - 1; i++) {
+                str += list[i] + ",";
+            }
+            str += list[size - 1] + "]";
+            return str;
         }
-        str += list[size - 1] + "]";
-        return str;
+        catch(Exception e) {
+            return "Index Out of Bounds Exception";
+        }
     }
     /**
      * Contains return true if the list has the item passed as an argument to.
