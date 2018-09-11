@@ -109,6 +109,10 @@ public class Solution {
             case "headSet":
                 int m = Integer.parseInt(token[1]);
                 if (b.headSet(m) != null) {
+                    if (b.headSet(m).length == 0) {
+                        System.out.println("{}");
+                        break;
+                    }
                     int[] k = b.headSet(m);
                     if (token[1].length() > 0) {
                         String str = "{";
