@@ -103,15 +103,17 @@ public class Solution {
                 }
                 break;
             case "headSet":
-                if (token[1].length() > 0) {
-                    int m = Integer.parseInt(token[1]);
-                    int[] k = b.headSet(m);
-                    String str = "{";
-                    for (int i = 0; i < k.length - 1; i++) {
-                        str += k[i] + ", ";
+                int m = Integer.parseInt(token[1]);
+                int[] k = b.headSet(m);
+                if (b.headSet(m) != null) {
+                    if (token[1].length() > 0) {
+                        String str = "{";
+                        for (int i = 0; i < k.length - 1; i++) {
+                            str += k[i] + ", ";
+                        }
+                        str += k[k.length - 1] + "}";
+                        System.out.println(str);
                     }
-                    str += k[k.length - 1] + "}";
-                    System.out.println(str);
                 }
                 break;
             case "last":
