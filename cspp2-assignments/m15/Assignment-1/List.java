@@ -114,7 +114,8 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(final int index) {
+    public void remove(final int index) throws Exception {
+        /*
         try {
             for (int i = index; i < size; i++) {
                 list[i] = list[i + 1];
@@ -123,7 +124,16 @@ public class List {
         } catch (Exception e) {
             // System.out.println(e);
             System.out.println("​Invalid Position Exception");
+        }*/
+
+        if (index >= size || index <= -1) {
+            throw new Exception("Invalid Position Exception");
         }
+        for (int i = index; i < size; i++) {
+                list[i] = list[i + 1];
+            }
+            size--;
+
     }
 
 
@@ -232,7 +242,7 @@ public class List {
 
      @param      newArray  The new array
     */
-    public void removeAll(final int[] newArray) {
+    public void removeAll(final int[] newArray) throws Exception {
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < size; j++) {
                 if (newArray[i] == list[j]) {
@@ -345,7 +355,11 @@ public class List {
                     break;
                 case "remove":
                     if (tokens.length == 2) {
-                        l.remove(Integer.parseInt(tokens[1]));
+                        try{
+                                l.remove(Integer.parseInt(tokens[1]));         
+                        } catch (Exception e) {
+                            System.out.println(e);
+                        }
                     }
                     break;
                 case "indexOf":
@@ -383,7 +397,12 @@ public class List {
                         for (int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
                         }
-                        l.removeAll(a);
+                        try {
+                            l.removeAll(a);    
+                        } catch(Exception e) {
+                            System.out.println(e);
+                        }
+                        
                     }
                     break;
                 case "subList":
