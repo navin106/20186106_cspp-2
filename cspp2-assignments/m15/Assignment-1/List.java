@@ -294,15 +294,22 @@ public class List {
         // list = new int[num];
         size = 0;
     }
+    /**
+     * { count }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int count(final int item) {
         if (this.list.length > 0) {
-            int count = 0;
+            int count1 = 0;
             for (int i = 0; i < size(); i++) {
                 if (item == this.list[i]) {
-                    count += 1;
+                    count1 += 1;
                 }
             }
-            return count;
+            return count1;
         } else {
             return 0;
         }
