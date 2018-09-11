@@ -47,17 +47,6 @@ class SortedSet extends Set {
         for (int i = 0; i < count; i++) {
             subSet[i] = empt[i];
         }
-        /*
-        if (indexOf(fromElement) != -1) {
-            index = indexOf(fromElement);
-        }
-        int[] subSet = new int[size];
-        int k = 0;
-        for (int i = index; i < size; i++) {
-            if (adtlist[i] < toElement) {
-                subSet[k++] = adtlist[i];
-            }
-        }*/
         return subSet;
     }
     /**
@@ -68,10 +57,10 @@ class SortedSet extends Set {
      * @return     { description_of_the_return_value }
      */
     public int[] headSet(final int toElement) {
-        if (toElement == adtlist[0]) {
-            System.out.println("{}");
-            return null;
-        }
+        // if (toElement == adtlist[0]) {
+        //     System.out.println("{}");
+        //     return null;
+        // }
         if (toElement < 0) {
             int[] a = new int[0];
             return a;
