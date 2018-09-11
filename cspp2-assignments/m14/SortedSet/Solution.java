@@ -54,9 +54,9 @@ public class Solution {
 			String[] token = sc.next().split(" ");
 			switch (token[0]) {
 			case "subSet":
-				if (token[1].length() == 2) {
-					String[] a = token[1].split(",");
-					System.out.println(b.subSet( Integer.parseInt(a[0]), Integer.parseInt(a[1])));
+				String[] a = token[1].split(",");
+				if (a.length !=1) {
+					System.out.println(b.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1])));
 				}
 				break;
 			case "headSet":
