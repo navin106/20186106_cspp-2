@@ -40,10 +40,13 @@ class SortedSet extends Set {
         return subSet;
     }
     public int[] headSet(int toElement) {
-        if (toElement == adtlist[0] || toElement < 0) {
+        if (toElement == adtlist[0]) {
             System.out.println("Invalid​ ​ Arguments​ ​ to​ Subset​ ​ Exception");
             return null;
         }
+        // if (toElement < 0) {
+        //     return adtlist[0]{};
+        // }
         int[] empt = new int[size];
         int count = 0;
         for (int i = 0; i < size; i++) {
