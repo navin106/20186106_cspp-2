@@ -1,15 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
-/**
- * Exception for signaling invalid position errors.
- */
-class InvalidPositionException extends Exception{
-    public String toString(){
-        return "Invalid Position Exception";
-    }
-}
 /**
  * List of .
  */
@@ -123,14 +114,16 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(final int index) throws InvalidPositionException{
-        if (index < size && index > 0) {
+    public void remove(final int index) {
+        try {
             for (int i = index; i < size; i++) {
                 list[i] = list[i + 1];
             }
             size--;
-        } else {
-            throw new InvalidPositionException();
+        }
+        catch(Exception e) {
+            // System.out.println(e);
+            System.out.println("​ Invalid Position Exception");
         }
     }
 
@@ -240,7 +233,7 @@ public class List {
 
      @param      newArray  The new array
     */
-    public void removeAll(final int[] newArray) throws InvalidPositionException {
+    public void removeAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < size; j++) {
                 if (newArray[i] == list[j]) {
@@ -262,18 +255,24 @@ public class List {
 
     @return     { description_of_the_return_value }
     */
-    public List subList(final int start, final int end) throws ArrayIndexOutOfBoundsException{
-        List k = new List();
-
+    public List subList(final int start, final int end) {
+        try {
+            List k = new List();
             if (start < 0 || end <= 0 || start > end
                     || start > size || end > size) {
-                throw new ArrayIndexOutOfBoundsException("Index Out of Bounds Exception");
+                System.out.println("Index Out of Bounds Exception");
+                return null;
             } else {
                 for (int i = start; i < end; i++) {
                     k.add(list[i]);
                 }
-                return k;
             }
+            return k;
+        }
+    catch(Exception e) {
+        System.out.println("Index Out of Bounds Exception");
+        return null;
+    }
     }
     /**
     Returns a boolean indicating whether the parameter i.e a List object is.
@@ -339,13 +338,8 @@ public class List {
                 System.out.println(l);
                 break;
             case "remove":
-                try {
-                    if (tokens.length == 2) {
-                        l.remove(Integer.parseInt(tokens[1]));
-                    }
-                }
-                catch(InvalidPositionException e) {
-                    System.out.println("Invalid Position Exception");
+                if (tokens.length == 2) {
+                    l.remove(Integer.parseInt(tokens[1]));
                 }
                 break;
             case "indexOf":
@@ -377,7 +371,6 @@ public class List {
                 }
                 break;
             case "removeAll":
-            try {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     int[] a = new int[t2.length];
@@ -386,13 +379,8 @@ public class List {
                     }
                     l.removeAll(a);
                 }
-            }
-            catch(InvalidPositionException e) {
-                System.out.println("Invalid Position Exception");
                 break;
-            }
             case "subList":
-            try {
                 if (tokens.length != 2) {
                     break;
                 }
@@ -402,11 +390,8 @@ public class List {
                 if (object != null) {
                     System.out.println(object);
                 }
-            }
-            catch(Exception e) {
-                System.out.println("Index Out of Bounds Exception");
-            }
                 break;
+
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
