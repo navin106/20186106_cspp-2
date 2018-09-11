@@ -56,14 +56,13 @@ class SortedSet extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public int[] headSet(final int toElement) {
+    public int[] headSet(final int toElement) throws Exception{
         if (toElement == adtlist[0]) {
             System.out.println("{}");
             return null;
         }
         if (toElement < 0) {
-            int[] a = new int[0];
-            return a;
+            throw new Exception("Set Empty Exception");
         }
         int[] empt = new int[size];
         int count = 0;
@@ -161,20 +160,25 @@ public final class Solution {
 
             case "headSet":
                 int m = Integer.parseInt(token[1]);
-                if (b.headSet(m) != null) {
-                    if (b.headSet(m).length == 0) {
-                        System.out.println("{}");
-                        break;
-                    }
-                    int[] k = b.headSet(m);
-                    if (token[1].length() > 0) {
-                        String str = "{";
-                        for (int i = 0; i < k.length - 1; i++) {
-                            str += k[i] + ", ";
+                try {
+                    if (b.headSet(m) != null) {
+                        if (b.headSet(m).length == 0) {
+                            System.out.println("{}");
+                            break;
                         }
-                        str += k[k.length - 1] + "}";
-                        System.out.println(str);
+                        int[] k = b.headSet(m);
+                        if (token[1].length() > 0) {
+                            String str = "{";
+                            for (int i = 0; i < k.length - 1; i++) {
+                                str += k[i] + ", ";
+                            }
+                            str += k[k.length - 1] + "}";
+                            System.out.println(str);
+                        }
                     }
+                }
+                catch(Exception e) {
+                    System.out.println(e.getMessage());
                 }
                 break;
             case "last":
