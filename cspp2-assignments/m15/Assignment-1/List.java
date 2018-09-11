@@ -358,7 +358,7 @@ public class List {
                         try{
                                 l.remove(Integer.parseInt(tokens[1]));         
                         } catch (Exception e) {
-                            System.out.println(e);
+                            System.out.println(e.getMessage());
                         }
                     }
                     break;
@@ -400,7 +400,7 @@ public class List {
                         try {
                             l.removeAll(a);    
                         } catch(Exception e) {
-                            System.out.println(e);
+                            System.out.println(e.getMessage());
                         }
                         
                     }
