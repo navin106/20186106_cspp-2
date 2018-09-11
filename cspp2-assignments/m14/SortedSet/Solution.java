@@ -10,34 +10,33 @@ class SortedSet extends Set {
         return -1;
     }
     public int[] subSet(int fromElement, int toElement) {
-        int count = 0;
-        int[] subSet = new int[count];
         int index = 0;
         if (fromElement > toElement) {
             System.out.println("Invalid​ ​ Arguments​ ​ to​ Subset​ ​ Exception");
-        } else {
-
-            int[] empt = new int[size];
-            for (int i = 0; i < size; i++) {
-                if (adtlist[i] >= fromElement && adtlist[i] < toElement) {
-                    empt[count++] = adtlist[i];
-                }
-            }
-            for (int i = 0; i < count; i++) {
-                subSet[i] = empt[i];
-            }
-            /*
-            if (indexOf(fromElement) != -1) {
-                index = indexOf(fromElement);
-            }
-            int[] subSet = new int[size];
-            int k = 0;
-            for (int i = index; i < size; i++) {
-                if (adtlist[i] < toElement) {
-                    subSet[k++] = adtlist[i];
-                }
-            }*/
+            return null;
         }
+        int[] empt = new int[size];
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            if (adtlist[i] >= fromElement && adtlist[i] < toElement) {
+                empt[count++] = adtlist[i];
+            }
+        }
+        int[] subSet = new int[count];
+        for (int i = 0; i < count; i++) {
+            subSet[i] = empt[i];
+        }
+        /*
+        if (indexOf(fromElement) != -1) {
+            index = indexOf(fromElement);
+        }
+        int[] subSet = new int[size];
+        int k = 0;
+        for (int i = index; i < size; i++) {
+            if (adtlist[i] < toElement) {
+                subSet[k++] = adtlist[i];
+            }
+        }*/
         return subSet;
     }
     public int[] headSet(int toElement) {
@@ -90,14 +89,17 @@ public class Solution {
             switch (token[0]) {
             case "subSet":
                 String[] a = token[1].split(",");
-                if (a.length == 2) {
-                    String str = "{";
-                    int[] k = b.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1]));
-                    for (int i = 0; i < k.length - 1; i++) {
-                        str += k[i] + ", ";
+                if (b.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1])) != null) {
+                    if (a.length == 2) {
+                        String str = "{";
+                        int[] k = b.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1]));
+                        for (int i = 0; i < k.length - 1; i++) {
+                            str += k[i] + ", ";
+                        }
+                        str += k[k.length - 1] + "}";
+                        System.out.println(str);
                     }
-                    str += k[k.length - 1] + "}";
-                    System.out.println(str);
+
                 }
                 break;
             case "headSet":
