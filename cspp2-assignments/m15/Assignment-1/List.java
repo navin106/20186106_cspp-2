@@ -240,16 +240,16 @@ public class List {
 
      @param      newArray  The new array
     */
-    // public void removeAll(final int[] newArray) {
-    //     for (int i = 0; i < newArray.length; i++) {
-    //         for (int j = 0; j < size; j++) {
-    //             if (newArray[i] == list[j]) {
-    //                 remove(j);
-    //                 j--;
-    //             }
-    //         }
-    //     }
-    // }
+    public void removeAll(final int[] newArray) throws InvalidPositionException {
+        for (int i = 0; i < newArray.length; i++) {
+            for (int j = 0; j < size; j++) {
+                if (newArray[i] == list[j]) {
+                    remove(j);
+                    j--;
+                }
+            }
+        }
+    }
     /**
     Returns a list object containing elements, including startIndex and.
     excluding endIndex. The first parameter indicates the startIndex and the
@@ -376,16 +376,21 @@ public class List {
                     l.addAll(temp);
                 }
                 break;
-            // case "removeAll":
-            //     if (tokens.length == 2) {
-            //         String[] t2 = tokens[1].split(",");
-            //         int[] a = new int[t2.length];
-            //         for (int i = 0; i < t2.length; i++) {
-            //             a[i] = Integer.parseInt(t2[i]);
-            //         }
-            //         l.removeAll(a);
-            //     }
-            //     break;
+            case "removeAll":
+            try {
+                if (tokens.length == 2) {
+                    String[] t2 = tokens[1].split(",");
+                    int[] a = new int[t2.length];
+                    for (int i = 0; i < t2.length; i++) {
+                        a[i] = Integer.parseInt(t2[i]);
+                    }
+                    l.removeAll(a);
+                }
+            }
+            catch(InvalidPositionException e) {
+                System.out.println("Invalid Position Exception");
+                break;
+            }
             case "subList":
             try {
                 if (tokens.length != 2) {
