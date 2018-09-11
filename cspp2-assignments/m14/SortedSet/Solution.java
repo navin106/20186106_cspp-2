@@ -1,12 +1,23 @@
 import java.util.Scanner;
 import java.util.Arrays;
 class SortedSet extends Set {
+	public int indexOf(int item) {
+		for (int i = 0; i < size; i++) {
+			if (item == adtlist[i]) {
+				return i;
+			}
+		}
+		return -1;
+	}
 	public int[] subSet(int fromElement, int toElement) {
+		int index = 0;
 		if (fromElement > toElement) {
 			System.out.println("Invalid​ ​ Arguments​ ​ to​ Subset​ ​ Exception");
 			return null;
 		}
-		int index = Arrays.asList(adtlist).indexOf(fromElement);
+		if (indexOf(fromElement) != -1) {
+			index = indexOf(fromElement);
+		}
 		int[] subSet = new int[size];
 		int k = 0;
 		for (int i = index; i < size; i++) {
