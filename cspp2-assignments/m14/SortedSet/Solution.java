@@ -43,7 +43,8 @@ class SortedSet extends Set {
 				add(a);
 			}
 		}
-		return;
+		adtlist = Arrays.copyOf(adtlist, size);
+		Arrays.sort(adtlist);
 	}
 }
 public class Solution {
