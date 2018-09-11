@@ -112,7 +112,9 @@ public class List {
      * removed item, to the left So, the new array looks like this. array =
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
      *
-     * @param      index  The index
+     * @param      index      The index
+     *
+     * @throws     Exception  { exception_description }
      */
     public void remove(final int index) throws Exception {
         if (index >= size || index <= -1) {
@@ -215,8 +217,6 @@ public class List {
     }
     /**
      * { function_description }.
-     *
-     * @return     { description_of_the_return_value }
      */
     public void resize() {
         // int[] list2 = new int[size * 2];
@@ -228,8 +228,10 @@ public class List {
     }
     /**
      Removes all of its elements that are contained in the specified int array.
-
-     @param      newArray  The new array
+    
+     @param      newArray   The new array
+    
+     @throws     Exception  { exception_description }
     */
     public void removeAll(final int[] newArray) throws Exception {
         for (int i = 0; i < newArray.length; i++) {
@@ -247,11 +249,13 @@ public class List {
     second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
-
-    @param      start  The start
-    @param      end    The end
-
+    
+    @param      start      The start.
+    @param      end        The end.
+    
     @return     { description_of_the_return_value }
+    
+    @throws     Exception  { exception_description }
     */
     public List subList(final int start, final int end) throws Exception {
         List k = new List();
