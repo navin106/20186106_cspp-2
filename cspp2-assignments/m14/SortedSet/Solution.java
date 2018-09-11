@@ -18,7 +18,7 @@ class SortedSet extends Set {
         int[] empt = new int[size];
         int count = 0;
         for (int i = 0; i < size; i++) {
-            if (adtlist[i]>= fromElement && adtlist[i] < toElement) {
+            if (adtlist[i] >= fromElement && adtlist[i] < toElement) {
                 empt[count++] = adtlist[i];
             }
         }
@@ -52,7 +52,7 @@ class SortedSet extends Set {
             }
         }
         int[] headSet =  new int[count];
-        for (int i =0; i < count; i++) {
+        for (int i = 0; i < count; i++) {
             headSet[i] = empt[i];
         }
         /*int index = Arrays.asList(adtlist).indexOf(toElement);
@@ -100,13 +100,16 @@ public class Solution {
                 }
                 break;
             case "headSet":
-            String str = "{";
-                int[] k = b.headSet(Integer.parseInt(token[1].trim()));
-                for (int i = 0; i < k.length - 1; i++) {
+                if (token[1].length() > 0) {
+                    int m = Integer.parseInt(token[1]);
+                    int[] k = b.headSet(m);
+                    String str = "{";
+                    for (int i = 0; i < k.length - 1; i++) {
                         str += k[i] + ", ";
                     }
                     str += k[k.length - 1] + "}";
                     System.out.println(str);
+                }
                 break;
             case "last":
                 System.out.println(b.last());
