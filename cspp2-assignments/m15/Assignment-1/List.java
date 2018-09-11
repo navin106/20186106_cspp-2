@@ -255,13 +255,11 @@ public class List {
 
     @return     { description_of_the_return_value }
     */
-    public List subList(final int start, final int end) {
-        try {
+    public List subList(final int start, final int end) throws Exception {
             List k = new List();
             if (start < 0 || end <= 0 || start > end
                     || start > size || end > size) {
-                System.out.println("Index Out of Bounds Exception");
-                return null;
+                throw new Exception("Index Out of Bounds Exception");
             } else {
                 for (int i = start; i < end; i++) {
                     k.add(list[i]);
@@ -269,11 +267,6 @@ public class List {
             }
             return k;
         }
-    catch(Exception e) {
-        System.out.println("Index Out of Bounds Exception");
-        return null;
-    }
-    }
     /**
     Returns a boolean indicating whether the parameter i.e a List object is.
     exactly matching with the given list or not.
@@ -381,6 +374,7 @@ public class List {
                 }
                 break;
             case "subList":
+            try{
                 if (tokens.length != 2) {
                     break;
                 }
@@ -390,7 +384,11 @@ public class List {
                 if (object != null) {
                     System.out.println(object);
                 }
-                break;
+            }
+            catch(Exception e){
+                System.out.println("Index Out of Bounds Exception");
+            }
+            break;
 
             case "equals":
                 if (tokens.length == 2) {
