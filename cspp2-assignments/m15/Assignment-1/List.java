@@ -266,14 +266,12 @@ public class List {
                 for (int i = start; i < end; i++) {
                     k.add(list[i]);
                 }
+                return k;
             // }
         }
     catch(Exception e) {
         System.out.println("Index Out of Bounds Exception");
-    }
-    finally {
-
-        return k;
+        return null;
     }
     }
     /**
