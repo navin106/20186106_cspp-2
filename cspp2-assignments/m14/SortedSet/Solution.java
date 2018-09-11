@@ -15,6 +15,10 @@ class SortedSet extends Set {
             System.out.println("Invalid Arguments to Subset Exception");
             return null;
         }
+        if (toElement < 0) {
+            int[] a = new int[0]; 
+            return a;
+        }
         int[] empt = new int[size];
         int count = 0;
         for (int i = 0; i < size; i++) {
@@ -95,6 +99,9 @@ public class Solution {
             case "subSet":
                 String[] a = token[1].split(",");
                 if (b.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1])) != null) {
+                    if (b.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1])).length == 0) {
+                        System.out.println("{}");
+                    }
                     if (a.length == 2) {
                         String str = "{";
                         int[] k = b.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1]));
