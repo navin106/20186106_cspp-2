@@ -255,24 +255,18 @@ public class List {
 
     @return     { description_of_the_return_value }
     */
-    public List subList(final int start, final int end) {
+    public List subList(final int start, final int end) throws ArrayIndexOutOfBoundsException{
         List k = new List();
-        try {
-            // if (start < 0 || end <= 0 || start > end
-            //         || start > size || end > size) {
-            //     System.out.println("Index Out of Bounds Exception");
-            //     return null;
-            // } else {
+
+            if (start < 0 || end <= 0 || start > end
+                    || start > size || end > size) {
+                throw new ArrayIndexOutOfBoundsException("Index Out of Bounds Exception");
+            } else {
                 for (int i = start; i < end; i++) {
                     k.add(list[i]);
                 }
                 return k;
-            // }
-        }
-    catch(ArrayIndexOutOfBoundsException e) {
-        System.out.println("Index Out of Bounds Exception");
-        return null;
-    }
+            }
     }
     /**
     Returns a boolean indicating whether the parameter i.e a List object is.
@@ -381,6 +375,7 @@ public class List {
                 }
                 break;
             case "subList":
+            try {
                 if (tokens.length != 2) {
                     break;
                 }
@@ -390,8 +385,11 @@ public class List {
                 if (object != null) {
                     System.out.println(object);
                 }
+            }
+            catch(Exception e) {
+                System.out.println("Index Out of Bounds Exception");
+            }
                 break;
-
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
