@@ -64,6 +64,7 @@ public class Solution {
 				System.out.println(b.last());
 				break;
 			case "addAll":
+			if (token[1].length() >= 1) {
 				String[] d = token[1].split(",");
 				int[] c = new int[d.length];
 				int i = 0;
@@ -71,6 +72,7 @@ public class Solution {
 					c[i++] = Integer.parseInt(e.trim());
 				}
 				b.addAll(c);
+			}
 				break;
 			case "print":
 				System.out.println(b);
