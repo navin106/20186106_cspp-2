@@ -11,6 +11,7 @@ class SortedSet extends Set {
 	}
 	public int[] subSet(int fromElement, int toElement) {
 		int index = 0;
+		int index1 = 0;
 		if (fromElement > toElement) {
 			System.out.println("Invalid​ ​ Arguments​ ​ to​ Subset​ ​ Exception");
 			return null;
@@ -18,9 +19,12 @@ class SortedSet extends Set {
 		if (indexOf(fromElement) != -1) {
 			index = indexOf(fromElement);
 		}
-		int[] subSet = new int[size];
+		if (indexOf(toElement) != -1) {
+			index1 = indexOf(toElement);
+		}
+		int[] subSet = new int[index1 - index];
 		int k = 0;
-		for (int i = index; i < size; i++) {
+		for (int i = index; i < index1 - index; i++) {
 			if (adtlist[i] < toElement) {
 				subSet[k++] = adtlist[i];
 			}
