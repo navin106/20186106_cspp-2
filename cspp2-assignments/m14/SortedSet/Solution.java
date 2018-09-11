@@ -104,8 +104,8 @@ public class Solution {
                 break;
             case "headSet":
                 int m = Integer.parseInt(token[1]);
-                int[] k = b.headSet(m);
                 if (b.headSet(m) != null) {
+                    int[] k = b.headSet(m);
                     if (token[1].length() > 0) {
                         String str = "{";
                         for (int i = 0; i < k.length - 1; i++) {
