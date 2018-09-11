@@ -269,8 +269,8 @@ public class List {
                 return k;
             // }
         }
-    catch(Exception e) {
-        System.out.println(e);
+    catch(ArrayIndexOutOfBoundsException e) {
+        System.out.println("Index Out of Bounds Exception");
         return null;
     }
     }
