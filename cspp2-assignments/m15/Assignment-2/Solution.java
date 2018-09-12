@@ -225,7 +225,7 @@ public final class Solution {
                     System.out.println(str);
 
                 } catch (Exception e) {
-                    System.out.println(e.getMessage());
+                    System.out.println("{}");
                 }
                 break;
             case "retainAll":

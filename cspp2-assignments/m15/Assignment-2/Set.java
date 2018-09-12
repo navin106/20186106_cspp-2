@@ -132,7 +132,7 @@ public class Set {
             return intersection;
         }
         else {
-            throw new Exception("{}");
+            throw new Exception();
         }
     }
     /**
