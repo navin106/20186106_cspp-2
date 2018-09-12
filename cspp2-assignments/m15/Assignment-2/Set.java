@@ -120,7 +120,7 @@ public class Set {
     public Set intersection(final Set newSet) throws Exception {
         Set intersection = new Set();
         int[] temp = newSet.adtlist;
-        if (newSet.size > 0 || this.size > 0) {
+        if (newSet.size > 0 && this.size > 0) {
             for (int i = 0; i < size; i++) {
                 for (int j = 0; j < temp.length; j++) {
                     if (adtlist[i] == temp[j]) {
