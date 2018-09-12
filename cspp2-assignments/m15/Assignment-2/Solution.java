@@ -211,7 +211,13 @@ public final class Solution {
                 s.addAll(intArray);
                 intArray = intArray(token[2].split(","));
                 t.addAll(intArray);
-                System.out.println(s.intersection(t));
+                int[] z = (s.intersection(t)).adtlist;
+                          String str = "{";
+                for (int i = 0; i < z.length - 1; i++) {
+                    str += z[i] + ", ";
+                }
+                str += z[z.length - 1] + "}";
+                System.out.println(str);
                 break;
             case "retainAll":
                 s = new SortedSet();
