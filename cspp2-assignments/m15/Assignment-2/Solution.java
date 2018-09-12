@@ -215,11 +215,12 @@ public final class Solution {
                     intArray = intArray(((token[2].replace("[", "")).replace("]", "")).split(","));
                     t.addAll(intArray);
                     int[] z = (s.intersection(t)).adtlist;
+                    int ksize = (s.intersection(t)).size;
                     String str = "{";
-                    for (int i = 0; i < z.length - 1; i++) {
+                    for (int i = 0; i < ksize-1; i++) {
                         str += z[i] + ", ";
                     }
-                    str += z[z.length - 1] + "}";
+                    str += z[ksize - 1] + "}";
                     System.out.println(str);
 
                 } catch (Exception e) {
