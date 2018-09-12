@@ -241,8 +241,18 @@ public final class Solution {
                 System.out.println(b);
                 break;
             case "intersection":
+                if (token[1].length() > 0 && token[2].length() > 0) {
+                    int[] x = k.intArray(token[1].split(","));
+                    int[] y = k.intArray(token[2].split(","));
+                    int[] z = b.intersection(x, y);
+                    String str = "{";
+                    for (int i = 0; i < z.length - 1; i++) {
+                        str += z[i] + ", ";
+                    }
+                    str += z[z.length - 1] + "}";
+                    System.out.println(str);
 
-
+                }
                 break;
             case "retainAll":
 
