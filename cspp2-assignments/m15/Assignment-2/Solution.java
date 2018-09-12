@@ -153,11 +153,11 @@ public final class Solution {
     private Solution() {
     }
     public int[] intArray(String[] a) {
-        String[] d = a[1].split(",");
-        int[] c = new int[d.length];
+        // String[] d = a[1].split(",");
+        int[] c = new int[a.length];
+        int i = 0;
         if (a[1].length() >= 1) {
-            int i = 0;
-            for (String e : d) {
+            for (String e : a) {
                 c[i++] = Integer.parseInt(e.trim());
             }
         }
@@ -189,7 +189,7 @@ public final class Solution {
                         if (a.length == 2) {
                             String str = "{";
                             int[] k1 = b.subSet(Integer.parseInt(a[0]),
-                                               Integer.parseInt(a[1]));
+                                                Integer.parseInt(a[1]));
                             for (int i = 0; i < k1.length - 1; i++) {
                                 str += k1[i] + ", ";
                             }
