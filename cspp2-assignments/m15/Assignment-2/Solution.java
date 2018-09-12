@@ -105,43 +105,6 @@ class SortedSet extends Set {
         adtlist = Arrays.copyOf(adtlist, size);
         Arrays.sort(adtlist);
     }
-    /**
-     * { function_description }.
-     *
-     * @param      newSet  The new set
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public int[] intersection(final int[] set1, final int[] set2) {
-        int[] intersection = new int[set2.length];
-        int k = 0;
-        for (int i = 0; i < set1.length; i++) {
-            for (int j = 0; j < set2.length; j++) {
-                if (set1[i] == set2[j]) {
-                    intersection[k++] = set1[i];
-                }
-            }
-        }
-        return intersection;
-    }
-    /**
-     * { function_description }.
-     *
-     * @param      newArray  The new array
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public Set retainAll(final int[] newArray) {
-        Set retainAll = new Set();
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < newArray.length; j++) {
-                if (adtlist[i] == newArray[j]) {
-                    retainAll.add(adtlist[i]);
-                }
-            }
-        }
-        return retainAll;
-    }
 }
 /**
  * Class for solution.
@@ -241,21 +204,20 @@ public final class Solution {
                 System.out.println(b);
                 break;
             case "intersection":
-                if (token[1].length() > 0 && token[2].length() > 0) {
-                    int[] x = k.intArray(token[1].split(","));
-                    int[] y = k.intArray(token[2].split(","));
-                    int[] z = b.intersection(x, y);
-                    String str = "{";
-                    for (int i = 0; i < z.length - 1; i++) {
-                        str += z[i] + ", ";
-                    }
-                    str += z[z.length - 1] + "}";
-                    System.out.println(str);
-
-                }
+                SortedSet set = new SortedSet();
+                SortedSet set2 = new SortedSet();
+                int[] intArray = k.intArray(token[1].split(","));
+                set.addAll(intArray);
+                intArray = k.intArray(token[2].split(","));
+                set2.addAll(intArray);
+                System.out.println(set.intersection(set2));
                 break;
             case "retainAll":
-
+                set = new SortedSet();
+                intArray = k.intArray(token[1].split(","));
+                set.addAll(intArray);
+                intArray = k.intArray(token[2].split(","));
+                System.out.println(set.retainAll(intArray));
                 break;
             default:
                 break;
