@@ -216,8 +216,8 @@ public final class Solution {
                 try {
                     int[] z = (s.intersection(t)).adtlist;
                     int ksize = (s.intersection(t)).size;
-                    System.out.println(z[0] + "z[0]");
                     if (ksize == 1) {
+                        System.out.println(z[0] + "z[0]");
                         System.out.println("{" + z[0] + "}");
 
                     } else {
