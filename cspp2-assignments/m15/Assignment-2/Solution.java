@@ -217,10 +217,10 @@ public final class Solution {
                     int[] z = (s.intersection(t)).adtlist;
                     int ksize = (s.intersection(t)).size;
                     String str = "{";
-                    for (int i = 0; i < ksize-1; i++) {
+                    for (int i = 0; i < ksize; i++) {
                         str += z[i] + ", ";
                     }
-                    str += z[ksize - 1] + "}";
+                    str += z[ksize] + "}";
                     System.out.println(str);
 
                 } catch (Exception e) {
