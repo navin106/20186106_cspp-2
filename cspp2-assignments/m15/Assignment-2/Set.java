@@ -123,7 +123,7 @@ public class Set {
         if (newSet.size > 0 || this.size > 0) {
             for (int i = 0; i < size; i++) {
                 for (int j = 0; j < temp.length; j++) {
-                    if (adtlist[i] == temp[j]) {
+                    if (adtlist[i] == temp[j] && adtlist[i] != 0) {
                         intersection.add(adtlist[i]);
                     }
                 }
