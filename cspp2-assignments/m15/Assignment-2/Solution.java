@@ -59,7 +59,8 @@ class SortedSet extends Set {
     public int[] headSet(final int toElement) throws Exception {
         if (toElement == adtlist[0] || toElement < 0) {
             throw new Exception("Set Empty Exception");
-        }
+        } else {
+            
         int[] empt = new int[size];
         int count = 0;
         for (int i = 0; i < size; i++) {
@@ -77,6 +78,7 @@ class SortedSet extends Set {
             headSet[k++] = adtlist[i];
         }*/
         return headSet;
+        }
     }
     /**
      * { function_description }.
