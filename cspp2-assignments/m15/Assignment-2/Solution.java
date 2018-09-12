@@ -210,7 +210,13 @@ public final class Solution {
                 set.addAll(intArray);
                 intArray = k.intArray(token[2].split(","));
                 set2.addAll(intArray);
-                System.out.println(set.intersection(set2));
+                int[] l = (set.intersection(set2)).adtlist;
+                String str = "{";
+                for (int i = 0; i < l.length - 1; i++) {
+                    str += l[i] + ", ";
+                }
+                str += l[l.length - 1] + "}";
+                System.out.println(str);
                 break;
             case "retainAll":
                 set = new SortedSet();
