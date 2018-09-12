@@ -122,16 +122,15 @@ public class Set {
         int[] temp = newSet.adtlist;
         int cnt = 0;
         if (newSet.size > 0 && size > 0) {
-            for (int i = 0; i < size; i++) {
-                for (int j = 0; j < temp.length; j++) {
+            for (int i = 0; i <= size; i++) {
+                for (int j = 0; j <= temp.length; j++) {
                     if (adtlist[i] == temp[j]) {
                         intersection.add(adtlist[i]);
                     }
                 }
             }
             return intersection;
-        }
-        else {
+        } else {
             throw new Exception();
         }
     }
