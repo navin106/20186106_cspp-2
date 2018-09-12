@@ -112,13 +112,13 @@ class SortedSet extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public Set intersection(final Set newSet) {
-        Set intersection = new Set();
-        int[] temp = newSet.adtlist;
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < temp.length; j++) {
-                if (adtlist[i] == temp[j]) {
-                    intersection.add(adtlist[i]);
+    public int[] intersection(final int[] set1, final int[] set2) {
+        int[] intersection = new int[set2.length];
+        int k = 0;
+        for (int i = 0; i < set1.length; i++) {
+            for (int j = 0; j < set2.length; j++) {
+                if (set1[i] == set2[j]) {
+                    intersection[k++] = set1[i];
                 }
             }
         }
@@ -153,7 +153,6 @@ public final class Solution {
     private Solution() {
     }
     public int[] intArray(String[] a) {
-        // String[] d = a[1].split(",");
         int[] c = new int[a.length];
         int i = 0;
         if (a[1].length() >= 1) {
@@ -241,19 +240,13 @@ public final class Solution {
             case "print":
                 System.out.println(b);
                 break;
-            /*case "intersection":
-                SortedSet t = new SortedSet();
-                intArray = intArray(tokens[1].split(","));
-                t.add(intArray);
-                System.out.println(s.intersection(t));
+            case "intersection":
+
+
                 break;
             case "retainAll":
-                s = new SortedSet();
-                intArray = intArray(tokens[1]);
-                s.addAll(intArray);
-                intArray = intArray(tokens[2]);
-                System.out.println(s.retainAll(intArray));
-                break;*/
+
+                break;
             default:
                 break;
             }
