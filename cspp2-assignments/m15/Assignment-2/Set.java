@@ -124,6 +124,7 @@ public class Set {
             for (int i = 0; i < size; i++) {
                 for (int j = 0; j < temp.length; j++) {
                     if (adtlist[i] == temp[j]) {
+                        System.out.println("setadt"+adtlist[i]);
                         intersection.add(adtlist[i]);
                     }
                 }
