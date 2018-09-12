@@ -212,7 +212,7 @@ public final class Solution {
                 try {
                     intArray = intArray(((token[1].replace("[", "")).replace("]", "")).split(","));
                     for (int i=0; i<intArray.length; i++) {
-                        System.out.print(intArray[i]+"i");
+                        System.out.println(intArray[i]+" "+"i");
                     }
                     s.addAll(intArray);
                     intArray = intArray(((token[2].replace("[", "")).replace("]", "")).split(","));
