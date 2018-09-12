@@ -115,7 +115,8 @@ public final class Solution {
      */
     private Solution() {
     }
-    public int[] intArray(String[] a) {
+    static int[] intArray;
+    static int[] intArray(String[] a) {
         int[] c = new int[a.length];
         int i = 0;
         if (a[1].length() >= 1) {
@@ -204,26 +205,21 @@ public final class Solution {
                 System.out.println(b);
                 break;
             case "intersection":
-                SortedSet set = new SortedSet();
-                SortedSet set2 = new SortedSet();
-                int[] intArray = k.intArray(token[1].split(","));
-                set.addAll(intArray);
-                intArray = k.intArray(token[2].split(","));
-                set2.addAll(intArray);
-                int[] l = (set.intersection(set2)).adtlist;
-                String str = "{";
-                for (int i = 0; i < l.length - 1; i++) {
-                    str += l[i] + ", ";
-                }
-                str += l[l.length - 1] + "}";
-                System.out.println(str);
+                SortedSet s = new SortedSet();
+                SortedSet t = new SortedSet();
+                intArray = intArray(token[1].split(","));
+                s.addAll(intArray);
+                intArray = intArray(token[2].split(","));
+                t.addAll(intArray);
+                System.out.println(s.intersection(t));
                 break;
             case "retainAll":
-                set = new SortedSet();
-                intArray = k.intArray(token[1].split(","));
-                set.addAll(intArray);
-                intArray = k.intArray(token[2].split(","));
-                System.out.println(set.retainAll(intArray));
+                s = new SortedSet();
+                intArray = intArray(token[1].split(","));
+                s.addAll(intArray);
+                intArray = intArray(token[2].split(","));
+                System.out.println(s.retainAll(intArray));
+
                 break;
             default:
                 break;
