@@ -209,9 +209,9 @@ public final class Solution {
             case "intersection":
                 SortedSet s = new SortedSet();
                 SortedSet t = new SortedSet();
-                intArray = intArray(token[1].split(","));
+                intArray = intArray((token[1].replace("[","").replace("]","")).split(","));
                 s.addAll(intArray);
-                intArray = intArray(token[2].split(","));
+                intArray = intArray((token[2].replace("[","").replace("[","")).split(","));
                 t.addAll(intArray);
                 int[] z = (s.intersection(t)).adtlist;
                           String str = "{";
@@ -223,11 +223,10 @@ public final class Solution {
                 break;
             case "retainAll":
                 s = new SortedSet();
-                intArray = intArray(token[1].split(","));
+                intArray = intArray((token[1].replace("[","").replace("]","")).split(","));
                 s.addAll(intArray);
-                intArray = intArray(token[2].split(","));
+                intArray = intArray((token[2].replace("[","").replace("]","")).split(","));
                 System.out.println(s.retainAll(intArray));
-
                 break;
             default:
                 break;
