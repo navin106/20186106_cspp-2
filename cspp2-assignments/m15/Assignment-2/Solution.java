@@ -218,6 +218,7 @@ public final class Solution {
                     int ksize = (s.intersection(t)).size;
                     String str = "{";
                     if (ksize == 1) {
+                        System.out.println(z[0]);
                         System.out.println("{"+z[0]+"}");
 
                     } else {
