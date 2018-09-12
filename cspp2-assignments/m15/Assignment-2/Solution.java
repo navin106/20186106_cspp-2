@@ -57,10 +57,7 @@ class SortedSet extends Set {
      * @return     { description_of_the_return_value }
      */
     public int[] headSet(final int toElement) throws Exception {
-        if (toElement == adtlist[0]) {
-            throw new Exception("Set Empty Exception");
-        }
-        if (toElement < 0) {
+        if (toElement == adtlist[0] || toElement < 0) {
             throw new Exception("Set Empty Exception");
         }
         int[] empt = new int[size];
