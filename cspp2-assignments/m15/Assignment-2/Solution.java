@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
 /**
- * Class for sorted set.
+ * Class for sorted SortedSet.
  */
 class SortedSet extends Set {
     /**
@@ -105,6 +105,43 @@ class SortedSet extends Set {
         adtlist = Arrays.copyOf(adtlist, size);
         Arrays.sort(adtlist);
     }
+    /**
+     * { function_description }.
+     *
+     * @param      newSet  The new set
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Set intersection(final Set newSet) {
+        Set intersection = new Set();
+        int[] temp = newSet.adtlist;
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < temp.length; j++) {
+                if (adtlist[i] == temp[j]) {
+                    intersection.add(adtlist[i]);
+                }
+            }
+        }
+        return intersection;
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      newArray  The new array
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Set retainAll(final int[] newArray) {
+        Set retainAll = new Set();
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < newArray.length; j++) {
+                if (adtlist[i] == newArray[j]) {
+                    retainAll.add(adtlist[i]);
+                }
+            }
+        }
+        return retainAll;
+    }
 }
 /**
  * Class for solution.
@@ -115,6 +152,17 @@ public final class Solution {
      */
     private Solution() {
     }
+    public int[] intArray(String[] a) {
+        String[] d = a[1].split(",");
+        int[] c = new int[d.length];
+        if (a[1].length() >= 1) {
+            int i = 0;
+            for (String e : d) {
+                c[i++] = Integer.parseInt(e.trim());
+            }
+        }
+        return c;
+    }
     /**
      * { function_description }.
      *
@@ -123,6 +171,7 @@ public final class Solution {
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         SortedSet b = new SortedSet();
+        Solution k = new Solution();
         while (sc.hasNext()) {
             String[] token = sc.nextLine().split(" ");
             switch (token[0]) {
@@ -139,12 +188,12 @@ public final class Solution {
                         }
                         if (a.length == 2) {
                             String str = "{";
-                            int[] k = b.subSet(Integer.parseInt(a[0]),
+                            int[] k1 = b.subSet(Integer.parseInt(a[0]),
                                                Integer.parseInt(a[1]));
-                            for (int i = 0; i < k.length - 1; i++) {
-                                str += k[i] + ", ";
+                            for (int i = 0; i < k1.length - 1; i++) {
+                                str += k1[i] + ", ";
                             }
-                            str += k[k.length - 1] + "}";
+                            str += k1[k1.length - 1] + "}";
                             System.out.println(str);
                         }
 
@@ -162,13 +211,13 @@ public final class Solution {
                             System.out.println("{}");
                             break;
                         }
-                        int[] k = b.headSet(m);
+                        int[] k2 = b.headSet(m);
                         if (token[1].length() > 0) {
                             String str = "{";
-                            for (int i = 0; i < k.length - 1; i++) {
-                                str += k[i] + ", ";
+                            for (int i = 0; i < k2.length - 1; i++) {
+                                str += k2[i] + ", ";
                             }
-                            str += k[k.length - 1] + "}";
+                            str += k2[k2.length - 1] + "}";
                             System.out.println(str);
                         }
                     }
@@ -180,25 +229,31 @@ public final class Solution {
                 try {
 
                     System.out.println(b.last());
-                }
-                catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
                 break;
             case "addAll":
-                if (token[1].length() >= 1) {
-                    String[] d = token[1].split(",");
-                    int[] c = new int[d.length];
-                    int i = 0;
-                    for (String e : d) {
-                        c[i++] = Integer.parseInt(e.trim());
-                    }
-                    b.addAll(c);
-                }
+
+                int[] c = k.intArray(token[1].split(","));
+                b.addAll(c);
                 break;
             case "print":
                 System.out.println(b);
                 break;
+            /*case "intersection":
+                SortedSet t = new SortedSet();
+                intArray = intArray(tokens[1].split(","));
+                t.add(intArray);
+                System.out.println(s.intersection(t));
+                break;
+            case "retainAll":
+                s = new SortedSet();
+                intArray = intArray(tokens[1]);
+                s.addAll(intArray);
+                intArray = intArray(tokens[2]);
+                System.out.println(s.retainAll(intArray));
+                break;*/
             default:
                 break;
             }
