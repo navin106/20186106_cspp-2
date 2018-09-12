@@ -60,24 +60,24 @@ class SortedSet extends Set {
         if (toElement == adtlist[0] || toElement < 0) {
             throw new Exception("Set Empty Exception");
         } else {
-            
-        int[] empt = new int[size];
-        int count = 0;
-        for (int i = 0; i < size; i++) {
-            if (adtlist[i] < toElement) {
-                empt[count++] = adtlist[i];
+
+            int[] empt = new int[size];
+            int count = 0;
+            for (int i = 0; i < size; i++) {
+                if (adtlist[i] < toElement) {
+                    empt[count++] = adtlist[i];
+                }
             }
-        }
-        int[] headSet =  new int[count];
-        for (int i = 0; i < count; i++) {
-            headSet[i] = empt[i];
-        }
-        /*int index = Arrays.asList(adtlist).indexOf(toElement);
-        int k = 0;
-        for (int i = 0; i < index; i++) {
-            headSet[k++] = adtlist[i];
-        }*/
-        return headSet;
+            int[] headSet =  new int[count];
+            for (int i = 0; i < count; i++) {
+                headSet[i] = empt[i];
+            }
+            /*int index = Arrays.asList(adtlist).indexOf(toElement);
+            int k = 0;
+            for (int i = 0; i < index; i++) {
+                headSet[k++] = adtlist[i];
+            }*/
+            return headSet;
         }
     }
     /**
@@ -209,23 +209,28 @@ public final class Solution {
             case "intersection":
                 SortedSet s = new SortedSet();
                 SortedSet t = new SortedSet();
-                intArray = intArray(((token[1].replace("[","")).replace("]","")).split(","));
-                s.addAll(intArray);
-                intArray = intArray(((token[2].replace("[","")).replace("]","")).split(","));
-                t.addAll(intArray);
-                int[] z = (s.intersection(t)).adtlist;
-                          String str = "{";
-                for (int i = 0; i < z.length - 1; i++) {
-                    str += z[i] + ", ";
+                try {
+                    intArray = intArray(((token[1].replace("[", "")).replace("]", "")).split(","));
+                    s.addAll(intArray);
+                    intArray = intArray(((token[2].replace("[", "")).replace("]", "")).split(","));
+                    t.addAll(intArray);
+                    int[] z = (s.intersection(t)).adtlist;
+                    String str = "{";
+                    for (int i = 0; i < z.length - 1; i++) {
+                        str += z[i] + ", ";
+                    }
+                    str += z[z.length - 1] + "}";
+                    System.out.println(str);
+
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
                 }
-                str += z[z.length - 1] + "}";
-                System.out.println(str);
                 break;
             case "retainAll":
                 s = new SortedSet();
-                intArray = intArray(((token[1].replace("[","")).replace("]","")).split(","));
+                intArray = intArray(((token[1].replace("[", "")).replace("]", "")).split(","));
                 s.addAll(intArray);
-                intArray = intArray(((token[2].replace("[","")).replace("]","")).split(","));
+                intArray = intArray(((token[2].replace("[", "")).replace("]", "")).split(","));
                 System.out.println(s.retainAll(intArray));
                 break;
             default:

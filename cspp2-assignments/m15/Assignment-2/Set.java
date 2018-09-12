@@ -75,7 +75,7 @@ public class Set {
      */
     public void add(final int item) {
         int cnt = 0;
-        if (size > adtlist.length/2) {
+        if (size > adtlist.length / 2) {
             resize();
         }
         for (int i = 0; i < size; i++) {
@@ -94,7 +94,7 @@ public class Set {
      * @param      items  The items
      */
     public void add(final int[] items) {
-        if (size == adtlist.length/2) {
+        if (size == adtlist.length / 2) {
             resize();
         }
         for (int i = 0; i < items.length; i++) {
@@ -117,17 +117,21 @@ public class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public Set intersection(final Set newSet) {
+    public Set intersection(final Set newSet) throws Exception {
         Set intersection = new Set();
         int[] temp = newSet.adtlist;
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < temp.length; j++) {
-                if (adtlist[i] == temp[j]) {
-                    intersection.add(adtlist[i]);
+        if (newSet.size > 0 || this.size > 0) {
+            for (int i = 0; i < size; i++) {
+                for (int j = 0; j < temp.length; j++) {
+                    if (adtlist[i] == temp[j]) {
+                        intersection.add(adtlist[i]);
+                    }
                 }
             }
+            return intersection;
+        } else {
+            throw new Exception("{}");
         }
-        return intersection;
     }
     /**
      * { function_description }.
