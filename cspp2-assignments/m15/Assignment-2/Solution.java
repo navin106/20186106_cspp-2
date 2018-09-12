@@ -209,18 +209,19 @@ public final class Solution {
             case "intersection":
                 SortedSet s = new SortedSet();
                 SortedSet t = new SortedSet();
+                intArray = intArray(((token[1].replace("[", "")).replace("]", "")).split(","));
+                s.addAll(intArray);
+                intArray = intArray(((token[2].replace("[", "")).replace("]", "")).split(","));
+                t.addAll(intArray);
                 try {
-                    intArray = intArray(((token[1].replace("[", "")).replace("]", "")).split(","));
-                    s.addAll(intArray);
-                    intArray = intArray(((token[2].replace("[", "")).replace("]", "")).split(","));
-                    t.addAll(intArray);
                     int[] z = (s.intersection(t)).adtlist;
                     int ksize = (s.intersection(t)).size;
-                    String str = "{";
+                    System.out.println(z[0] + "z[0]");
                     if (ksize == 1) {
                         System.out.println("{" + z[0] + "}");
 
                     } else {
+                        String str = "{";
                         for (int i = 0; i < ksize - 1; i++) {
                             str += z[i] + ", ";
                         }
