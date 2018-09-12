@@ -211,7 +211,7 @@ public final class Solution {
                 SortedSet t = new SortedSet();
                 intArray = intArray(((token[1].replace("[","")).replace("]","")).split(","));
                 s.addAll(intArray);
-                intArray = intArray(((token[2].replace("[","")).replace("[","")).split(","));
+                intArray = intArray(((token[2].replace("[","")).replace("]","")).split(","));
                 t.addAll(intArray);
                 int[] z = (s.intersection(t)).adtlist;
                           String str = "{";
