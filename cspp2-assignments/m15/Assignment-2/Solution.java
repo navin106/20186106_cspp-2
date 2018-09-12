@@ -58,7 +58,8 @@ class SortedSet extends Set {
      */
     public int[] headSet(final int toElement) throws Exception {
         if (toElement == adtlist[0]) {
-            throw new Exception("{}");
+            System.out.println("{}");
+            return null;
         }
         if (toElement < 0) {
             throw new Exception("Set Empty Exception");
