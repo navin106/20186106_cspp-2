@@ -219,7 +219,7 @@ public final class Solution {
                     String str = "{";
                     for (int i = 0; i < ksize-1; i++) {
                         str += z[i] + ", ";
-                        System.out.println(z[i]);
+                        System.out.println("z[i]"+z[i]);
                     }
                     str += z[ksize - 1] + "}";
                     System.out.println(str);
