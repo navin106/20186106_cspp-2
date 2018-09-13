@@ -75,6 +75,9 @@ class BookYourShow {
                             patronlist[patronsize] = c;
                             patronsize++;
                         }
+                    } else {
+                        System.out.println("No show");
+                        break;
                     }
 
                 }
