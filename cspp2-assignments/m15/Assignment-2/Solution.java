@@ -117,7 +117,7 @@ public final class Solution {
      */
     private Solution() {
     }
-    static int[] intArray;
+    // static int[] intArray;
     static int[] intArray(String[] a) {
         int[] c = new int[a.length];
         int i = 0;
@@ -210,20 +210,22 @@ public final class Solution {
                 SortedSet s = new SortedSet();
                 SortedSet t = new SortedSet();
                 try {
+                    int[] intArray = new int[token[1].length()/3];
                     if (token[1].length() > 3) {
                         intArray = intArray((((token[1].replace("[", "")).replace("]", "")).split(",")));
                     } else if (token[1].length() == 3) {
                         intArray[0] = Integer.parseInt((token[1].replace("[", "")).replace("]", ""));
                     }
-                    System.out.println(intArray.length+"arraylength");
+                    System.out.println(intArray.length + "arraylength");
                     s.addAll(intArray);
+                    intArray = new int[token[2].length()/3];
                     if (token[2].length() > 3) {
                         intArray = intArray((((token[2].replace("[", "")).replace("]", "")).split(",")));
 
                     } else if (token[2].length() == 3) {
                         intArray[0] = Integer.parseInt((token[2].replace("[", "")).replace("]", ""));
                     }
-                    System.out.println(intArray.length+"arraylength");
+                    System.out.println(intArray.length + "arraylength");
                     t.addAll(intArray);
                     int[] z = (s.intersection(t)).adtlist;
                     int ksize = (s.intersection(t)).size;
@@ -245,6 +247,7 @@ public final class Solution {
                 }
                 break;
             case "retainAll":
+                int[] intArray;
                 s = new SortedSet();
                 intArray = intArray(((token[1].replace("[", "")).replace("]", "")).split(","));
                 s.addAll(intArray);
