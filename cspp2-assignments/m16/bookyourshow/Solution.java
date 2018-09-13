@@ -54,25 +54,30 @@ class BookYourShow {
 
     public void bookAShow(String a, String b, Patron c, String[] d) {
         int cnt = 0;
-        for (int k = 0; k < size; k++) {
-            if (a.equals(movielist[k].moviename)) {
-                if ((movielist[k].timedate).equals(b)) {
-                    String[] availseats = movielist[k].seats;
-                    for (int i = 0; i < d.length; i++) {
-                        for (int j = 0; j < availseats.length; j++) {
-                            if (availseats[j].equals(d[i])) {
-                                cnt += 1;
+        if (size == 0) {
+            System.out.println("No show");
+        } else {
+
+            for (int k = 0; k < size; k++) {
+                if (a.equals(movielist[k].moviename)) {
+                    if ((movielist[k].timedate).equals(b)) {
+                        String[] availseats = movielist[k].seats;
+                        for (int i = 0; i < d.length; i++) {
+                            for (int j = 0; j < availseats.length; j++) {
+                                if (availseats[j].equals(d[i])) {
+                                    cnt += 1;
+                                }
+
                             }
 
                         }
+                        if (cnt > 0) {
+                            patronlist[patronsize] = c;
+                            patronsize++;
+                        }
+                    }
 
-                    }
-                    if (cnt > 0) {
-                        patronlist[patronsize] = c;
-                        patronsize++;
-                    }
                 }
-
             }
         }
     }
