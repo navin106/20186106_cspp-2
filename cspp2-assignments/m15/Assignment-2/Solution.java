@@ -119,6 +119,9 @@ class SortedSet extends Set {
  * Class for solution.
  */
 public final class Solution {
+    /**
+     * { var_description }.
+     */
     private static final int NUM = 3;
     /**
      * Constructs the object.
@@ -126,7 +129,7 @@ public final class Solution {
     private Solution() {
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      a     { parameter_description }
      *
@@ -147,7 +150,8 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(final String[] args) {
+    public static void main(
+        final String[] args) {
         Scanner sc = new Scanner(System.in);
         SortedSet b = new SortedSet();
         Solution k = new Solution();
@@ -227,7 +231,8 @@ public final class Solution {
                     int[] intArray = new int[token[1].length() / NUM];
                     if (token[1].length() > NUM) {
                         intArray = intArray((((
-                            token[1].replace("[", "")).replace("]", "")).split(",")));
+                            token[1].replace("[", "")).replace(
+                            "]", "")).split(",")));
                     } else if (token[1].length() == NUM) {
                         intArray[0] = Integer.parseInt((
                             token[1].replace("[", "")).replace("]", ""));
@@ -236,7 +241,8 @@ public final class Solution {
                     intArray = new int[token[2].length() / NUM];
                     if (token[2].length() > NUM) {
                         intArray = intArray((((
-                            token[2].replace("[", "")).replace("]", "")).split(",")));
+                            token[2].replace("[", "")).replace(
+                            "]", "")).split(",")));
 
                     } else if (token[2].length() == NUM) {
                         intArray[0] = Integer.parseInt((
@@ -269,7 +275,8 @@ public final class Solution {
                     int[] intArray = new int[token[1].length() / NUM];
                     if (token[1].length() > NUM) {
                         intArray = intArray((((
-                            token[1].replace("[", "")).replace("]", "")).split(",")));
+                            token[1].replace("[", "")).replace(
+                            "]", "")).split(",")));
                     } else if (token[1].length() == NUM) {
                         intArray[0] = Integer.parseInt((
                             token[1].replace("[", "")).replace("]", ""));
@@ -278,7 +285,8 @@ public final class Solution {
                     intArray = new int[token[2].length() / NUM];
                     if (token[2].length() > NUM) {
                         intArray = intArray((((
-                            token[2].replace("[", "")).replace("]", "")).split(",")));
+                            token[2].replace("[", "")).replace(
+                            "]", "")).split(",")));
 
                     } else if (token[2].length() == NUM) {
                         intArray[0] = Integer.parseInt((
