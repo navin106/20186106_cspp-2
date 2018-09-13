@@ -145,7 +145,14 @@ public final class Solution {
         }
         return c;
     }
-    static String str(int[] a) {
+    /**
+     * { function_description }
+     *
+     * @param      a     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    static String str(final int[] a) {
         String str = "{";
         for (int i = 0; i < a.length - 1; i++) {
             str += a[i] + ", ";
@@ -167,7 +174,6 @@ public final class Solution {
             switch (token[0]) {
             case "subSet":
                 try {
-
                     String[] a = token[1].split(",");
                     if (b.subSet(Integer.parseInt(a[0]),
                                  Integer.parseInt(a[1])) != null) {
@@ -188,7 +194,6 @@ public final class Solution {
                     System.out.println(e.getMessage());
                 }
                 break;
-
             case "headSet":
                 int m = Integer.parseInt(token[1]);
                 try {
@@ -229,22 +234,22 @@ public final class Solution {
                     int[] intArray = new int[token[1].length() / NUM];
                     if (token[1].length() > NUM) {
                         intArray = intArray((((
-                                                  token[1].replace("[", "")).replace(
-                                                  "]", "")).split(",")));
+                                    token[1].replace("[", "")).replace(
+                                    "]", "")).split(",")));
                     } else if (token[1].length() == NUM) {
                         intArray[0] = Integer.parseInt((
-                                                           token[1].replace("[", "")).replace("]", ""));
+                                    token[1].replace("[", "")).replace("]", ""));
                     }
                     s.addAll(intArray);
                     intArray = new int[token[2].length() / NUM];
                     if (token[2].length() > NUM) {
                         intArray = intArray((((
-                                                  token[2].replace("[", "")).replace(
-                                                  "]", "")).split(",")));
+                                    token[2].replace("[", "")).replace(
+                                    "]", "")).split(",")));
 
                     } else if (token[2].length() == NUM) {
                         intArray[0] = Integer.parseInt((
-                                                           token[2].replace("[", "")).replace("]", ""));
+                                    token[2].replace("[", "")).replace("]", ""));
                     }
                     t.addAll(intArray);
                     int[] z = (s.intersection(t)).adtlist;
@@ -252,16 +257,13 @@ public final class Solution {
                     String str = "{";
                     if (ksize == 1) {
                         System.out.println("{" + z[0] + "}");
-
                     } else {
                         for (int i = 0; i < ksize - 1; i++) {
                             str += z[i] + ", ";
                         }
                         str += z[ksize - 1] + "}";
                         System.out.println(str);
-
                     }
-
                 } catch (Exception e) {
                     System.out.println("{}");
                 }
@@ -273,38 +275,35 @@ public final class Solution {
                     int[] intArray = new int[token[1].length() / NUM];
                     if (token[1].length() > NUM) {
                         intArray = intArray((((
-                                                  token[1].replace("[", "")).replace(
-                                                  "]", "")).split(",")));
+                                        token[1].replace("[", "")).replace(
+                                        "]", "")).split(",")));
                     } else if (token[1].length() == NUM) {
                         intArray[0] = Integer.parseInt((
-                                                           token[1].replace("[", "")).replace("]", ""));
+                                        token[1].replace("[", "")).replace("]", ""));
                     }
                     s.addAll(intArray);
                     intArray = new int[token[2].length() / NUM];
                     if (token[2].length() > NUM) {
                         intArray = intArray((((
-                                                  token[2].replace("[", "")).replace(
-                                                  "]", "")).split(",")));
+                                        token[2].replace("[", "")).replace(
+                                        "]", "")).split(",")));
 
                     } else if (token[2].length() == NUM) {
                         intArray[0] = Integer.parseInt((
-                                                           token[2].replace("[", "")).replace("]", ""));
+                                        token[2].replace("[", "")).replace("]", ""));
                     }
                     int[] z = (s.retainAll(intArray)).adtlist;
                     int ksize = (s.retainAll(intArray)).size;
                     String str = "{";
                     if (ksize == 1) {
                         System.out.println("{" + z[0] + "}");
-
                     } else {
                         for (int i = 0; i < ksize - 1; i++) {
                             str += z[i] + ", ";
                         }
                         str += z[ksize - 1] + "}";
                         System.out.println(str);
-
                     }
-
                 } catch (Exception e) {
                     System.out.println("{}");
                 }
