@@ -21,7 +21,7 @@ class Patron {
         this.Mobilenumber = b;
     }
     public String toString() {
-        return (this.Patronname+" "+this.Mobilenumber);
+        return (this.Patronname + " " + this.Mobilenumber);
     }
 }
 /**
@@ -49,7 +49,7 @@ class BookYourShow {
             if ((movielist[i].moviename).equals(a)) {
                 if ((movielist[i].timedate).equals(b)) {
                     return movielist[i];
-                    
+
                 }
             }
 
@@ -59,27 +59,32 @@ class BookYourShow {
     public void bookAShow(String a, String b, Patron c, String[] d) {
         int cnt = 0;
         int l = 0;
-        for (int k = 0; k < movielist.length; k++) {
-            if (a.equals(movielist[k].moviename)) {
-                if ((movielist[k].timedate).equals(b)) {
+        if (movielist.length > 0) {
 
-                    String[] availseats = movielist[k].seats;
-                    for (int i = 0; i < d.length; i++) {
-                        for (int j = 0; j < availseats.length; j++) {
-                            if (availseats[j].equals(d[i])) {
-                                cnt += 1;
+            for (int k = 0; k < movielist.length; k++) {
+                if (a.equals(movielist[k].moviename)) {
+                    if ((movielist[k].timedate).equals(b)) {
+                        String[] availseats = movielist[k].seats;
+                        for (int i = 0; i < d.length; i++) {
+                            for (int j = 0; j < availseats.length; j++) {
+                                if (availseats[j].equals(d[i])) {
+                                    cnt += 1;
+                                }
+
                             }
 
                         }
+                        if (cnt == d.length) {
+                            patronlist[l] = c;
+                            l++;
+                        }
+                    }
 
-                    }
-                    if (cnt == d.length) {
-                        patronlist[l] = c;
-                        l++;
-                    }
                 }
-
             }
+        }
+        else {
+            System.out.println("no show");
         }
 
     }
