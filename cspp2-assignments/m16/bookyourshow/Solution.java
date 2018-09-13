@@ -54,34 +54,38 @@ class BookYourShow {
 
     public void bookAShow(String a, String b, Patron c, String[] d) {
         int cnt = 0;
-            for (int k = 0; k < size; k++) {
-                if (a.equals(movielist[k].moviename)) {
-                    if ((movielist[k].timedate).equals(b)) {
-                        String[] availseats = movielist[k].seats;
-                        for (int i = 0; i < d.length; i++) {
-                            for (int j = 0; j < availseats.length; j++) {
-                                if (availseats[j].equals(d[i])) {
-                                    cnt += 1;
-                                }
-
+        for (int k = 0; k < size; k++) {
+            if (a.equals(movielist[k].moviename)) {
+                if ((movielist[k].timedate).equals(b)) {
+                    String[] availseats = movielist[k].seats;
+                    for (int i = 0; i < d.length; i++) {
+                        for (int j = 0; j < availseats.length; j++) {
+                            if (availseats[j].equals(d[i])) {
+                                cnt += 1;
                             }
 
                         }
-                        if (cnt > 0) {
-                            patronlist[patronsize] = c;
-                            patronsize++;
-                        }
-                    }
 
+                    }
+                    if (cnt > 0) {
+                        patronlist[patronsize] = c;
+                        patronsize++;
+                    }
                 }
+
             }
+        }
     }
 
     public boolean printTicket(String a, String b, String c) {
         for (int i = 0; i < patronsize; i++) {
             if (c.equals(patronlist[i].Mobilenumber)) {
-                System.out.println(patronlist[i].Mobilenumber + " " + a + " " + b);
-                return true;
+                for (int j = 0; j < size; j++) {
+                    if (b.equals(movielist[j].timedate)) {
+                        System.out.println(patronlist[i].Mobilenumber + " " + a + " " + b);
+                        return true;
+                    }
+                }
             }
         }
         return false;
@@ -128,14 +132,14 @@ public final class Solution {
             case "get":
                 Show show = bys.getAShow(check[1], tokens[1]);
                 if (show != null) {
-                    System.out.println(check[1] +","+tokens[1]);
+                    System.out.println(check[1] + "," + tokens[1]);
                 } else {
                     System.out.println("No show");
                 }
                 break;
 
             case "print":
-                if(bys.printTicket(check[1], tokens[1], tokens[2])) {
+                if (bys.printTicket(check[1], tokens[1], tokens[2])) {
                     break;
                 } else {
                     System.out.println("Invalid");
