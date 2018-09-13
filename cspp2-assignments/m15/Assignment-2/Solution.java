@@ -146,7 +146,7 @@ public final class Solution {
         return c;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      a     { parameter_description }
      *
@@ -238,7 +238,7 @@ public final class Solution {
                                     "]", "")).split(",")));
                     } else if (token[1].length() == NUM) {
                         intArray[0] = Integer.parseInt((
-                                    token[1].replace("[", "")).replace("]", ""));
+                        token[1].replace("[", "")).replace("]", ""));
                     }
                     s.addAll(intArray);
                     intArray = new int[token[2].length() / NUM];
@@ -249,7 +249,7 @@ public final class Solution {
 
                     } else if (token[2].length() == NUM) {
                         intArray[0] = Integer.parseInt((
-                                    token[2].replace("[", "")).replace("]", ""));
+                            token[2].replace("[", "")).replace("]", ""));
                     }
                     t.addAll(intArray);
                     int[] z = (s.intersection(t)).adtlist;
@@ -279,7 +279,7 @@ public final class Solution {
                                         "]", "")).split(",")));
                     } else if (token[1].length() == NUM) {
                         intArray[0] = Integer.parseInt((
-                                        token[1].replace("[", "")).replace("]", ""));
+                        token[1].replace("[", "")).replace("]", ""));
                     }
                     s.addAll(intArray);
                     intArray = new int[token[2].length() / NUM];
@@ -290,7 +290,7 @@ public final class Solution {
 
                     } else if (token[2].length() == NUM) {
                         intArray[0] = Integer.parseInt((
-                                        token[2].replace("[", "")).replace("]", ""));
+                        token[2].replace("[", "")).replace("]", ""));
                     }
                     int[] z = (s.retainAll(intArray)).adtlist;
                     int ksize = (s.retainAll(intArray)).size;
