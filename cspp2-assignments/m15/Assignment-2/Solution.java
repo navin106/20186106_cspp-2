@@ -30,7 +30,7 @@ class SortedSet extends Set {
      * @throws     Exception    { exception_description }
      */
     public int[] subSet(final int fromElement,
-     final int toElement) throws Exception {
+                        final int toElement) throws Exception {
         int index = 0;
         if (fromElement > toElement) {
             throw new Exception("Invalid Arguments to Subset Exception");
@@ -145,9 +145,14 @@ public final class Solution {
         }
         return c;
     }
-    // static String str(int[] a) {
-        
-    // }
+    static String str(int[] a) {
+        String str = "{";
+        for (int i = 0; i < a.length - 1; i++) {
+            str += a[i] + ", ";
+        }
+        str += a[a.length - 1] + "}";
+        return str;
+    }
     /**
      * { function_description }.
      *
@@ -172,14 +177,10 @@ public final class Solution {
                             break;
                         }
                         if (a.length == 2) {
-                            String str = "{";
                             int[] k1 = b.subSet(Integer.parseInt(a[0]),
                                                 Integer.parseInt(a[1]));
-                            for (int i = 0; i < k1.length - 1; i++) {
-                                str += k1[i] + ", ";
-                            }
-                            str += k1[k1.length - 1] + "}";
-                            System.out.println(str);
+
+                            System.out.println(str(k1));
                         }
 
                     }
@@ -198,12 +199,7 @@ public final class Solution {
                         }
                         int[] k2 = b.headSet(m);
                         if (token[1].length() > 0) {
-                            String str = "{";
-                            for (int i = 0; i < k2.length - 1; i++) {
-                                str += k2[i] + ", ";
-                            }
-                            str += k2[k2.length - 1] + "}";
-                            System.out.println(str);
+                            System.out.println(str(k2));
                         }
                     }
                 } catch (Exception e) {
@@ -233,22 +229,22 @@ public final class Solution {
                     int[] intArray = new int[token[1].length() / NUM];
                     if (token[1].length() > NUM) {
                         intArray = intArray((((
-                            token[1].replace("[", "")).replace(
-                            "]", "")).split(",")));
+                                                  token[1].replace("[", "")).replace(
+                                                  "]", "")).split(",")));
                     } else if (token[1].length() == NUM) {
                         intArray[0] = Integer.parseInt((
-                            token[1].replace("[", "")).replace("]", ""));
+                                                           token[1].replace("[", "")).replace("]", ""));
                     }
                     s.addAll(intArray);
                     intArray = new int[token[2].length() / NUM];
                     if (token[2].length() > NUM) {
                         intArray = intArray((((
-                            token[2].replace("[", "")).replace(
-                            "]", "")).split(",")));
+                                                  token[2].replace("[", "")).replace(
+                                                  "]", "")).split(",")));
 
                     } else if (token[2].length() == NUM) {
                         intArray[0] = Integer.parseInt((
-                            token[2].replace("[", "")).replace("]", ""));
+                                                           token[2].replace("[", "")).replace("]", ""));
                     }
                     t.addAll(intArray);
                     int[] z = (s.intersection(t)).adtlist;
@@ -277,22 +273,22 @@ public final class Solution {
                     int[] intArray = new int[token[1].length() / NUM];
                     if (token[1].length() > NUM) {
                         intArray = intArray((((
-                            token[1].replace("[", "")).replace(
-                            "]", "")).split(",")));
+                                                  token[1].replace("[", "")).replace(
+                                                  "]", "")).split(",")));
                     } else if (token[1].length() == NUM) {
                         intArray[0] = Integer.parseInt((
-                            token[1].replace("[", "")).replace("]", ""));
+                                                           token[1].replace("[", "")).replace("]", ""));
                     }
                     s.addAll(intArray);
                     intArray = new int[token[2].length() / NUM];
                     if (token[2].length() > NUM) {
                         intArray = intArray((((
-                            token[2].replace("[", "")).replace(
-                            "]", "")).split(",")));
+                                                  token[2].replace("[", "")).replace(
+                                                  "]", "")).split(",")));
 
                     } else if (token[2].length() == NUM) {
                         intArray[0] = Integer.parseInt((
-                            token[2].replace("[", "")).replace("]", ""));
+                                                           token[2].replace("[", "")).replace("]", ""));
                     }
                     int[] z = (s.retainAll(intArray)).adtlist;
                     int ksize = (s.retainAll(intArray)).size;
