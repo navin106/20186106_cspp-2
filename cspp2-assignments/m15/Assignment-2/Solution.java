@@ -262,9 +262,8 @@ public final class Solution {
                     } else if (token[2].length() == 3) {
                         intArray[0] = Integer.parseInt((token[2].replace("[", "")).replace("]", ""));
                     }
-                    t.addAll(intArray);
-                    int[] z = (s.intersection(t)).adtlist;
-                    int ksize = (s.intersection(t)).size;
+                    int[] z = (s.retainAll(intArray)).adtlist;
+                    int ksize = (s.retainAll(intArray)).size;
                     String str = "{";
                     if (ksize == 1) {
                         System.out.println("{" + z[0] + "}");
