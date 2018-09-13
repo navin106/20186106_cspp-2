@@ -61,7 +61,7 @@ class BookYourShow {
         int l = 0;
         if (movielist.length > 0) {
             for (int k = 0; k < movielist.length; k++) {
-                System.out.println(movielist[k]);
+                System.out.println(movielist[k].moviename);
                 /*if (a.equals(movielist[k].moviename)) {
                     if ((movielist[k].timedate).equals(b)) {
                         String[] availseats = movielist[k].seats;
