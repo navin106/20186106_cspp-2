@@ -78,7 +78,7 @@ class BookYourShow {
     }
 
     public void printTicket(String a, String b, String c) {
-        for (int i = 0; i < patronsize; i++) {
+        for (int i = 0; i < size; i++) {
             if (c.equals(patronlist[i].Mobilenumber)) {
                 System.out.println(patronlist[i].Mobilenumber + " " + a + " " + b);
             }
