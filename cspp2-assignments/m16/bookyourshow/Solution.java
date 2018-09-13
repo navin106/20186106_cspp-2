@@ -9,9 +9,6 @@ class Show {
         this.timedate = b;
         this.seats = c;
     }
-    public String toString() {
-        return (this.moviename + "," + this.timedate);
-    }
 }
 class Patron {
     String Patronname;
@@ -19,9 +16,6 @@ class Patron {
     public Patron(String a, String b) {
         this.Patronname = a;
         this.Mobilenumber = b;
-    }
-    public String toString() {
-        return (this.Patronname + " " + this.Mobilenumber);
     }
 }
 /**
@@ -40,28 +34,29 @@ class BookYourShow {
         this.patronlist = new Patron[10];
         this.size = 0;
     }
+
     public void addAShow(Show k) {
         movielist[size++] = k;
     }
-    public Show getAShow(String a, String b) {
 
+
+    public Show getAShow(String a, String b) {
         for (int i = 0; i < movielist.length; i++) {
             if ((movielist[i].moviename).equals(a)) {
                 if ((movielist[i].timedate).equals(b)) {
                     return movielist[i];
-
                 }
             }
-
         }
         return null;
     }
+
     public void bookAShow(String a, String b, Patron c, String[] d) {
         int cnt = 0;
         int l = 0;
         if (movielist.length > 0) {
             for (int k = 0; k < movielist.length; k++) {
-                System.out.println(movielist[k]);
+                System.out.println(movielist[k].moviename);
                 /*if (a.equals(movielist[k].moviename)) {
                     if ((movielist[k].timedate).equals(b)) {
                         String[] availseats = movielist[k].seats;
@@ -88,6 +83,7 @@ class BookYourShow {
         }
 
     }
+
     public void printTicket(String a, String b, String c) {
         for (int i = 0; i < patronlist.length; i++) {
             if (c.equals(patronlist[i].Mobilenumber)) {
