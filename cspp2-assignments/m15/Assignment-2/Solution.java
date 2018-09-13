@@ -210,14 +210,14 @@ public final class Solution {
                 SortedSet s = new SortedSet();
                 SortedSet t = new SortedSet();
                 try {
-                    int[] intArray = new int[token[1].length()/3];
+                    int[] intArray = new int[token[1].length() / 3];
                     if (token[1].length() > 3) {
                         intArray = intArray((((token[1].replace("[", "")).replace("]", "")).split(",")));
                     } else if (token[1].length() == 3) {
                         intArray[0] = Integer.parseInt((token[1].replace("[", "")).replace("]", ""));
                     }
                     s.addAll(intArray);
-                    intArray = new int[token[2].length()/3];
+                    intArray = new int[token[2].length() / 3];
                     if (token[2].length() > 3) {
                         intArray = intArray((((token[2].replace("[", "")).replace("]", "")).split(",")));
 
@@ -248,14 +248,14 @@ public final class Solution {
                 s = new SortedSet();
                 t = new SortedSet();
                 try {
-                    int[] intArray = new int[token[1].length()/3];
+                    int[] intArray = new int[token[1].length() / 3];
                     if (token[1].length() > 3) {
                         intArray = intArray((((token[1].replace("[", "")).replace("]", "")).split(",")));
                     } else if (token[1].length() == 3) {
                         intArray[0] = Integer.parseInt((token[1].replace("[", "")).replace("]", ""));
                     }
                     s.addAll(intArray);
-                    intArray = new int[token[2].length()/3];
+                    intArray = new int[token[2].length() / 3];
                     if (token[2].length() > 3) {
                         intArray = intArray((((token[2].replace("[", "")).replace("]", "")).split(",")));
 
