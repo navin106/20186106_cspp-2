@@ -118,6 +118,7 @@ class SortedSet extends Set {
  * Class for solution.
  */
 public final class Solution {
+    private static int NUM = 3;
     /**
      * Constructs the object.
      */
@@ -222,18 +223,18 @@ public final class Solution {
                 SortedSet s = new SortedSet();
                 SortedSet t = new SortedSet();
                 try {
-                    int[] intArray = new int[token[1].length() / 3];
-                    if (token[1].length() > 3) {
+                    int[] intArray = new int[token[1].length() / NUM];
+                    if (token[1].length() > NUM) {
                         intArray = intArray((((token[1].replace("[", "")).replace("]", "")).split(",")));
-                    } else if (token[1].length() == 3) {
+                    } else if (token[1].length() == NUM) {
                         intArray[0] = Integer.parseInt((token[1].replace("[", "")).replace("]", ""));
                     }
                     s.addAll(intArray);
-                    intArray = new int[token[2].length() / 3];
-                    if (token[2].length() > 3) {
+                    intArray = new int[token[2].length() / NUM];
+                    if (token[2].length() > NUM) {
                         intArray = intArray((((token[2].replace("[", "")).replace("]", "")).split(",")));
 
-                    } else if (token[2].length() == 3) {
+                    } else if (token[2].length() == NUM) {
                         intArray[0] = Integer.parseInt((token[2].replace("[", "")).replace("]", ""));
                     }
                     t.addAll(intArray);
@@ -260,18 +261,18 @@ public final class Solution {
                 s = new SortedSet();
                 t = new SortedSet();
                 try {
-                    int[] intArray = new int[token[1].length() / 3];
-                    if (token[1].length() > 3) {
+                    int[] intArray = new int[token[1].length() / NUM];
+                    if (token[1].length() > NUM) {
                         intArray = intArray((((token[1].replace("[", "")).replace("]", "")).split(",")));
-                    } else if (token[1].length() == 3) {
+                    } else if (token[1].length() == NUM) {
                         intArray[0] = Integer.parseInt((token[1].replace("[", "")).replace("]", ""));
                     }
                     s.addAll(intArray);
-                    intArray = new int[token[2].length() / 3];
-                    if (token[2].length() > 3) {
+                    intArray = new int[token[2].length() / NUM];
+                    if (token[2].length() > NUM) {
                         intArray = intArray((((token[2].replace("[", "")).replace("]", "")).split(",")));
 
-                    } else if (token[2].length() == 3) {
+                    } else if (token[2].length() == NUM) {
                         intArray[0] = Integer.parseInt((token[2].replace("[", "")).replace("]", ""));
                     }
                     int[] z = (s.retainAll(intArray)).adtlist;
