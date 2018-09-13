@@ -215,13 +215,15 @@ public final class Solution {
                     } else if (token[1].length() == 3) {
                         intArray[0] = Integer.parseInt((token[1].replace("[", "")).replace("]", ""));
                     }
+                    System.out.println(intArray.length);
+                    s.addAll(intArray);
                     if (token[2].length() > 3) {
                         intArray = intArray((((token[2].replace("[", "")).replace("]", "")).split(",")));
 
                     } else if (token[2].length() == 3) {
                         intArray[0] = Integer.parseInt((token[2].replace("[", "")).replace("]", ""));
                     }
-                    s.addAll(intArray);
+                    System.out.println(intArray.length);
                     t.addAll(intArray);
                     int[] z = (s.intersection(t)).adtlist;
                     int ksize = (s.intersection(t)).size;
