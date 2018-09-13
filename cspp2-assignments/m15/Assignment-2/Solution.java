@@ -216,7 +216,6 @@ public final class Solution {
                     } else if (token[1].length() == 3) {
                         intArray[0] = Integer.parseInt((token[1].replace("[", "")).replace("]", ""));
                     }
-                    System.out.println(intArray.length + "arraylength");
                     s.addAll(intArray);
                     intArray = new int[token[2].length()/3];
                     if (token[2].length() > 3) {
@@ -225,7 +224,6 @@ public final class Solution {
                     } else if (token[2].length() == 3) {
                         intArray[0] = Integer.parseInt((token[2].replace("[", "")).replace("]", ""));
                     }
-                    System.out.println(intArray.length + "arraylength");
                     t.addAll(intArray);
                     int[] z = (s.intersection(t)).adtlist;
                     int ksize = (s.intersection(t)).size;
