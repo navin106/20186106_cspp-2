@@ -145,13 +145,15 @@ public final class Solution {
         }
         return c;
     }
+    // static String str(int[] a) {
+        
+    // }
     /**
      * { function_description }.
      *
      * @param      args  The arguments
      */
-    public static void main(
-        final String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         SortedSet b = new SortedSet();
         Solution k = new Solution();
