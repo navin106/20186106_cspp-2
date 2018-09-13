@@ -245,12 +245,42 @@ public final class Solution {
                 }
                 break;
             case "retainAll":
-                int[] intArray;
                 s = new SortedSet();
-                intArray = intArray(((token[1].replace("[", "")).replace("]", "")).split(","));
-                s.addAll(intArray);
-                intArray = intArray(((token[2].replace("[", "")).replace("]", "")).split(","));
-                System.out.println(s.retainAll(intArray));
+                t = new SortedSet();
+                try {
+                    int[] intArray = new int[token[1].length()/3];
+                    if (token[1].length() > 3) {
+                        intArray = intArray((((token[1].replace("[", "")).replace("]", "")).split(",")));
+                    } else if (token[1].length() == 3) {
+                        intArray[0] = Integer.parseInt((token[1].replace("[", "")).replace("]", ""));
+                    }
+                    s.addAll(intArray);
+                    intArray = new int[token[2].length()/3];
+                    if (token[2].length() > 3) {
+                        intArray = intArray((((token[2].replace("[", "")).replace("]", "")).split(",")));
+
+                    } else if (token[2].length() == 3) {
+                        intArray[0] = Integer.parseInt((token[2].replace("[", "")).replace("]", ""));
+                    }
+                    t.addAll(intArray);
+                    int[] z = (s.intersection(t)).adtlist;
+                    int ksize = (s.intersection(t)).size;
+                    String str = "{";
+                    if (ksize == 1) {
+                        System.out.println("{" + z[0] + "}");
+
+                    } else {
+                        for (int i = 0; i < ksize - 1; i++) {
+                            str += z[i] + ", ";
+                        }
+                        str += z[ksize - 1] + "}";
+                        System.out.println(str);
+
+                    }
+
+                } catch (Exception e) {
+                    System.out.println("{}");
+                }
                 break;
             default:
                 break;
