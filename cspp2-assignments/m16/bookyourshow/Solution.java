@@ -56,7 +56,7 @@ class BookYourShow {
         int l = 0;
         System.out.println(size);
         if (movielist.length > 0) {
-            for (int k = 0; k < movielist.length; k++) {
+            for (int k = 0; k < size; k++) {
                 System.out.println(movielist[k].moviename);
                 /*if (a.equals(movielist[k].moviename)) {
                     if ((movielist[k].timedate).equals(b)) {
