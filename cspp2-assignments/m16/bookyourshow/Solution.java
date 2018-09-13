@@ -60,9 +60,9 @@ class BookYourShow {
         int cnt = 0;
         int l = 0;
         if (movielist.length > 0) {
-
             for (int k = 0; k < movielist.length; k++) {
-                if (a.equals(movielist[k].moviename)) {
+                System.out.println(movielist[k]);
+                /*if (a.equals(movielist[k].moviename)) {
                     if ((movielist[k].timedate).equals(b)) {
                         String[] availseats = movielist[k].seats;
                         for (int i = 0; i < d.length; i++) {
@@ -80,7 +80,7 @@ class BookYourShow {
                         }
                     }
 
-                }
+                }*/
             }
         }
         else {
