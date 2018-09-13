@@ -210,17 +210,18 @@ public final class Solution {
                 SortedSet s = new SortedSet();
                 SortedSet t = new SortedSet();
                 try {
-                    if (token[1].length() > 3 && token[2].length() > 3) {
-                         intArray = intArray((((token[1].replace("[", "")).replace("]", "")).split(",")));
-                         intArray = intArray((((token[2].replace("[", "")).replace("]", "")).split(",")));
-                    }
-                    if (token[1].length() == 3) {
+                    if (token[1].length() > 3) {
+                        intArray = intArray((((token[1].replace("[", "")).replace("]", "")).split(",")));
+                    } else if (token[1].length() == 3) {
                         intArray[0] = Integer.parseInt((token[1].replace("[", "")).replace("]", ""));
                     }
-                    if (token[2].length() == 3) {
+                    s.addAll(intArray);
+                    if (token[2].length() > 3) {
+                        intArray = intArray((((token[2].replace("[", "")).replace("]", "")).split(",")));
+
+                    } else if (token[2].length() == 3) {
                         intArray[0] = Integer.parseInt((token[2].replace("[", "")).replace("]", ""));
                     }
-                    s.addAll(intArray);
                     t.addAll(intArray);
                     int[] z = (s.intersection(t)).adtlist;
                     int ksize = (s.intersection(t)).size;
