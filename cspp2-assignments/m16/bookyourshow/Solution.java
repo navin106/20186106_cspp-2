@@ -41,7 +41,7 @@ class BookYourShow {
 
 
     public Show getAShow(String a, String b) {
-        for (int i = 0; i < movielist.length; i++) {
+        for (int i = 0; i < size; i++) {
             if ((movielist[i].moviename).equals(a)) {
                 if ((movielist[i].timedate).equals(b)) {
                     return movielist[i];
