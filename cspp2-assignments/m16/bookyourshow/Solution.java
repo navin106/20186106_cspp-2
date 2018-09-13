@@ -99,9 +99,24 @@ class BookYourShow {
         return false;
 
     }
-    // showAll() {
+    public void showAll() {
+        if (movielist.length > 0) {
+            for (int i = 0; i < size; i++) {
+                String str = "";
+                str += movielist[i].moviename + ",";
+                str += movielist[i].timedate+",";
+                String str2 = "[";
+                String[] availseats = movielist[i].seats;
+                for (int j=0; j<availseats.length-1; j++) {
+                    str2 += availseats[j] + ",";
+                }
+                str2 += availseats[availseats.length-1] +"]";
+                str += str2;
+                System.out.println(str);
+            }
+        }
 
-    // }
+    }
 }
 public final class Solution {
     /**
@@ -154,9 +169,9 @@ public final class Solution {
                 }
                 break;
 
-            // case "showAll":
-            //     bys.showAll();
-            //     break;
+            case "showAll":
+                bys.showAll();
+                break;
 
             default:
                 break;
