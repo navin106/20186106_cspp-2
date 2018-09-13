@@ -54,11 +54,9 @@ class BookYourShow {
     public void bookAShow(String a, String b, Patron c, String[] d) {
         int cnt = 0;
         int l = 0;
-        System.out.println(size);
-        if (movielist.length > 0) {
+        if (size > 0) {
             for (int k = 0; k < size; k++) {
-                System.out.println(movielist[k].moviename);
-                /*if (a.equals(movielist[k].moviename)) {
+                if (a.equals(movielist[k].moviename)) {
                     if ((movielist[k].timedate).equals(b)) {
                         String[] availseats = movielist[k].seats;
                         for (int i = 0; i < d.length; i++) {
@@ -76,7 +74,7 @@ class BookYourShow {
                         }
                     }
 
-                }*/
+                }
             }
         }
         else {
