@@ -54,6 +54,7 @@ class BookYourShow {
     public void bookAShow(String a, String b, Patron c, String[] d) {
         int cnt = 0;
         int l = 0;
+        System.out.println(movielist.length);
         if (movielist.length > 0) {
             for (int k = 0; k < movielist.length; k++) {
                 System.out.println(movielist[k].moviename);
