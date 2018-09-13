@@ -65,6 +65,7 @@ class BookYourShow {
                         for (int i = 0; i < d.length; i++) {
                             for (int j = 0; j < availseats.length; j++) {
                                 if (availseats[j].equals(d[i])) {
+                                    availseats[j] = "N/A";
                                     cnt += 1;
                                 }
 
