@@ -29,7 +29,8 @@ class SortedSet extends Set {
      *
      * @throws     Exception    { exception_description }
      */
-    public int[] subSet(final int fromElement, final int toElement) throws Exception {
+    public int[] subSet(final int fromElement,
+     final int toElement) throws Exception {
         int index = 0;
         if (fromElement > toElement) {
             throw new Exception("Invalid Arguments to Subset Exception");
@@ -118,7 +119,7 @@ class SortedSet extends Set {
  * Class for solution.
  */
 public final class Solution {
-    private static int NUM = 3;
+    private static final int NUM = 3;
     /**
      * Constructs the object.
      */
@@ -225,17 +226,21 @@ public final class Solution {
                 try {
                     int[] intArray = new int[token[1].length() / NUM];
                     if (token[1].length() > NUM) {
-                        intArray = intArray((((token[1].replace("[", "")).replace("]", "")).split(",")));
+                        intArray = intArray((((
+                            token[1].replace("[", "")).replace("]", "")).split(",")));
                     } else if (token[1].length() == NUM) {
-                        intArray[0] = Integer.parseInt((token[1].replace("[", "")).replace("]", ""));
+                        intArray[0] = Integer.parseInt((
+                            token[1].replace("[", "")).replace("]", ""));
                     }
                     s.addAll(intArray);
                     intArray = new int[token[2].length() / NUM];
                     if (token[2].length() > NUM) {
-                        intArray = intArray((((token[2].replace("[", "")).replace("]", "")).split(",")));
+                        intArray = intArray((((
+                            token[2].replace("[", "")).replace("]", "")).split(",")));
 
                     } else if (token[2].length() == NUM) {
-                        intArray[0] = Integer.parseInt((token[2].replace("[", "")).replace("]", ""));
+                        intArray[0] = Integer.parseInt((
+                            token[2].replace("[", "")).replace("]", ""));
                     }
                     t.addAll(intArray);
                     int[] z = (s.intersection(t)).adtlist;
@@ -263,17 +268,21 @@ public final class Solution {
                 try {
                     int[] intArray = new int[token[1].length() / NUM];
                     if (token[1].length() > NUM) {
-                        intArray = intArray((((token[1].replace("[", "")).replace("]", "")).split(",")));
+                        intArray = intArray((((
+                            token[1].replace("[", "")).replace("]", "")).split(",")));
                     } else if (token[1].length() == NUM) {
-                        intArray[0] = Integer.parseInt((token[1].replace("[", "")).replace("]", ""));
+                        intArray[0] = Integer.parseInt((
+                            token[1].replace("[", "")).replace("]", ""));
                     }
                     s.addAll(intArray);
                     intArray = new int[token[2].length() / NUM];
                     if (token[2].length() > NUM) {
-                        intArray = intArray((((token[2].replace("[", "")).replace("]", "")).split(",")));
+                        intArray = intArray((((
+                            token[2].replace("[", "")).replace("]", "")).split(",")));
 
                     } else if (token[2].length() == NUM) {
-                        intArray[0] = Integer.parseInt((token[2].replace("[", "")).replace("]", ""));
+                        intArray[0] = Integer.parseInt((
+                            token[2].replace("[", "")).replace("]", ""));
                     }
                     int[] z = (s.retainAll(intArray)).adtlist;
                     int ksize = (s.retainAll(intArray)).size;
