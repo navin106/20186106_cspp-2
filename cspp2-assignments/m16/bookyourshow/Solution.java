@@ -28,6 +28,7 @@ class BookYourShow {
     Show[] movielist;
     Patron[] patronlist;
     int size = 0;
+    int patronsize = 0;
 
     public BookYourShow() {
         this.movielist = new Show[10];
@@ -53,7 +54,6 @@ class BookYourShow {
 
     public void bookAShow(String a, String b, Patron c, String[] d) {
         int cnt = 0;
-        int l = 0;
         if (size > 0) {
             for (int k = 0; k < size; k++) {
                 if (a.equals(movielist[k].moviename)) {
@@ -69,22 +69,21 @@ class BookYourShow {
 
                         }
                         if (cnt == d.length) {
-                            patronlist[l] = c;
-                            l++;
+                            patronlist[patronsize] = c;
+                            patronsize++;
                         }
                     }
 
                 }
             }
-        }
-        else {
+        } else {
             System.out.println("no show");
         }
 
     }
 
     public void printTicket(String a, String b, String c) {
-        for (int i = 0; i < patronlist.length; i++) {
+        for (int i = 0; i < patronsize; i++) {
             if (c.equals(patronlist[i].Mobilenumber)) {
                 System.out.println(patronlist[i].Mobilenumber + " " + a + " " + b);
             }
