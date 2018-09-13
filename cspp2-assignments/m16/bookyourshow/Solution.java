@@ -105,13 +105,13 @@ class BookYourShow {
             for (int i = 0; i < size; i++) {
                 String str = "";
                 str += movielist[i].moviename + ",";
-                str += movielist[i].timedate+",";
+                str += movielist[i].timedate + ",";
                 String str2 = "[";
                 String[] availseats = movielist[i].seats;
-                for (int j=0; j<availseats.length-1; j++) {
+                for (int j = 0; j < availseats.length - 1; j++) {
                     str2 += availseats[j] + ",";
                 }
-                str2 += availseats[availseats.length-1] +"]";
+                str2 += availseats[availseats.length - 1] + "]";
                 str += str2;
                 System.out.println(str);
             }
