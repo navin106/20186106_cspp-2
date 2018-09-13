@@ -26,6 +26,8 @@ class SortedSet extends Set {
      * @param      toElement    To element
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception    { exception_description }
      */
     public int[] subSet(final int fromElement, final int toElement) throws Exception {
         int index = 0;
@@ -55,6 +57,8 @@ class SortedSet extends Set {
      * @param      toElement  To element
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
     public int[] headSet(final int toElement) throws Exception {
         if (toElement == adtlist[0] || toElement < 0) {
@@ -84,6 +88,8 @@ class SortedSet extends Set {
      * { function_description }.
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
     public int last() throws Exception {
         if (size == 0) {
@@ -117,8 +123,14 @@ public final class Solution {
      */
     private Solution() {
     }
-    // static int[] intArray;
-    static int[] intArray(String[] a) {
+    /**
+     * { function_description }
+     *
+     * @param      a     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    static int[] intArray(final String[] a) {
         int[] c = new int[a.length];
         int i = 0;
         if (a[1].length() >= 1) {
