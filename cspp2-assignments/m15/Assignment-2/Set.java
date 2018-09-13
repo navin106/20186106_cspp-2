@@ -120,8 +120,6 @@ public class Set {
     public Set intersection(final Set newSet) throws Exception {
         Set intersection = new Set();
         int[] temp = newSet.adtlist;
-        // System.out.println("newSet.size" + newSet.size);
-        // System.out.println("size" + size);
         if (newSet.size > 0 && size > 0) {
             for (int i = 0; i < size; i++) {
                 for (int j = 0; j < temp.length; j++) {

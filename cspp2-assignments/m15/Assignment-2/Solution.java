@@ -210,26 +210,37 @@ public final class Solution {
                 SortedSet s = new SortedSet();
                 SortedSet t = new SortedSet();
                 try {
-                    intArray = intArray(((token[1].replace("[", "")).replace("]", "")).split(","));
-                    for (int i=0; i<intArray.length; i++) {
-                        System.out.println(intArray[i]+" "+"i");
+                    if (token[1].length() > 1) {
+                        intArray = intArray((((token[1].replace("[", "")).replace("]", "")).split(",")));
+                    } else {
+                        if (token[1].length() == 1) {
+                            intArray[0] = Integer.parseInt(((token[1]).replace("[", "")).replace("]", ""));
+
+                        }
                     }
                     s.addAll(intArray);
-                    intArray = intArray(((token[2].replace("[", "")).replace("]", "")).split(","));
+                    if (token[2].length() > 1) {
+                        intArray = intArray((((token[1].replace("[", "")).replace("]", "")).split(",")));
+                    } else {
+                        if (token[2].length() == 1) {
+                            intArray[0] = Integer.parseInt(((token[1]).replace("[", "")).replace("]", ""));
+
+                        }
+                    }
                     t.addAll(intArray);
                     int[] z = (s.intersection(t)).adtlist;
                     int ksize = (s.intersection(t)).size;
                     String str = "{";
                     if (ksize == 1) {
-                        System.out.println("{"+z[0]+"}");
+                        System.out.println("{" + z[0] + "}");
 
                     } else {
-                    for (int i = 0; i < ksize - 1; i++) {
-                        str += z[i] + ", ";
-                    }
-                    str += z[ksize - 1] + "}";
-                    System.out.println(str);
-                        
+                        for (int i = 0; i < ksize - 1; i++) {
+                            str += z[i] + ", ";
+                        }
+                        str += z[ksize - 1] + "}";
+                        System.out.println(str);
+
                     }
 
                 } catch (Exception e) {
