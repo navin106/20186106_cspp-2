@@ -54,7 +54,6 @@ class BookYourShow {
 
     public void bookAShow(String a, String b, Patron c, String[] d) {
         int cnt = 0;
-        if (size > 0) {
             for (int k = 0; k < size; k++) {
                 if (a.equals(movielist[k].moviename)) {
                     if ((movielist[k].timedate).equals(b)) {
@@ -76,10 +75,6 @@ class BookYourShow {
 
                 }
             }
-        } else {
-            System.out.println("no show");
-        }
-
     }
 
     public void printTicket(String a, String b, String c) {
