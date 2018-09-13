@@ -77,12 +77,14 @@ class BookYourShow {
             }
     }
 
-    public void printTicket(String a, String b, String c) {
+    public boolean printTicket(String a, String b, String c) {
         for (int i = 0; i < patronsize; i++) {
             if (c.equals(patronlist[i].Mobilenumber)) {
                 System.out.println(patronlist[i].Mobilenumber + " " + a + " " + b);
+                return true;
             }
         }
+        return false;
 
     }
     // showAll() {
@@ -133,7 +135,11 @@ public final class Solution {
                 break;
 
             case "print":
-                bys.printTicket(check[1], tokens[1], tokens[2]);
+                if(bys.printTicket(check[1], tokens[1], tokens[2])) {
+                    break;
+                } else {
+                    System.out.println("Invalid");
+                }
                 break;
 
             // case "showAll":
