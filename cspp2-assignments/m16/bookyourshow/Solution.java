@@ -33,9 +33,9 @@ class BookYourShow {
     /**
      * Constructs the object.
      */
-    public BookYourShow() {
-        this.movielist = new Show[10];
-        this.patronlist = new Patron[10];
+    BookYourShow() {
+        this.movielist = new Show[2 + 2 + 2 + 2 + 2];
+        this.patronlist = new Patron[2 + 2 + 2 + 2 + 2];
         this.size = 0;
     }
 
@@ -57,7 +57,7 @@ class BookYourShow {
      *
      * @return     A show.
      */
-    public Show getAShow(String a, String b) {
+    public Show getAShow(final String a, final String b) {
         for (int i = 0; i < size; i++) {
             if ((movielist[i].moviename).equals(a)) {
                 if ((movielist[i].timedate).equals(b)) {
@@ -76,7 +76,8 @@ class BookYourShow {
      * @param      c     { parameter_description }
      * @param      d     { parameter_description }
      */
-    public void bookAShow(final String a, final String b, final Patron c, final String[] d) {
+    public void bookAShow(final String a,
+                          final String b, final Patron c, final String[] d) {
         int cnt = 0;
         if (size == 0) {
             System.out.println("No show");
@@ -123,8 +124,10 @@ class BookYourShow {
         for (int i = 0; i < patronsize; i++) {
             if (c.equals(patronlist[i].Mobilenumber)) {
                 for (int j = 0; j < size; j++) {
-                    if (b.equals(movielist[j].timedate) && a.equals(movielist[j].moviename)) {
-                        System.out.println(patronlist[i].Mobilenumber + " " + a + " " + b);
+                    if (b.equals(movielist[j].timedate)
+                            && a.equals(movielist[j].moviename)) {
+                        System.out.println(
+                            patronlist[i].Mobilenumber + " " + a + " " + b);
                         return true;
                     }
                 }
@@ -155,7 +158,10 @@ class BookYourShow {
 
     }
 }
-public final class Solution {
+/**
+ * { item_description }
+ */
+final class Solution {
     /**
      * main method to drive program.
      *
