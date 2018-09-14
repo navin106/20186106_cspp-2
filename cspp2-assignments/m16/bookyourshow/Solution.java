@@ -23,11 +23,20 @@ class Patron {
  */
 class BookYourShow {
     /**
-     * Constructs the object.
+     * { var_description }.
      */
     Show[] movielist;
+    /**
+     * { var_description }.
+     */
     Patron[] patronlist;
+    /**
+     * { var_description }.
+     */
     int size = 0;
+    /**
+     * { var_description }.
+     */
     int patronsize = 0;
 
     /**
@@ -44,7 +53,7 @@ class BookYourShow {
      *
      * @param      k     { parameter_description }
      */
-    public void addAShow(Show k) {
+    public void addAShow(final Show k) {
         movielist[size++] = k;
     }
 
@@ -159,9 +168,9 @@ class BookYourShow {
     }
 }
 /**
- * { item_description }
+ * { item_description }.
  */
-final class Solution {
+public final class Solution {
     /**
      * main method to drive program.
      *
