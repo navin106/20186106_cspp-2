@@ -134,17 +134,19 @@ public final class Solution {
 			String[] questoken = s.nextLine().split(":");
 			tokensize = questoken.length;
 			String[] choices = questoken[1].split(",");
+			if (tokensize == 5) {
 				if (choices.length >= 2) {
 					quizlist[qsize++] = new Quiz(choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
+				}
 			}
 		}
 		if (qsize > 0 && tokensize == 5) {
 			System.out.println(qsize + " are added to the quiz");
 		}
 		if (qsize == 0 && tokensize == 0) {
-		System.out.println("Quiz does not have questions");
+			System.out.println("Quiz does not have questions");
 		}
-		if (tokensize < 5 && qsize > 0) {
+		if (tokensize < 5 && tokensize > 0) {
 			System.out.println("Error! Malformed question");
 		}
 	}
