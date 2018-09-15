@@ -8,7 +8,6 @@ class Quiz {
 	private int chooseoption;
 	private String questionno;
 	public Quiz() {
-
 	}
 	public Quiz(String qn, String[] cs, int ca, int mm, int nm) {
 		this.choices = cs;
@@ -17,60 +16,52 @@ class Quiz {
 		this.negativemark = nm;
 		this.questionno = qn;
 	}
-	public String getquestionno() {
-		return questionno;
-	}
-
-	public void setquestionno(String questionno) {
-		this.questionno = questionno;
-	}
 	public Quiz(int ma, int co) {
 		this.markaward = ma;
 		this.chooseoption = co;
 	}
+	public String getquestionno() {
+		return questionno;
+	}
+	public void setquestionno(String questionno) {
+		this.questionno = questionno;
+	}
 	public int getchooseoption() {
 		return chooseoption;
 	}
-
 	public void setchooseoption(int chooseoption) {
 		this.chooseoption = chooseoption;
 	}
 	public int getmarkaward() {
 		return markaward;
 	}
-
 	public void setmarkaward(int markaward) {
 		this.markaward = markaward;
 	}
 	public int getnegativemark() {
 		return negativemark;
 	}
-
 	public void setnegativemark(int negativemark) {
 		this.negativemark = negativemark;
 	}
 	public int getmaxmark() {
 		return maxmark;
 	}
-
 	public void setmaxmark(int maxmark) {
 		this.maxmark = maxmark;
 	}
 	public int getrtanswer() {
 		return rtanswer;
 	}
-
 	public void setrtanswer(int rtanswer) {
 		this.rtanswer = rtanswer;
 	}
 	public String[] getchoices() {
 		return choices;
 	}
-
 	public void setchoices(String[] choices) {
 		this.choices = choices;
 	}
-
 }
 /**
  * Solution class for code-eval.
@@ -167,7 +158,6 @@ public final class Solution {
 			System.out.println("Error! Malformed question");
 		}
 	}
-
 	/**
 	 * Starts a quiz.
 	 *
@@ -185,7 +175,6 @@ public final class Solution {
 		size = 0;
 		int cnt = 0;
 		if (qsize > 0 && tokensize == 5) {
-
 			for (int i = 0; i < answerCount; i++) {
 				String choose = s.nextLine();
 				String[] k = choose.split(" ");
@@ -203,7 +192,6 @@ public final class Solution {
 				} else {
 					System.out.println("invalid option");
 				}
-
 			}
 			if (uopt <= 4) {
 				for (int k = 0; k < qsize; k++) {
@@ -227,8 +215,6 @@ public final class Solution {
 
 			for (int i = 1; i <= size; i++) {
 				if (uopt <= 4) {
-
-
 					System.out.println("question text " + i);
 					if (quizmarklist[i - 1].getmarkaward() > 0) {
 						System.out.println(" Correct Answer! - Marks Awarded: " + quizlist[i - 1].getmaxmark());
@@ -239,7 +225,9 @@ public final class Solution {
 					}
 				}
 			}
+			if (size>0) {
 			System.out.println("Total Score: " + mark);
+			}
 		}
 	}
 }
