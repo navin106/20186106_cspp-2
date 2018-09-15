@@ -196,7 +196,7 @@ public final class Solution {
 				}
 
 			}
-			if (uopt < 4) {
+			if (uopt <= 4) {
 				for (int k = 0; k < qsize; k++) {
 					System.out.println("question text " + (k + 1) + "(" + quizlist[k].getmaxmark() + ")");
 					// System.out.println("question text " + (k + 1) + "(" + k + ")");
