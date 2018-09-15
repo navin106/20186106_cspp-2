@@ -138,7 +138,7 @@ public final class Solution {
 				System.out.println("invallid");
 			}
 		}
-		System.out.println(quizlist.length + "are added to the quiz");
+		System.out.println(qsize + " are added to the quiz");
 	}
 
 	/**
@@ -177,7 +177,7 @@ public final class Solution {
 
 		}
 		for (int k = 0; k < qsize; k++) {
-			System.out.println("question text 1(" + quizmarklist[k].getchooseoption() + ")");
+			System.out.println("question text 1(" + quizmarklist[k].getmarkaward() + ")");
 			System.out.println("choice 1	choice 2	choice 3	choice 4");
 		}
 	}
