@@ -209,7 +209,7 @@ public final class Solution {
                 for (int k = 0; k < qsize; k++) {
                     System.out.println(quizlist[k].getquestionno() + "(" + quizlist[k].getmaxmark() + ")");
                     // System.out.println("question text " + (k + 1) + "(" + k + ")");
-                    System.out.println("choice 1    choice 2    choice 3    choice 4");
+                    System.out.println("choice 1        choice 2        choice 3        choice 4");
                     System.out.println();
                 }
             }
