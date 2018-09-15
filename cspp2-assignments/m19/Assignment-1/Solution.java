@@ -123,13 +123,13 @@ public final class Solution {
 	 */
 	static Quiz[] quizlist;
 	static int qsize;
+	static int tokensize = 0;
 	public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
 		quizlist = new Quiz[20];
 		qsize = 0;
-		int tokensize = 0;
 		for (int i = 0; i < questionCount; i++) {
 			String[] questoken = s.nextLine().split(":");
 			tokensize = questoken.length;
@@ -169,7 +169,7 @@ public final class Solution {
 		quizmarklist = new Quiz[20];
 		size = 0;
 		int cnt = 0;
-		if (qsize > 0) {
+		if (qsize > 0 && tokensize == 5) {
 
 			for (int i = 0; i < answerCount; i++) {
 				String choose = s.nextLine();
@@ -206,7 +206,7 @@ public final class Solution {
 	public static void displayScore(final Quiz quiz) {
 		// write your code here to display the score report
 		int mark = 0;
-		if (size > 0) {
+		if (size > 0 && tokensize == 5) {
 
 			for (int i = 1; i <= size; i++) {
 				System.out.println("question text " + i);
