@@ -163,12 +163,10 @@ public final class Solution {
 			if (Integer.parseInt(k[1]) < 5 && Integer.parseInt(k[1].trim()) > 0) {
 				String[] avail = quizlist[i].getchoices();
 				for (int j = 0; j < avail.length; j++) {
-					if (choose.equals(avail[j])) {
-						if (Integer.parseInt(k[1]) == quizlist[j].getrtanswer()) {
-							quizmarklist[size++] = new Quiz(quizlist[j].getmaxmark(), Integer.parseInt(k[1].trim()));
-						} else {
-							quizmarklist[size++] = new Quiz(quizlist[j].getnegativemark(), Integer.parseInt(k[1].trim()));
-						}
+					if (Integer.parseInt(k[1]) == quizlist[j].getrtanswer()) {
+						quizmarklist[size++] = new Quiz(quizlist[j].getmaxmark(), Integer.parseInt(k[1].trim()));
+					} else {
+						quizmarklist[size++] = new Quiz(quizlist[j].getnegativemark(), Integer.parseInt(k[1].trim()));
 					}
 				}
 			} else {
