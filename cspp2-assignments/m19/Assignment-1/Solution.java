@@ -6,15 +6,24 @@ class Quiz {
 	private int negativemark;
 	private int markaward;
 	private int chooseoption;
+	private String questionno;
 	public Quiz() {
 
 	}
-	public Quiz(String[] cs, int ca, int mm, int nm) {
+	public Quiz(String qn, String[] cs, int ca, int mm, int nm) {
 		this.choices = cs;
 		this.rtanswer = ca;
 		this.maxmark = mm;
 		this.negativemark = nm;
+		this.questionno = qn;
 	}
+	 public String getquestionno(){
+	  return questionno;
+	 }
+	 
+	 public void setquestionno(String questionno){
+	  this.questionno = questionno;
+	 }
 	public Quiz(int ma, int co) {
 		this.markaward = ma;
 		this.chooseoption = co;
@@ -139,7 +148,7 @@ public final class Solution {
 			uopt = Integer.parseInt(questoken[2]);
 			if (tokensize == 5) {
 				if (choices.length >= 2) {
-					quizlist[qsize++] = new Quiz(choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
+					quizlist[qsize++] = new Quiz(questoken[1], choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
 				}
 			}
 		}
@@ -198,7 +207,7 @@ public final class Solution {
 			}
 			if (uopt <= 4) {
 				for (int k = 0; k < qsize; k++) {
-					System.out.println("question text " + (k + 1) + "(" + quizlist[k].getmaxmark() + ")");
+					System.out.println(quizlist[k].getquestionno()+ "(" + quizlist[k].getmaxmark() + ")");
 					// System.out.println("question text " + (k + 1) + "(" + k + ")");
 					System.out.println("choice 1	choice 2	choice 3	choice 4");
 					System.out.println();
