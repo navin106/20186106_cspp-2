@@ -146,7 +146,7 @@ public final class Solution {
 			System.out.println(qsize + " are added to the quiz");
 
 		} else {
-			if (tokensize != 5) {
+			if (tokensize != 5 && qsize == 0) {
 				System.out.println("Error! Malformed question");
 			} else {
 
