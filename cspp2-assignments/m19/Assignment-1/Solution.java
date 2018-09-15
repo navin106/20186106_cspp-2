@@ -124,13 +124,14 @@ public final class Solution {
 	static Quiz[] quizlist;
 	static int qsize;
 	static int tokensize;
+	static int uopt;
 	public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
 		quizlist = new Quiz[20];
 		qsize = 0;
-		int uopt = 0;
+		uopt = 0;
 		for (int i = 0; i < questionCount; i++) {
 			String[] questoken = s.nextLine().split(":");
 			tokensize = questoken.length;
@@ -195,11 +196,13 @@ public final class Solution {
 				}
 
 			}
-			for (int k = 0; k < qsize; k++) {
-				System.out.println("question text " + (k + 1) + "(" + quizlist[k].getmaxmark() + ")");
-				// System.out.println("question text " + (k + 1) + "(" + k + ")");
-				System.out.println("choice 1	choice 2	choice 3	choice 4");
-				System.out.println();
+			if (uopt < 4) {
+				for (int k = 0; k < qsize; k++) {
+					System.out.println("question text " + (k + 1) + "(" + quizlist[k].getmaxmark() + ")");
+					// System.out.println("question text " + (k + 1) + "(" + k + ")");
+					System.out.println("choice 1	choice 2	choice 3	choice 4");
+					System.out.println();
+				}
 			}
 		}
 	}
