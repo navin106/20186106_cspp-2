@@ -138,7 +138,7 @@ public final class Solution {
 				quizlist[qsize++] = new Quiz(choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
 			}
 		}
-		if (qsize > 0 && tokensize != 5) {
+		if (qsize > 0 || tokensize != 5) {
 			System.out.println(qsize + " are added to the quiz");
 
 		} else {
