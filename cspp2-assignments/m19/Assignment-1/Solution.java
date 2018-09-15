@@ -210,7 +210,7 @@ public final class Solution {
                     System.out.println(quizlist[k].getquestionno() + "(" + quizlist[k].getmaxmark() + ")");
                     // System.out.println("question text " + (k + 1) + "(" + k + ")");
                     System.out.println("choice 1    choice 2    choice 3    choice 4");
-                    System.out.println();   
+                    System.out.println();
                 }
             }
         }
@@ -237,9 +237,9 @@ public final class Solution {
                         System.out.println(" Wrong Answer! - Penalty: " + quizlist[i - 1].getnegativemark());
                         mark += quizlist[i - 1].getnegativemark();
                     }
-                    System.out.println("Total Score: " + mark);
                 }
             }
+            System.out.println("Total Score: " + mark);
         }
     }
 }
