@@ -17,13 +17,13 @@ class Quiz {
 		this.negativemark = nm;
 		this.questionno = qn;
 	}
-	 public String getquestionno(){
-	  return questionno;
-	 }
-	 
-	 public void setquestionno(String questionno){
-	  this.questionno = questionno;
-	 }
+	public String getquestionno() {
+		return questionno;
+	}
+
+	public void setquestionno(String questionno) {
+		this.questionno = questionno;
+	}
 	public Quiz(int ma, int co) {
 		this.markaward = ma;
 		this.chooseoption = co;
@@ -207,7 +207,7 @@ public final class Solution {
 			}
 			if (uopt <= 4) {
 				for (int k = 0; k < qsize; k++) {
-					System.out.println(quizlist[k].getquestionno()+ "(" + quizlist[k].getmaxmark() + ")");
+					System.out.println(quizlist[k].getquestionno() + "(" + quizlist[k].getmaxmark() + ")");
 					// System.out.println("question text " + (k + 1) + "(" + k + ")");
 					System.out.println("choice 1	choice 2	choice 3	choice 4");
 					System.out.println();
@@ -226,16 +226,19 @@ public final class Solution {
 		if (size > 0 && tokensize == 5) {
 
 			for (int i = 1; i <= size; i++) {
-				System.out.println("question text " + i);
-				if (quizmarklist[i - 1].getmarkaward() > 0) {
-					System.out.println(" Correct Answer! - Marks Awarded: " + quizlist[i - 1].getmaxmark());
-					mark += quizlist[i - 1].getmaxmark();
-				} else {
-					System.out.println(" Wrong Answer! - Penalty: " + quizlist[i - 1].getnegativemark());
-					mark += quizlist[i - 1].getnegativemark();
+				if (quizlist[i].getrtanswer() <= 4) {
+
+					System.out.println("question text " + i);
+					if (quizmarklist[i - 1].getmarkaward() > 0) {
+						System.out.println(" Correct Answer! - Marks Awarded: " + quizlist[i - 1].getmaxmark());
+						mark += quizlist[i - 1].getmaxmark();
+					} else {
+						System.out.println(" Wrong Answer! - Penalty: " + quizlist[i - 1].getnegativemark());
+						mark += quizlist[i - 1].getnegativemark();
+					}
+					System.out.println("Total Score: " + mark);
 				}
 			}
-			System.out.println("Total Score: " + mark);
 		}
 	}
 }
