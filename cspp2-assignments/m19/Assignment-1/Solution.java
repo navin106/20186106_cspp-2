@@ -225,8 +225,9 @@ public final class Solution {
 		int mark = 0;
 		if (size > 0 && tokensize == 5) {
 
-			for (int i = 1; i <= qsize; i++) {
-				if (quizlist[i].getrtanswer() <= 4) {
+			for (int i = 1; i <= size; i++) {
+				if (uopt <= 4) {
+
 
 					System.out.println("question text " + i);
 					if (quizmarklist[i - 1].getmarkaward() > 0) {
