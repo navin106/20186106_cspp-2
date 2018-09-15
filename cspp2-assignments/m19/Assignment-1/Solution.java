@@ -127,7 +127,7 @@ public final class Solution {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
-		quizlist = new Quiz[10];
+		quizlist = new Quiz[20];
 		qsize = 0;
 		for (int i = 0; i < questionCount; i++) {
 			String[] questoken = s.nextLine().split(":");
@@ -138,7 +138,12 @@ public final class Solution {
 				System.out.println("invallid");
 			}
 		}
-		System.out.println(qsize + " are added to the quiz");
+		if (quizlist.length > 0) {
+
+			System.out.println(qsize + " are added to the quiz");
+		} else {
+			System.out.println("Quiz does not have questions");
+		}
 	}
 
 	/**
@@ -154,33 +159,36 @@ public final class Solution {
 		// write your code here to display the quiz questions
 		// read the user responses from the console
 		// store the user respones in the quiz object
-		quizmarklist = new Quiz[10];
+		quizmarklist = new Quiz[20];
 		size = 0;
 		int cnt = 0;
-		for (int i = 0; i < answerCount; i++) {
-			String choose = s.nextLine();
-			String[] k = choose.split(" ");
-			if (Integer.parseInt(k[1]) < 5 && Integer.parseInt(k[1].trim()) > 0) {
-				String[] avail = quizlist[i].getchoices();
-				for (int j = 0; j < avail.length; j++) {
-					if (choose.equals(avail[j])) {
-						if (Integer.parseInt(k[1]) == quizlist[i].getrtanswer()) {
-							quizmarklist[size++] = new Quiz(quizlist[i].getmaxmark(), Integer.parseInt(k[1].trim()));
-						} else {
-							quizmarklist[size++] = new Quiz(quizlist[i].getnegativemark(), Integer.parseInt(k[1].trim()));
+		if (qsize > 0) {
+
+			for (int i = 0; i < answerCount; i++) {
+				String choose = s.nextLine();
+				String[] k = choose.split(" ");
+				if (Integer.parseInt(k[1]) < 5 && Integer.parseInt(k[1].trim()) > 0) {
+					String[] avail = quizlist[i].getchoices();
+					for (int j = 0; j < avail.length; j++) {
+						if (choose.equals(avail[j])) {
+							if (Integer.parseInt(k[1]) == quizlist[i].getrtanswer()) {
+								quizmarklist[size++] = new Quiz(quizlist[i].getmaxmark(), Integer.parseInt(k[1].trim()));
+							} else {
+								quizmarklist[size++] = new Quiz(quizlist[i].getnegativemark(), Integer.parseInt(k[1].trim()));
+							}
 						}
 					}
+				} else {
+					System.out.println("invalid option");
 				}
-			} else {
-				System.out.println("invalid option");
-			}
 
-		}
-		for (int k = 0; k < qsize; k++) {
-			System.out.println("question text " + (k + 1) + "(" + quizlist[k].getmaxmark() + ")");
-			// System.out.println("question text " + (k + 1) + "(" + k + ")");
-			System.out.println("choice 1	choice 2	choice 3	choice 4");
-			System.out.println();
+			}
+			for (int k = 0; k < qsize; k++) {
+				System.out.println("question text " + (k + 1) + "(" + quizlist[k].getmaxmark() + ")");
+				// System.out.println("question text " + (k + 1) + "(" + k + ")");
+				System.out.println("choice 1	choice 2	choice 3	choice 4");
+				System.out.println();
+			}
 		}
 	}
 	/**
@@ -191,16 +199,19 @@ public final class Solution {
 	public static void displayScore(final Quiz quiz) {
 		// write your code here to display the score report
 		int mark = 0;
-		for (int i = 1; i <= size; i++) {
-			System.out.println("question text " + i);
-			if (quizmarklist[i - 1].getmarkaward() > 0) {
-				System.out.println(" Correct Answer! - Marks Awarded: " + quizlist[i - 1].getmaxmark());
-				mark += quizlist[i - 1].getmaxmark();
-			} else {
-				System.out.println(" Wrong Answer! - Penalty: " + quizlist[i - 1].getnegativemark());
-				mark += quizlist[i - 1].getnegativemark();
+		if (size > 0) {
+
+			for (int i = 1; i <= size; i++) {
+				System.out.println("question text " + i);
+				if (quizmarklist[i - 1].getmarkaward() > 0) {
+					System.out.println(" Correct Answer! - Marks Awarded: " + quizlist[i - 1].getmaxmark());
+					mark += quizlist[i - 1].getmaxmark();
+				} else {
+					System.out.println(" Wrong Answer! - Penalty: " + quizlist[i - 1].getnegativemark());
+					mark += quizlist[i - 1].getnegativemark();
+				}
 			}
+			System.out.println("Total Score: " + mark);
 		}
-		System.out.println("Total Score: " + mark);
 	}
 }
