@@ -138,7 +138,7 @@ public final class Solution {
 				System.out.println("invallid");
 			}
 		}
-		if (quizlist.length > 0) {
+		if (qsize > 0) {
 			System.out.println(qsize + " are added to the quiz");
 		} else {
 			System.out.println("Quiz does not have questions");
