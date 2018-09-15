@@ -135,11 +135,7 @@ public final class Solution {
 			tokensize = questoken.length;
 			String[] choices = questoken[1].split(",");
 			if (tokensize == 5) {
-				if (choices.length >= 2) {
-					quizlist[qsize++] = new Quiz(choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
-				} else {
-					System.out.println("invallid");
-				}
+				quizlist[qsize++] = new Quiz(choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
 			}
 		}
 		if (qsize > 0) {
