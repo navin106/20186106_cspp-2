@@ -177,7 +177,7 @@ public final class Solution {
 
 		}
 		for (int k = 0; k < qsize; k++) {
-			System.out.println("question text 1(" + quizmarklist[k].getmarkaward() + ")");
+			System.out.println("question text 1(" + quizmarklist[k].getmarkaward	() + ")");
 			System.out.println("choice 1	choice 2	choice 3	choice 4");
 		}
 	}
@@ -191,12 +191,12 @@ public final class Solution {
 		int mark = 0;
 		for (int i = 1; i <= size; i++) {
 			System.out.println("question text " + i);
-			if (quizmarklist[i].getmarkaward() > 0) {
+			if (quizmarklist[i-1].getmarkaward() > 0) {
 				System.out.println(" Correct Answer! - Marks Awarded:" + quizlist[i].getmaxmark());
-				mark += quizlist[i].getmaxmark();
+				mark += quizlist[i-1].getmaxmark();
 			} else {
 				System.out.println(" Wrong Answer! - Marks Awarded:" + quizlist[i].getnegativemark());
-				mark += quizlist[i].getnegativemark();
+				mark += quizlist[i-1].getnegativemark();
 			}
 		}
 		System.out.println("Total Score: " + mark);
