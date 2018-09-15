@@ -123,7 +123,7 @@ public final class Solution {
 	 */
 	static Quiz[] quizlist;
 	static int qsize;
-	static int tokensize = 0;
+	static int tokensize;
 	public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
@@ -142,7 +142,7 @@ public final class Solution {
 				}
 			}
 		}
-		if (qsize > 0) {
+		if (qsize > 0 && tokensize == 5) {
 				System.out.println(qsize + " are added to the quiz");
 
 		} else {
