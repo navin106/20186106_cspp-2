@@ -192,10 +192,10 @@ public final class Solution {
 		for (int i = 1; i <= size; i++) {
 			System.out.println("question text " + i);
 			if (quizmarklist[i-1].getmarkaward() > 0) {
-				System.out.println(" Correct Answer! - Marks Awarded:" + quizlist[i].getmarkaward());
+				System.out.println(" Correct Answer! - Marks Awarded:" + quizlist[i].getmaxmark());
 				mark += quizlist[i-1].getmarkaward();
 			} else {
-				System.out.println(" Wrong Answer! - Penalty:" + quizlist[i].getmarkaward());
+				System.out.println(" Wrong Answer! - Penalty:" + quizlist[i].getnegativemark());
 				mark += quizlist[i-1].getmarkaward();
 			}
 		}
