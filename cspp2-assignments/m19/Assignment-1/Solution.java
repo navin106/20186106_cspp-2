@@ -225,7 +225,7 @@ public final class Solution {
 					}
 				}
 			}
-			if (size>0) {
+			if (size>0 && tokensize == 5) {
 			System.out.println("Total Score: " + mark);
 			}
 		}
