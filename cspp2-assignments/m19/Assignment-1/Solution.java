@@ -225,7 +225,7 @@ public final class Solution {
 					}
 				}
 			}
-			if (size>0 && tokensize == 5) {
+			if (size>0 && uopt<=4) {
 			System.out.println("Total Score: " + mark);
 			}
 		}
