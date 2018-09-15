@@ -210,7 +210,7 @@ public final class Solution {
 					System.out.println(quizlist[k].getquestionno() + "(" + quizlist[k].getmaxmark() + ")");
 					// System.out.println("question text " + (k + 1) + "(" + k + ")");
 					System.out.println("choice 1	choice 2	choice 3	choice 4");
-					System.out.println();
+					System.out.println();	
 				}
 			}
 		}
