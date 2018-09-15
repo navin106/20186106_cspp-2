@@ -148,7 +148,7 @@ public final class Solution {
 			uopt = Integer.parseInt(questoken[2]);
 			if (tokensize == 5) {
 				if (choices.length >= 2) {
-					quizlist[qsize++] = new Quiz(questoken[1], choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
+					quizlist[qsize++] = new Quiz(questoken[0], choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
 				}
 			}
 		}
