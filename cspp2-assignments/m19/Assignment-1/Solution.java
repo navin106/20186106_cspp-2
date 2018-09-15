@@ -163,10 +163,12 @@ public final class Solution {
 			if (Integer.parseInt(k[1]) < 5 && Integer.parseInt(k[1].trim()) > 0) {
 				String[] avail = quizlist[i].getchoices();
 				for (int j = 0; j < avail.length; j++) {
-					if (Integer.parseInt(k[1]) == quizlist[j].getrtanswer()) {
-						quizmarklist[size++] = new Quiz(quizlist[j].getmaxmark(), Integer.parseInt(k[1].trim()));
-					} else {
-						quizmarklist[size++] = new Quiz(quizlist[j].getnegativemark(), Integer.parseInt(k[1].trim()));
+					if (choose.equals(avail[j])) {
+						if (Integer.parseInt(k[1]) == quizlist[j].getrtanswer()) {
+							quizmarklist[size++] = new Quiz(quizlist[j].getmaxmark(), Integer.parseInt(k[1].trim()));
+						} else {
+							quizmarklist[size++] = new Quiz(quizlist[j].getnegativemark(), Integer.parseInt(k[1].trim()));
+						}
 					}
 				}
 			} else {
@@ -189,12 +191,12 @@ public final class Solution {
 		int mark = 0;
 		for (int i = 1; i <= size; i++) {
 			System.out.println("question text " + i);
-			if (quizmarklist[i - 1].getmarkaward() > 0) {
-				System.out.println(" Correct Answer! - Marks Awarded:" + quizlist[i - 1].getmaxmark());
-				mark += quizlist[i - 1].getmaxmark();
+			if (quizmarklist[i-1].getmarkaward() > 0) {
+				System.out.println(" Correct Answer! - Marks Awarded:" + quizlist[i-1].getmaxmark());
+				mark += quizlist[i-1].getmaxmark();
 			} else {
-				System.out.println(" Wrong Answer! - Penalty:" + quizlist[i - 1].getnegativemark());
-				mark += quizlist[i - 1].getnegativemark();
+				System.out.println(" Wrong Answer! - Penalty:" + quizlist[i-1].getnegativemark());
+				mark += quizlist[i-1].getnegativemark();
 			}
 		}
 		System.out.println("Total Score: " + mark);
