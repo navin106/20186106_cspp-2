@@ -129,8 +129,10 @@ public final class Solution {
 		// add the question objects to the quiz class
 		quizlist = new Quiz[20];
 		qsize = 0;
+		int tokensize = 0;
 		for (int i = 0; i < questionCount; i++) {
 			String[] questoken = s.nextLine().split(":");
+			tokensize = questoken.length;
 			String[] choices = questoken[1].split(",");
 			if (choices.length >= 2) {
 				quizlist[qsize++] = new Quiz(choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
@@ -139,7 +141,11 @@ public final class Solution {
 			}
 		}
 		if (qsize > 0) {
-			System.out.println(qsize + " are added to the quiz");
+			if (tokensize == 5) {
+				System.out.println(qsize + " are added to the quiz");
+
+			}
+			System.out.println("Error! Malformed question");
 		} else {
 			System.out.println("Quiz does not have questions");
 		}
