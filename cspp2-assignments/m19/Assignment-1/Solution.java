@@ -177,7 +177,7 @@ public final class Solution {
 
 		}
 		for (int k = 0; k < qsize; k++) {
-			System.out.println("question text 1(" + quizmarklist[k].getmarkaward	() + ")");
+			System.out.println("question text "+(k+1)+"(" + quizmarklist[k].getmarkaward	() + ")");
 			System.out.println("choice 1	choice 2	choice 3	choice 4");
 			System.out.println();
 		}
