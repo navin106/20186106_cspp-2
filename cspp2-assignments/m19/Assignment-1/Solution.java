@@ -139,7 +139,6 @@ public final class Solution {
 			}
 		}
 		if (quizlist.length > 0) {
-
 			System.out.println(qsize + " are added to the quiz");
 		} else {
 			System.out.println("Quiz does not have questions");
