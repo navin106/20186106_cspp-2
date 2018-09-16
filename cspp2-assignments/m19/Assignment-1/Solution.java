@@ -178,7 +178,7 @@ public final class Solution {
 			for (int i = 0; i < answerCount; i++) {
 				String choose = s.nextLine();
 				String[] k = choose.split(" ");
-				if ((Integer.parseInt(k[1]) < 5 && Integer.parseInt(k[1].trim()) > 0) || true) {
+				// if ((Integer.parseInt(k[1]) < 5 && Integer.parseInt(k[1].trim()) > 0) || true) {
 					String[] avail = quizlist[i].getchoices();
 					for (int j = 0; j < avail.length; j++) {
 						if (choose.equals(avail[j])) {
@@ -189,9 +189,9 @@ public final class Solution {
 							}
 						}
 					}
-				} else {
-					System.out.println("invalid option");
-				}
+				// } else {
+				// 	System.out.println("invalid option");
+				// }
 			}
 			if (uopt <= 4) {
 				for (int k = 0; k < qsize; k++) {
