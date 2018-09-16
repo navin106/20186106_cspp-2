@@ -5,7 +5,7 @@ class Quiz {
 	private int maxmark;
 	private int negativemark;
 	private int markaward;
-	private int chooseoption;
+	private String chooseoption;
 	private String questionno;
 	public Quiz() {
 	}
@@ -16,7 +16,7 @@ class Quiz {
 		this.negativemark = nm;
 		this.questionno = qn;
 	}
-	public Quiz(int ma, int co) {
+	public Quiz(int ma, String co) {
 		this.markaward = ma;
 		this.chooseoption = co;
 	}
@@ -26,10 +26,10 @@ class Quiz {
 	public void setquestionno(String questionno) {
 		this.questionno = questionno;
 	}
-	public int getchooseoption() {
+	public String getchooseoption() {
 		return chooseoption;
 	}
-	public void setchooseoption(int chooseoption) {
+	public void setchooseoption(String chooseoption) {
 		this.chooseoption = chooseoption;
 	}
 	public int getmarkaward() {
@@ -183,9 +183,9 @@ public final class Solution {
 					for (int j = 0; j < avail.length; j++) {
 						if (choose.equals(avail[j])) {
 							if (k[1].equals(quizlist[i].getrtanswer())) {
-								quizmarklist[size++] = new Quiz(quizlist[i].getmaxmark(), Integer.parseInt(k[1].trim()));
+								quizmarklist[size++] = new Quiz(quizlist[i].getmaxmark(), k[1]);
 							} else {
-								quizmarklist[size++] = new Quiz(quizlist[i].getnegativemark(), Integer.parseInt(k[1].trim()));
+								quizmarklist[size++] = new Quiz(quizlist[i].getnegativemark(), k[1]);
 							}
 						}
 					}
