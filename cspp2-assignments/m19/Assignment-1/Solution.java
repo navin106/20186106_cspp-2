@@ -195,9 +195,10 @@ public final class Solution {
 			}
 			if (uopt <= 4) {
 				for (int k = 0; k < qsize; k++) {
+					String[] avail = quizlist[k].getchoices();
 					System.out.println(quizlist[k].getquestionno() + "(" + quizlist[k].getmaxmark() + ")");
 					// System.out.println("question text " + (k + 1) + "(" + k + ")");
-					System.out.println("choice 1\tchoice 2\tchoice 3\tchoice 4");
+					System.out.println(avail[0]+"\t"+avail[1]+"\t"+avail[2]+"\t"+avail[3]);
 					System.out.println();
 				}
 			}
@@ -225,8 +226,8 @@ public final class Solution {
 					}
 				}
 			}
-			if (size>0 && uopt<=4) {
-			System.out.println("Total Score: " + mark);
+			if (size > 0 && uopt <= 4) {
+				System.out.println("Total Score: " + mark);
 			}
 		}
 	}
