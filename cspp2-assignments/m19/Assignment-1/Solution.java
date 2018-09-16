@@ -178,7 +178,7 @@ public final class Solution {
 			for (int i = 0; i < answerCount; i++) {
 				String choose = s.nextLine();
 				String[] k = choose.split(" ");
-				if (Integer.parseInt(k[1]) < 5 && Integer.parseInt(k[1].trim()) > 0) {
+				if ((Integer.parseInt(k[1]) < 5 && Integer.parseInt(k[1].trim()) > 0) || true) {
 					String[] avail = quizlist[i].getchoices();
 					for (int j = 0; j < avail.length; j++) {
 						if (choose.equals(avail[j])) {
