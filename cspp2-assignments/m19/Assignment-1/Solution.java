@@ -126,7 +126,7 @@ public final class Solution {
 	static int tokensize;
 	static int uopt;
 	static int maxmark;
-	static int negmark;
+	// static int negmark;
 	public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
@@ -140,7 +140,7 @@ public final class Solution {
 			uopt = Integer.parseInt(questoken[2]);
 			maxmark = Integer.parseInt(questoken[3]);
 			if (tokensize == 5) {
-				negmark = Integer.parseInt(questoken[4]);
+				// negmark = Integer.parseInt(questoken[4]);
 				if (choices.length >= 2) {
 					quizlist[qsize++] = new Quiz(questoken[0], choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
 				} else {
@@ -155,7 +155,7 @@ public final class Solution {
 				if (maxmark < 0) {
 					System.out.println("Invalid max marks for question about sony");
 				} else {
-					if (negmark > 0) {
+					if (quizlist[qsize-1].getnegativemark() > 0) {
 						System.out.println("Invalid penalty for question about sony");
 					} else {
 						System.out.println(qsize + " are added to the quiz");
@@ -203,7 +203,7 @@ public final class Solution {
 					}
 				}
 			}
-			if (uopt <= 4 && maxmark > 0 && negmark < 0) {
+			if (uopt <= 4 && maxmark > 0) {
 				for (int k = 0; k < qsize; k++) {
 					String[] avail = quizlist[k].getchoices();
 					System.out.println(quizlist[k].getquestionno() + "(" + quizlist[k].getmaxmark() + ")");
@@ -229,7 +229,7 @@ public final class Solution {
 		if (size > 0 && tokensize == 5) {
 
 			for (int i = 1; i <= size; i++) {
-				if (uopt <= 4 && maxmark > 0 && negmark < 0) {
+				if (uopt <= 4 && maxmark > 0) {
 					System.out.println(quizlist[i - 1].getquestionno());
 					if (quizmarklist[i - 1].getmarkaward() > 0) {
 						System.out.println(" Correct Answer! - Marks Awarded: " + quizlist[i - 1].getmaxmark());
@@ -240,7 +240,7 @@ public final class Solution {
 					}
 				}
 			}
-			if (size > 0 && uopt <= 4 && maxmark > 0 && negmark < 0) {
+			if (size > 0 && uopt <= 4 && maxmark > 0) {
 				System.out.println("Total Score: " + mark);
 			}
 		}
