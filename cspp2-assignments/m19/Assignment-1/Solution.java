@@ -181,7 +181,7 @@ public final class Solution {
 				String[] avail = quizlist[i].getchoices();
 				for (int j = 0; j < avail.length; j++) {
 					if (choose.equals(avail[j])) {
-						if (quizlist[i].getrtanswer() > 0) {
+						if (quizlist[i].getrtanswer() <= 4) {
 							if (choose.equals(avail[quizlist[i].getrtanswer() - 1])) {
 								quizmarklist[size++] = new Quiz(quizlist[i].getmaxmark(), k[1]);
 							} else {
