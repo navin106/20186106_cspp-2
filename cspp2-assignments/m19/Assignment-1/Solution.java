@@ -125,18 +125,20 @@ public final class Solution {
 	static int qsize;
 	static int tokensize;
 	static int uopt;
+	static int maxmark;
 	public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
 		quizlist = new Quiz[20];
 		qsize = 0;
-		uopt = 0;
+		// uopt = 0;
 		for (int i = 0; i < questionCount; i++) {
 			String[] questoken = s.nextLine().split(":");
 			tokensize = questoken.length;
 			String[] choices = questoken[1].split(",");
 			uopt = Integer.parseInt(questoken[2]);
+			maxmark = Integer.parseInt(questoken[3]);
 			if (tokensize == 5) {
 				if (choices.length >= 2) {
 					quizlist[qsize++] = new Quiz(questoken[0], choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
