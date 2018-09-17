@@ -67,27 +67,33 @@ public final class Solution {
      * @param      quiz       The quiz
      * @param      q          The question count
      *
+     * @throws     Exception  { exception_description }
      */
     public static void loadQuestions(final Scanner scan,
-                                     final Quiz quiz, final int q) throws Exception {
+                    final Quiz quiz, final int q) throws Exception {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        if (q == 0) throw new Exception("Quiz does not have questions");
+        if (q == 0) {
+            throw new Exception("Quiz does not have questions");
+        }
         for (int  i = 0; i < q; i++) {
             String[] tokens = scan.nextLine().split(":");
-            for (String token : tokens)
+            for (String token : tokens)  {
                 if (token.equals("")) {
                     throw new Exception("Error! Malformed question");
                 }
+            }
             if (tokens.length < 2 + 2 + 1) {
                 throw new Exception("Error! Malformed question");
             }
             if (tokens[1].split(",").length < 2) {
-                throw new Exception(tokens[0] + " does not have enough answer choices");
+                throw new Exception(tokens[0] + 
+                    " does not have enough answer choices");
             }
             if (Integer.parseInt(tokens[2]) > tokens[1].split(",").length) {
-                throw new Exception("Error! Correct answer choice number is out of range for question text " + (i + 1));
+                throw new Exception("Error! Correct answer"+
+                    " choice number is out of range for question text " + (i + 1));
             }
             if (Integer.parseInt(tokens[2 + 1]) < 0) {
                 throw new Exception("Invalid max marks for " + tokens[0]);
@@ -95,7 +101,9 @@ public final class Solution {
             if (Integer.parseInt(tokens[2 + 2]) > 0) {
                 throw new Exception("Invalid penalty for " + tokens[0]);
             }
-            quiz.addQuestion(new Question(tokens[0], tokens[1].split(","), Integer.parseInt(tokens[2]), Integer.parseInt(tokens[2 + 1]), Integer.parseInt(tokens[2 + 2])));
+            quiz.addQuestion(new Question(tokens[0], tokens[1].split(
+                ","), Integer.parseInt(tokens[2]), Integer.parseInt(
+                tokens[2 + 1]), Integer.parseInt(tokens[2 + 2])));
             // System.out.println(i);
         }
         System.out.println(q + " are added to the quiz");
