@@ -139,8 +139,8 @@ public final class Solution {
 			String[] choices = questoken[1].split(",");
 			uopt = Integer.parseInt(questoken[2]);
 			maxmark = Integer.parseInt(questoken[3]);
-			negmark = Integer.parseInt(questoken[4]);
 			if (tokensize == 5) {
+				negmark = Integer.parseInt(questoken[4]);
 				if (choices.length >= 2) {
 					quizlist[qsize++] = new Quiz(questoken[0], choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
 				} else {
