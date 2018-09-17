@@ -229,7 +229,7 @@ public final class Solution {
 		if (size > 0 && tokensize == 5) {
 
 			for (int i = 1; i <= size; i++) {
-				if (uopt <= 4 && maxmark > 0) {
+				if (uopt <= 4 && maxmark > 0 && quizlist[qsize-1].getnegativemark() <= 0) {
 					System.out.println(quizlist[i - 1].getquestionno());
 					if (quizmarklist[i - 1].getmarkaward() > 0) {
 						System.out.println(" Correct Answer! - Marks Awarded: " + quizlist[i - 1].getmaxmark());
