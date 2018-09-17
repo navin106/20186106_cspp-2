@@ -88,12 +88,12 @@ public final class Solution {
                 throw new Exception("Error! Malformed question");
             }
             if (tokens[1].split(",").length < 2) {
-                throw new Exception(tokens[0] + 
-                    " does not have enough answer choices");
+                throw new Exception(tokens[0]
+            + " does not have enough answer choices");
             }
             if (Integer.parseInt(tokens[2]) > tokens[1].split(",").length) {
-                throw new Exception("Error! Correct answer"+
-                    " choice number is out of range for question text " + (i + 1));
+                throw new Exception("Error! Correct answer" + 
+                " choice number is out of range for question text " + (i + 1));
             }
             if (Integer.parseInt(tokens[2 + 1]) < 0) {
                 throw new Exception("Invalid max marks for " + tokens[0]);
