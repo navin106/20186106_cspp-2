@@ -211,7 +211,7 @@ public final class Solution {
 
 			for (int i = 1; i <= size; i++) {
 				if (uopt <= 4) {
-					System.out.println("question text " + i);
+					System.out.println(quizlist[i-1].getquestionno());
 					if (quizmarklist[i - 1].getmarkaward() > 0) {
 						System.out.println(" Correct Answer! - Marks Awarded: " + quizlist[i - 1].getmaxmark());
 						mark += quizlist[i - 1].getmaxmark();
