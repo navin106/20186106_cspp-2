@@ -244,7 +244,7 @@ public final class Solution {
 					}
 				}
 			}
-			if (size > 0 && uopt <= 4 && maxmark > 0 && quizlist[qsize - 1].getnegativemark() <= 0) {
+			if (size > 0 && uopt <= 4 && maxmark > 0 && quizlist[qsize - 1].getnegativemark() <= 0 && !((quizlist[qsize - 1].getquestionno()).equals(""))) {
 				System.out.println("Total Score: " + mark);
 			}
 		}
