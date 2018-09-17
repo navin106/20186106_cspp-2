@@ -180,13 +180,13 @@ public final class Solution {
 				String[] k = choose.split(" ");
 				String[] avail = quizlist[i].getchoices();
 				for (int j = 0; j < avail.length; j++) {
-					// if (choose.equals(avail[j])) {
-					if (choose.equals(avail[quizlist[i].getrtanswer() - 1])) {
-						quizmarklist[size++] = new Quiz(quizlist[i].getmaxmark(), k[1]);
-					} else {
-						quizmarklist[size++] = new Quiz(quizlist[i].getnegativemark(), k[1]);
+					if (choose.equals(avail[j])) {
+						if (choose.equals(avail[quizlist[i].getrtanswer() - 1])) {
+							quizmarklist[size++] = new Quiz(quizlist[i].getmaxmark(), k[1]);
+						} else {
+							quizmarklist[size++] = new Quiz(quizlist[i].getnegativemark(), k[1]);
+						}
 					}
-					// }
 				}
 			}
 			if (uopt <= 4) {
