@@ -197,7 +197,12 @@ public final class Solution {
 				for (int k = 0; k < qsize; k++) {
 					String[] avail = quizlist[k].getchoices();
 					System.out.println(quizlist[k].getquestionno() + "(" + quizlist[k].getmaxmark() + ")");
-					System.out.println(avail[0] + "\t" + avail[1] + "\t" + avail[2] + "\t" + avail[3]);
+					String str = "";
+					for (int i =0; i < avail.length-1; i++) {
+						str += avail[i] +"\t";
+					}
+					str += avail[avail.length-1];
+					System.out.println(str);
 					System.out.println();
 				}
 			}
