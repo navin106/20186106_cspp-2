@@ -178,27 +178,22 @@ public final class Solution {
 			for (int i = 0; i < answerCount; i++) {
 				String choose = s.nextLine();
 				String[] k = choose.split(" ");
-				// if ((Integer.parseInt(k[1]) < 5 && Integer.parseInt(k[1].trim()) > 0) || true) {
-					String[] avail = quizlist[i].getchoices();
-					for (int j = 0; j < avail.length; j++) {
-						if (choose.equals(avail[j])) {
-							if (k[1].equals(quizlist[i].getrtanswer())) {
-								quizmarklist[size++] = new Quiz(quizlist[i].getmaxmark(), k[1]);
-							} else {
-								quizmarklist[size++] = new Quiz(quizlist[i].getnegativemark(), k[1]);
-							}
+				String[] avail = quizlist[i].getchoices();
+				for (int j = 0; j < avail.length; j++) {
+					if (choose.equals(j+1)) {
+						if (k[1].equals(quizlist[i].getrtanswer())) {
+							quizmarklist[size++] = new Quiz(quizlist[i].getmaxmark(), k[1]);
+						} else {
+							quizmarklist[size++] = new Quiz(quizlist[i].getnegativemark(), k[1]);
 						}
 					}
-				// } else {
-				// 	System.out.println("invalid option");
-				// }
+				}
 			}
 			if (uopt <= 4) {
 				for (int k = 0; k < qsize; k++) {
 					String[] avail = quizlist[k].getchoices();
 					System.out.println(quizlist[k].getquestionno() + "(" + quizlist[k].getmaxmark() + ")");
-					// System.out.println("question text " + (k + 1) + "(" + k + ")");
-					System.out.println(avail[0]+"\t"+avail[1]+"\t"+avail[2]+"\t"+avail[3]);
+					System.out.println(avail[0] + "\t" + avail[1] + "\t" + avail[2] + "\t" + avail[3]);
 					System.out.println();
 				}
 			}
