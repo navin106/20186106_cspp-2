@@ -140,6 +140,8 @@ public final class Solution {
 			if (tokensize == 5) {
 				if (choices.length >= 2) {
 					quizlist[qsize++] = new Quiz(questoken[0], choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
+				} else {
+					System.out.println("trick question  does not have enough answer choices");
 				}
 			}
 		}
@@ -156,10 +158,6 @@ public final class Solution {
 		}
 		if (tokensize < 5 && tokensize > 0) {
 			System.out.println("Error! Malformed question");
-		}
-		if (((quizlist[qsize-1].getchoices()).length) <= 1) {
-			System.out.println("trick question  does not have enough answer choices");
-			
 		}
 	}
 	/**
