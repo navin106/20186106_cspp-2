@@ -155,10 +155,14 @@ public final class Solution {
 				if (maxmark < 0) {
 					System.out.println("Invalid max marks for question about sony");
 				} else {
-					if (quizlist[qsize-1].getnegativemark() > 0) {
+					if (quizlist[qsize - 1].getnegativemark() > 0) {
 						System.out.println("Invalid penalty for question about sony");
 					} else {
-						System.out.println(qsize + " are added to the quiz");
+						if ((quizlist[qsize - 1].getquestionno()).equals("")) {
+							System.out.println("Error! Malformed question");
+						} else {
+							System.out.println(qsize + " are added to the quiz");
+						}
 					}
 				}
 			}
@@ -166,7 +170,7 @@ public final class Solution {
 		if (qsize == 0 && tokensize == 0) {
 			System.out.println("Quiz does not have questions");
 		}
-		if (tokensize < 5 && tokensize > 0) {
+		if (tokensize < 5 && tokensize > 0 ) {
 			System.out.println("Error! Malformed question");
 		}
 	}
@@ -203,7 +207,7 @@ public final class Solution {
 					}
 				}
 			}
-			if (uopt <= 4 && maxmark > 0 && quizlist[qsize-1].getnegativemark() <= 0) {
+			if (uopt <= 4 && maxmark > 0 && quizlist[qsize - 1].getnegativemark() <= 0) {
 				for (int k = 0; k < qsize; k++) {
 					String[] avail = quizlist[k].getchoices();
 					System.out.println(quizlist[k].getquestionno() + "(" + quizlist[k].getmaxmark() + ")");
@@ -229,7 +233,7 @@ public final class Solution {
 		if (size > 0 && tokensize == 5) {
 
 			for (int i = 1; i <= size; i++) {
-				if (uopt <= 4 && maxmark > 0 && quizlist[qsize-1].getnegativemark() <= 0) {
+				if (uopt <= 4 && maxmark > 0 && quizlist[qsize - 1].getnegativemark() <= 0) {
 					System.out.println(quizlist[i - 1].getquestionno());
 					if (quizmarklist[i - 1].getmarkaward() > 0) {
 						System.out.println(" Correct Answer! - Marks Awarded: " + quizlist[i - 1].getmaxmark());
@@ -240,7 +244,7 @@ public final class Solution {
 					}
 				}
 			}
-			if (size > 0 && uopt <= 4 && maxmark > 0 && quizlist[qsize-1].getnegativemark() <= 0) {
+			if (size > 0 && uopt <= 4 && maxmark > 0 && quizlist[qsize - 1].getnegativemark() <= 0) {
 				System.out.println("Total Score: " + mark);
 			}
 		}
