@@ -157,6 +157,10 @@ public final class Solution {
 		if (tokensize < 5 && tokensize > 0) {
 			System.out.println("Error! Malformed question");
 		}
+		if (((quizlist[qsize].getchoices()).length) <= 1) {
+			System.out.println("trick question  does not have enough answer choices");
+			
+		}
 	}
 	/**
 	 * Starts a quiz.
