@@ -151,8 +151,12 @@ public final class Solution {
 			if (uopt > 4) {
 				System.out.println("Error! Correct answer choice number is out of range for question text 1");
 			} else {
+				if (maxmark < 0) {
 
-				System.out.println(qsize + " are added to the quiz");
+					System.out.println("Invalid max marks for question about sony");
+				} else {
+					System.out.println(qsize + " are added to the quiz");
+				}
 			}
 		}
 		if (qsize == 0 && tokensize == 0) {
@@ -195,15 +199,15 @@ public final class Solution {
 					}
 				}
 			}
-			if (uopt <= 4) {
+			if (uopt <= 4 && maxmark > 0) {
 				for (int k = 0; k < qsize; k++) {
 					String[] avail = quizlist[k].getchoices();
 					System.out.println(quizlist[k].getquestionno() + "(" + quizlist[k].getmaxmark() + ")");
 					String str = "";
-					for (int i =0; i < avail.length-1; i++) {
-						str += avail[i] +"\t";
+					for (int i = 0; i < avail.length - 1; i++) {
+						str += avail[i] + "\t";
 					}
-					str += avail[avail.length-1];
+					str += avail[avail.length - 1];
 					System.out.println(str);
 					System.out.println();
 				}
@@ -232,7 +236,7 @@ public final class Solution {
 					}
 				}
 			}
-			if (size > 0 && uopt <= 4) {
+			if (size > 0 && uopt <= 4 && maxmark > 0) {
 				System.out.println("Total Score: " + mark);
 			}
 		}
