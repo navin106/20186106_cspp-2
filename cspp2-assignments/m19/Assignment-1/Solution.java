@@ -1,7 +1,7 @@
 import java.util.Scanner;
 class Quiz {
 	private String[] choices;
-	private String rtanswer;
+	private int rtanswer;
 	private int maxmark;
 	private int negativemark;
 	private int markaward;
@@ -9,7 +9,7 @@ class Quiz {
 	private String questionno;
 	public Quiz() {
 	}
-	public Quiz(String qn, String[] cs, String ca, int mm, int nm) {
+	public Quiz(String qn, String[] cs, int ca, int mm, int nm) {
 		this.choices = cs;
 		this.rtanswer = ca;
 		this.maxmark = mm;
@@ -50,10 +50,10 @@ class Quiz {
 	public void setmaxmark(int maxmark) {
 		this.maxmark = maxmark;
 	}
-	public String getrtanswer() {
+	public int getrtanswer() {
 		return rtanswer;
 	}
-	public void setrtanswer(String rtanswer) {
+	public void setrtanswer(int rtanswer) {
 		this.rtanswer = rtanswer;
 	}
 	public String[] getchoices() {
@@ -139,7 +139,7 @@ public final class Solution {
 			uopt = Integer.parseInt(questoken[2]);
 			if (tokensize == 5) {
 				if (choices.length >= 2) {
-					quizlist[qsize++] = new Quiz(questoken[0], choices,  questoken[2], Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
+					quizlist[qsize++] = new Quiz(questoken[0], choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
 				}
 			}
 		}
@@ -180,13 +180,13 @@ public final class Solution {
 				String[] k = choose.split(" ");
 				String[] avail = quizlist[i].getchoices();
 				for (int j = 0; j < avail.length; j++) {
-					if (choose.equals(j+1)) {
-						if (k[1].equals(quizlist[i].getrtanswer())) {
-							quizmarklist[size++] = new Quiz(quizlist[i].getmaxmark(), k[1]);
-						} else {
-							quizmarklist[size++] = new Quiz(quizlist[i].getnegativemark(), k[1]);
-						}
+					// if (choose.equals(avail[j])) {
+					if (choose.equals(avail[quizlist[i].getrtanswer()])) {
+						quizmarklist[size++] = new Quiz(quizlist[i].getmaxmark(), k[1]);
+					} else {
+						quizmarklist[size++] = new Quiz(quizlist[i].getnegativemark(), k[1]);
 					}
+					// }
 				}
 			}
 			if (uopt <= 4) {
