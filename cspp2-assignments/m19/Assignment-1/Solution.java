@@ -124,7 +124,6 @@ public final class Solution {
 	static Quiz[] quizlist;
 	static int qsize;
 	static int tokensize;
-	static int uopt;
 	static int maxmark;
 	public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
 		// write your code here to read the questions from the console
@@ -132,13 +131,10 @@ public final class Solution {
 		// add the question objects to the quiz class
 		quizlist = new Quiz[20];
 		qsize = 0;
-		// uopt = 0;
 		for (int i = 0; i < questionCount; i++) {
 			String[] questoken = s.nextLine().split(":");
 			tokensize = questoken.length;
 			String[] choices = questoken[1].split(",");
-			uopt = Integer.parseInt(questoken[2]);
-			maxmark = Integer.parseInt(questoken[3]);
 			if (tokensize == 5) {
 				if (choices.length >= 2) {
 					quizlist[qsize++] = new Quiz(questoken[0], choices,  Integer.parseInt(questoken[2]), Integer.parseInt(questoken[3]), Integer.parseInt(questoken[4]));
@@ -148,7 +144,7 @@ public final class Solution {
 			}
 		}
 		if (qsize > 0 && tokensize == 5) {
-			if (uopt > 4) {
+			if (quizlist[size-1].getrtanswer() <= 4) {
 				System.out.println("Error! Correct answer choice number is out of range for question text 1");
 			} else {
 				if (maxmark < 0) {
@@ -199,7 +195,7 @@ public final class Solution {
 					}
 				}
 			}
-			if (uopt <= 4 && maxmark > 0) {
+			if (quizlist[size-1].getrtanswer() <= 4 && maxmark > 0) {
 				for (int k = 0; k < qsize; k++) {
 					String[] avail = quizlist[k].getchoices();
 					System.out.println(quizlist[k].getquestionno() + "(" + quizlist[k].getmaxmark() + ")");
@@ -225,7 +221,7 @@ public final class Solution {
 		if (size > 0 && tokensize == 5) {
 
 			for (int i = 1; i <= size; i++) {
-				if (uopt <= 4 && quizlist[size-1].getmaxmark() > 0) {
+				if (quizlist[size-1].getrtanswer() <= 4 && quizlist[size-1].getmaxmark() > 0) {
 					System.out.println(quizlist[i - 1].getquestionno());
 					if (quizmarklist[i - 1].getmarkaward() > 0) {
 						System.out.println(" Correct Answer! - Marks Awarded: " + quizlist[i - 1].getmaxmark());
@@ -236,7 +232,7 @@ public final class Solution {
 					}
 				}
 			}
-			if (size > 0 && uopt <= 4 && quizlist[size-1].getmaxmark() > 0) {
+			if (size > 0 && quizlist[size-1].getrtanswer() <= 4 && quizlist[size-1].getmaxmark() > 0) {
 				System.out.println("Total Score: " + mark);
 			}
 		}
