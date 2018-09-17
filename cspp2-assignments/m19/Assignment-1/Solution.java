@@ -166,7 +166,7 @@ public final class Solution {
 		if (qsize == 0 && tokensize == 0) {
 			System.out.println("Quiz does not have questions");
 		}
-		if (tokensize < 5) {
+		if (tokensize < 5 && tokensize > 0) {
 			System.out.println("Error! Malformed question");
 		}
 	}
