@@ -203,7 +203,7 @@ public final class Solution {
 					}
 				}
 			}
-			if (uopt <= 4 && maxmark > 0) {
+			if (uopt <= 4 && maxmark > 0 && quizlist[qsize-1].getnegativemark() < 0) {
 				for (int k = 0; k < qsize; k++) {
 					String[] avail = quizlist[k].getchoices();
 					System.out.println(quizlist[k].getquestionno() + "(" + quizlist[k].getmaxmark() + ")");
