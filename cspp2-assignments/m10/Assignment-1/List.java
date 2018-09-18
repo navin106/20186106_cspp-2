@@ -10,7 +10,6 @@ public class List {
      */
     private static final int NUM = 10;
     //Implement all the methods mentioned to build a ListADT
-
     /**
      * The goal for the list is to store items. How are we going to store the.
      * items in the list? An array would be good. Right? So, assume we are only
@@ -46,11 +45,11 @@ public class List {
      * size variable to be accessed by the methods that are outside of the List
      * class.
      */
-    private int size;
 
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    private int size;
 
     /** . The purpose of the constructor is to initialize the class variables
      * with some default values.

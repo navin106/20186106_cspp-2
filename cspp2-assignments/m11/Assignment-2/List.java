@@ -1,4 +1,4 @@
-import java.util.Arrays;
+ import java.util.Arrays;
 /**
  * The goal for the list is to store items.
  * How are we going to store the items in the list?
@@ -14,6 +14,7 @@ import java.util.Arrays;
  @param      <E>   { parameter_description }
 */
 public class List<E> {
+	
 	private E[] list;
 	private int size;
 
@@ -22,7 +23,7 @@ public class List<E> {
 	 */
 	public List() {
 		// Create a variable of the type Object[]
-		list = ((E[])new Object[10]);//Object is the base class for all the classes
+		list = ((E[]) new Object[10]);//Object is the base class for all the classes
 		size = 0;
 	}
 

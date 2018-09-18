@@ -24,8 +24,9 @@ public final class StudentDetails {
      */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.println(
-            "enter the name, rollno,marks of three subjects");
+
+        System.out.println("enter the name, rollno,marks of three subjects");
+
         studinput(s);
     }
     /**
@@ -34,9 +35,8 @@ public final class StudentDetails {
      * @param      s     { parameter_description }
      */
     public static void studinput(final Scanner s) {
-        Student k = new Student(s.nextLine(),
-                                s.nextLine(), s.nextDouble(),
-                                s.nextDouble(), s.nextDouble());
+        Student k = new Student(s.nextLine(),s.nextLine(), s.nextDouble(),s.nextDouble(), s.nextDouble());
+
         System.out.println((Math.floor((k.getavg()) * NO)) / NO);
     }
     /**
@@ -72,9 +72,7 @@ public final class StudentDetails {
          * @param      ba    { parameter_description }
          * @param      ca    { parameter_description }
          */
-        public Student(final String sa, final String ra,
-                       final Double aa, final Double ba,
-                       final Double ca) {
+        public Student(final String sa, final String ra,final Double aa, final Double ba,final Double ca) {
             this.s = sa;
             this.r = ra;
             this.a = aa;

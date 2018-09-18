@@ -4,7 +4,7 @@ import java.util.Scanner;
  */
 public final class Solution {
     private Solution() {
-        
+
     }
     /**
      * main method to drive program.
@@ -73,16 +73,19 @@ class Show {
     String moviename;
     String timedate;
     String[] seats;
-    public Show(String a, String b, String[] c) {
+    Show(final String a, final String b, final String[] c) {
         this.moviename = a;
         this.timedate = b;
         this.seats = c;
     }
 }
+/**
+ * Class for patron.
+ */
 class Patron {
     String Patronname;
     String Mobilenumber;
-    public Patron(String a, String b) {
+    public Patron(final String a, final String b) {
         this.Patronname = a;
         this.Mobilenumber = b;
     }
