@@ -50,15 +50,13 @@ class SociaNetwork {
 		return cn;
 	}
 	public void network() {
+		String str = "";
 		String k[] = sn.keySet().toString().replace("[", "").replace("]", "").split(", ");
 		Arrays.sort(k);
-		for (int i = 0; i < k.length - 1; i++) {
-			System.out.print(k[i] + ": ");
-			System.out.print(getConnection(k[i]) + ", ");
+		for (int i = 0; i < k.length; i++) {
+			str += k[i] + ": " + getConnection(k[i]) + ", ";
 		}
-		System.out.print(k[k.length - 1] + ": ");
-		System.out.print(getConnection(k[k.length - 1]));
-		System.out.println();
+		System.out.println(str.substring(0, str.length() - 2));
 	}
 }
 public class Solution {
