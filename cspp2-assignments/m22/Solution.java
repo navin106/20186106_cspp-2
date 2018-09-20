@@ -1,7 +1,7 @@
 import java.util.Scanner;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Arrays;
 class SociaNetwork {
 	HashMap<String, ArrayList<String>> sn;
 	SociaNetwork() {
