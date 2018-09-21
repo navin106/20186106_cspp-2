@@ -72,74 +72,80 @@ public class Solution {
 		File[] filesArray = folder.listFiles();
 		Arrays.sort(filesArray);
 		ArrayList<String> filestringslist = new ArrayList<String>();
-		for (File a : filesArray) {
-			// System.out.println(a);
-			FileReader f = new FileReader(a);
-			BufferedReader b = new BufferedReader(f);
-			String filestring = "";
-			while (true) {
-				String tmp = b.readLine();
-				if (tmp != null) {
-					filestring += tmp;
-				} else {
-					break;
+		if (filesArray.length >= 2) {
+			for (File a : filesArray) {
+				// System.out.println(a);
+				FileReader f = new FileReader(a);
+				BufferedReader b = new BufferedReader(f);
+				String filestring = "";
+				while (true) {
+					String tmp = b.readLine();
+					if (tmp != null) {
+						filestring += tmp;
+					} else {
+						break;
+					}
 				}
+				// System.out.println(filestring);
+				filestringslist.add(filestring);
+				f.close();
+				b.close();
 			}
-			// System.out.println(filestring);
-			filestringslist.add(filestring);
-			f.close();
-			b.close();
-		}
-		HashMap<String, Integer> freqd1;
-		double percent = 0;
-		ArrayList<Long> resultlist = new ArrayList<Long>();
-		ArrayList<HashMap<String, Integer>> dictlist = new ArrayList<HashMap<String, Integer>>();
-		for (String b : filestringslist) {
-			// System.out.println(b);
-			k1 = new Freqdict();
-			freqd1 = new HashMap<String, Integer>();
-			// freqd1 = k1.makedict(cleanstring(b.toLowerCase().replace(".", " ")).split(" "));
-			freqd1 = k1.makedict(b.toLowerCase().split(" "));
-			dictlist.add(freqd1);
-			// System.out.println(freqd1);
-		}
-		String[] mp = new String[2];
-		float max = 0;
-		int x = -1;
-		int y = -1;
-		for (HashMap<String, Integer> k : dictlist) {
-			x++;
-			for (HashMap<String, Integer> l : dictlist) {
-				y++;
-				pl = new Plagarise();
-				int dp = pl.Dotproduct(k, l);
-				double en = pl.EuclideanNorm(k.values(), l.values());
-				percent = dp / en * 100;
-				if (max < Math.round(percent) && Math.round(percent) != 100) {
-					max = Math.round(percent);
-					mp[0] = filenames[x];
-					mp[1] = filenames[y];
+
+			HashMap<String, Integer> freqd1;
+			double percent = 0;
+			ArrayList<Long> resultlist = new ArrayList<Long>();
+			ArrayList<HashMap<String, Integer>> dictlist = new ArrayList<HashMap<String, Integer>>();
+			for (String b : filestringslist) {
+				// System.out.println(b);
+				k1 = new Freqdict();
+				freqd1 = new HashMap<String, Integer>();
+				// freqd1 = k1.makedict(cleanstring(b.toLowerCase().replace(".", " ")).split(" "));
+				freqd1 = k1.makedict(b.toLowerCase().split(" "));
+				dictlist.add(freqd1);
+				// System.out.println(freqd1);
+			}
+
+			String[] mp = new String[2];
+			float max = 0;
+			int x = -1;
+			int y = -1;
+			for (HashMap<String, Integer> k : dictlist) {
+				x++;
+				for (HashMap<String, Integer> l : dictlist) {
+					y++;
+					pl = new Plagarise();
+					int dp = pl.Dotproduct(k, l);
+					double en = pl.EuclideanNorm(k.values(), l.values());
+					percent = dp / en * 100;
+					if (max < Math.round(percent) && Math.round(percent) != 100) {
+						max = Math.round(percent);
+						mp[0] = filenames[x];
+						mp[1] = filenames[y];
+					}
+					resultlist.add(Math.round(percent));
 				}
-				resultlist.add(Math.round(percent));
+				y = -1;
 			}
-			y = -1;
-		}
-		x = -1;
-		String s = "" + "\t" + "\t";
-		for (String k : filenames) {
-			s += k + "\t";
-		}
-		int k = 0;
-		s += "\n";
-		for (int i = 0; i < filenames.length; i++) {
-			s += filenames[i] + "\t";
-			for (int j = 0; j < filenames.length; j++) {
-				s += resultlist.get(k++) + "\t" + "\t";
+			x = -1;
+			String s = "" + "\t" + "\t";
+			for (String k : filenames) {
+				s += k + "\t";
 			}
+			int k = 0;
 			s += "\n";
+			for (int i = 0; i < filenames.length; i++) {
+				s += filenames[i] + "\t";
+				for (int j = 0; j < filenames.length; j++) {
+					s += resultlist.get(k++) + "\t" + "\t";
+				}
+				s += "\n";
+			}
+			System.out.println(s);
+			System.out.println("Maximum similarity is between " + mp[0] + "and " + mp[1]);
+		} else {
+			System.out.println("empty directory");
 		}
-		System.out.println(s);
-		System.out.println("Maximum similarity is between " + mp[0] + "and " + mp[1]);
 	}
 	public static String cleanstring(String d1) {
 		// System.out.println(d1);
