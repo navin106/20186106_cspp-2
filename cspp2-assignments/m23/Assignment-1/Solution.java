@@ -89,7 +89,8 @@ public class Solution {
 		for (String b : filestringslist) {
 			k1 = new Freqdict();
 			freqd1 = new HashMap<String, Integer>();
-			freqd1 = k1.makedict(cleanstring(b.toLowerCase().replace(".", " ")).split(" "));
+			// freqd1 = k1.makedict(cleanstring(b.toLowerCase().replace(".", " ")).split(" "));
+			freqd1 = k1.makedict(cleanstring(b.toLowerCase()).split(" "));
 			dictlist.add(freqd1);
 		}
 		for (HashMap<String, Integer> k : dictlist) {
