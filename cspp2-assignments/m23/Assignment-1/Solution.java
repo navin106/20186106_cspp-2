@@ -144,7 +144,7 @@ public class Solution {
     }
     public static String cleanstring(String d1) {
         // System.out.println(d1);
-        Pattern p = Pattern.compile("[^a-z 0-9]");
+        Pattern p = Pattern.compile("[^a-z 0-9 _]");
         Matcher m = p.matcher(d1);
         String newstring = m.replaceAll("");
         // System.out.println(newstring);
