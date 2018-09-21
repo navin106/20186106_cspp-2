@@ -108,9 +108,9 @@ public class Solution {
 		int x = 0;
 		int y = 0;
 		for (HashMap<String, Integer> k : dictlist) {
-			x++;
+			++x;
 			for (HashMap<String, Integer> l : dictlist) {
-				y++;
+				++y;
 				pl = new Plagarise();
 				int dp = pl.Dotproduct(k, l);
 				double en = pl.EuclideanNorm(k.values(), l.values());
