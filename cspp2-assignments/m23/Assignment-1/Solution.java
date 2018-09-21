@@ -68,17 +68,18 @@ public class Solution {
 
 		File folder = new File(sc.next());
 		File[] filesArray = folder.listFiles();
-		Arrays.sort(filesArray);
+		String[] filenames = folder.list();
+		// Arrays.sort(filesArray);
 		ArrayList<String> filestringslist = new ArrayList<String>();
 		for (File a : filesArray) {
-			// System.out.println(a);
+			System.out.println(a);
 			FileReader f = new FileReader(a);
 			BufferedReader b = new BufferedReader(f);
 			String filestring = "";
 			while (true) {
 				String tmp = b.readLine();
-				if (tmp !=null) {
-					filestring += tmp;	
+				if (tmp != null) {
+					filestring += tmp;
 				} else {
 					break;
 				}
@@ -101,18 +102,26 @@ public class Solution {
 			dictlist.add(freqd1);
 			// System.out.println(freqd1);
 		}
+		String[] mp = new String[2];
+		float max = 0;
+		int x = 0;
+		int y = 0;
 		for (HashMap<String, Integer> k : dictlist) {
+			x++;
 			for (HashMap<String, Integer> l : dictlist) {
+				y++;
 				pl = new Plagarise();
 				int dp = pl.Dotproduct(k, l);
 				double en = pl.EuclideanNorm(k.values(), l.values());
 				percent = dp / en * 100;
-
-
+				if (max < Math.round(percent) && Math.round(percent) != 100) {
+					max = Math.round(percent);
+					mp[0] = filenames[x];
+					mp[1] = filenames[y];
+				}
 				resultlist.add(Math.round(percent));
 			}
 		}
-		String[] filenames = folder.list();
 		Arrays.sort(filenames);
 		String s = "" + "\t" + "\t";
 		for (String k : filenames) {
@@ -128,6 +137,7 @@ public class Solution {
 			s += "\n";
 		}
 		System.out.println(s);
+		System.out.println("Maximum similarity is between " + mp[0] + "and " + mp[1]);
 	}
 	public static String cleanstring(String d1) {
 		// System.out.println(d1);
