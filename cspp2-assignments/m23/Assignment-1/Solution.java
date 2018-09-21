@@ -118,7 +118,7 @@ public class Solution {
 		System.out.println(s);
 	}
 	public static String cleanstring(String d1) {
-		Pattern p = Pattern.compile("[0-9_ ]");
+		Pattern p = Pattern.compile("[^a-z 0-9_]");
 		Matcher m = p.matcher(d1);
 		String newstring = m.replaceAll("");
 		return newstring;
