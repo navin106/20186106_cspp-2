@@ -92,7 +92,7 @@ public class Solution {
 
         HashMap<String, Integer> freqd1;
         double percent = 0;
-        ArrayList<Double> resultlist = new ArrayList<Double>();
+        ArrayList<Long> resultlist = new ArrayList<Long>();
         ArrayList<HashMap<String, Integer>> dictlist = new ArrayList<HashMap<String, Integer>>();
         for (String b : filestringslist) {
             // System.out.println(b);
@@ -121,7 +121,7 @@ public class Solution {
                     mp[0] = filenames[x];
                     mp[1] = filenames[y];
                 }
-                resultlist.add(Math.floor(percent));
+                resultlist.add(Math.round(percent));
             }
             y = -1;
         }
