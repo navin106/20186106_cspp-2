@@ -115,11 +115,11 @@ public class Solution {
 				int dp = pl.Dotproduct(k, l);
 				double en = pl.EuclideanNorm(k.values(), l.values());
 				percent = dp / en * 100;
-				if (max < Math.round(percent) && Math.round(percent) != 100) {
+				/*if (max < Math.round(percent) && Math.round(percent) != 100) {
 					max = Math.round(percent);
 					mp[0] = filenames[x];
 					mp[1] = filenames[y];
-				}
+				}*/
 				resultlist.add(Math.round(percent));
 			}
 		}
@@ -137,7 +137,7 @@ public class Solution {
 			s += "\n";
 		}
 		System.out.println(s);
-		System.out.println("Maximum similarity is between " + mp[0] + "and " + mp[1]);
+		// System.out.println("Maximum similarity is between " + mp[0] + "and " + mp[1]);
 	}
 	public static String cleanstring(String d1) {
 		// System.out.println(d1);
