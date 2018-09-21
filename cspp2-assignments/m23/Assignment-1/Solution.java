@@ -63,42 +63,54 @@ class Plagarise {
 public class Solution {
 	public static void main(String[] args) throws Exception {
 		Freqdict k1;
-		Plagarise pl = new Plagarise();
+		Plagarise pl;
 		Scanner sc = new Scanner(System.in);
 
 		File folder = new File(sc.next());
 		File[] filesArray = folder.listFiles();
-		// Arrays.sort(filesArray);
+		Arrays.sort(filesArray);
 		ArrayList<String> filestringslist = new ArrayList<String>();
 		for (File a : filesArray) {
 			// System.out.println(a);
 			FileReader f = new FileReader(a);
 			BufferedReader b = new BufferedReader(f);
 			String filestring = "";
-			while (b.readLine() != null) {
-				filestring += b.readLine();
+			while (true) {
+				String tmp = b.readLine();
+				if (tmp !=null) {
+					filestring += tmp;	
+				} else {
+					break;
+				}
+				
 			}
+			// System.out.println(filestring);
 			filestringslist.add(filestring);
 			f.close();
 			b.close();
 		}
 		HashMap<String, Integer> freqd1;
 		double percent = 0;
-		ArrayList<Integer> resultlist = new ArrayList<Integer>();
+		ArrayList<Long> resultlist = new ArrayList<Long>();
 		ArrayList<HashMap<String, Integer>> dictlist = new ArrayList<HashMap<String, Integer>>();
 		for (String b : filestringslist) {
+			// System.out.println(b);
 			k1 = new Freqdict();
 			freqd1 = new HashMap<String, Integer>();
-			freqd1 = k1.makedict(cleanstring(b.toLowerCase().replace(".", " ")).split(" "));
-			// freqd1 = k1.makedict(cleanstring(b.toLowerCase()).split(" "));
+			// freqd1 = k1.makedict(cleanstring(b.toLowerCase().replace(".", " ")).split(" "));
+			freqd1 = k1.makedict(b.toLowerCase().split(" "));
 			dictlist.add(freqd1);
+			// System.out.println(freqd1);
 		}
 		for (HashMap<String, Integer> k : dictlist) {
 			for (HashMap<String, Integer> l : dictlist) {
+				pl = new Plagarise();
 				int dp = pl.Dotproduct(k, l);
 				double en = pl.EuclideanNorm(k.values(), l.values());
 				percent = dp / en * 100;
-				resultlist.add((int) percent);
+
+
+				resultlist.add(Math.round(percent));
 			}
 		}
 		String[] filenames = folder.list();
@@ -112,16 +124,18 @@ public class Solution {
 		for (int i = 0; i < filenames.length; i++) {
 			s += filenames[i] + "\t";
 			for (int j = 0; j < filenames.length; j++) {
-				s += resultlist.get(k++) + "\t" +"\t";
+				s += resultlist.get(k++) + "\t" + "\t";
 			}
 			s += "\n";
 		}
 		System.out.println(s);
 	}
 	public static String cleanstring(String d1) {
-		Pattern p = Pattern.compile("[^a-z0-9_ ]");
+		// System.out.println(d1);
+		Pattern p = Pattern.compile("[^a-z 0-9]");
 		Matcher m = p.matcher(d1);
 		String newstring = m.replaceAll("");
+		// System.out.println(newstring);
 		return newstring;
 	}
 
