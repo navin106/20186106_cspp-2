@@ -139,8 +139,8 @@ public class Solution {
             }
             s += "\n";
         }
-        /*System.out.println(s);
-        System.out.println("Maximum similarity is between " + mp[0] + " and " + mp[1]);*/
+        System.out.println(s);
+        System.out.println("Maximum similarity is between " + mp[0] + " and " + mp[1]);
     }
     public static String cleanstring(String d1) {
         // System.out.println(d1);
