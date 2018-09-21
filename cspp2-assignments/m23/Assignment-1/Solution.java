@@ -68,7 +68,7 @@ public class Solution {
 
 		File folder = new File(sc.next());
 		File[] filesArray = folder.listFiles();
-		// Arrays.sort(filesArray);
+		Arrays.sort(filesArray);
 		ArrayList<String> filestringslist = new ArrayList<String>();
 		for (File a : filesArray) {
 			// System.out.println(a);
