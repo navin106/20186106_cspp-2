@@ -99,7 +99,7 @@ public class Solution {
             k1 = new Freqdict();
             freqd1 = new HashMap<String, Integer>();
             // freqd1 = k1.makedict(cleanstring(b.toLowerCase().replace(".", " ")).split(" "));
-            freqd1 = k1.makedict(b.toLowerCase().split(" "));
+            freqd1 = k1.makedict(b. toLowerCase().split(" "));
             dictlist.add(freqd1);
             // System.out.println(freqd1);
         }
@@ -139,8 +139,8 @@ public class Solution {
             }
             s += "\n";
         }
-        /*System.out.println(s);
-        System.out.println("Maximum similarity is between " + mp[0] + " and " + mp[1]);*/
+        System.out.println(s);
+        System.out.println("Maximum similarity is between " + mp[0] + " and " + mp[1]);
     }
     public static String cleanstring(String d1) {
         // System.out.println(d1);
