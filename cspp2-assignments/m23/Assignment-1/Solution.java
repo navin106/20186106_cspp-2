@@ -102,7 +102,7 @@ public class Solution {
 				freqd1 = k1.makedict(b.toLowerCase().split(" "));
 				dictlist.add(freqd1);
 				// System.out.println(freqd1);
-			}
+			}	
 
 			String[] mp = new String[2];
 			float max = 0;
@@ -140,7 +140,7 @@ public class Solution {
 				s += "\n";
 			}
 			System.out.println(s);
-			System.out.println("Maximum similarity is between " + mp[0] + "and " + mp[1]);
+			System.out.println("Maximum similarity is between " + mp[0] + " and " + mp[1]);
 	}
 	public static String cleanstring(String d1) {
 		// System.out.println(d1);
