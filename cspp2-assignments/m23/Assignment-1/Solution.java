@@ -65,7 +65,6 @@ public class Solution {
 		Freqdict k1;
 		Plagarise pl;
 		Scanner sc = new Scanner(System.in);
-		if (sc.next()!= null) {
 			File folder = new File(sc.next());
 			File[] filesArray = folder.listFiles();
 			Arrays.sort(filesArray);
@@ -142,9 +141,6 @@ public class Solution {
 			}
 			System.out.println(s);
 			System.out.println("Maximum similarity is between " + mp[0] + "and " + mp[1]);
-		} else {
-			System.out.println("empty directory");
-		}
 	}
 	public static String cleanstring(String d1) {
 		// System.out.println(d1);
