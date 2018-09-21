@@ -105,12 +105,12 @@ public class Solution {
 		}
 		String[] mp = new String[2];
 		float max = 0;
-		int x = 0;
-		int y = 0;
+		int x = -1;
+		int y = -1;
 		for (HashMap<String, Integer> k : dictlist) {
-			++x;
+			x++;
 			for (HashMap<String, Integer> l : dictlist) {
-				++y;
+				y++;
 				pl = new Plagarise();
 				int dp = pl.Dotproduct(k, l);
 				double en = pl.EuclideanNorm(k.values(), l.values());
@@ -122,9 +122,9 @@ public class Solution {
 				}
 				resultlist.add(Math.round(percent));
 			}
-			y = 0;
+			y = -1;
 		}
-		x = 0;
+		x = -1;
 		String s = "" + "\t" + "\t";
 		for (String k : filenames) {
 			s += k + "\t";
