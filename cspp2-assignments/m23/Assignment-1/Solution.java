@@ -65,14 +65,13 @@ public class Solution {
 		Freqdict k1;
 		Plagarise pl;
 		Scanner sc = new Scanner(System.in);
-
-		File folder = new File(sc.next());
-		String[] filenames = folder.list();
-		Arrays.sort(filenames);
-		File[] filesArray = folder.listFiles();
-		Arrays.sort(filesArray);
-		ArrayList<String> filestringslist = new ArrayList<String>();
-		if (filesArray.length >= 2) {
+		if (sc.next()!= null) {
+			File folder = new File(sc.next());
+			File[] filesArray = folder.listFiles();
+			Arrays.sort(filesArray);
+			String[] filenames = folder.list();
+			Arrays.sort(filenames);
+			ArrayList<String> filestringslist = new ArrayList<String>();
 			for (File a : filesArray) {
 				// System.out.println(a);
 				FileReader f = new FileReader(a);
