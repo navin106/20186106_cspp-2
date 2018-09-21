@@ -68,7 +68,7 @@ public class Solution {
 
 		File folder = new File(sc.next());
 		File[] filesArray = folder.listFiles();
-		// Arrays.sort(filesArray);
+		Arrays.sort(filesArray);
 		ArrayList<String> filestringslist = new ArrayList<String>();
 		for (File a : filesArray) {
 			// System.out.println(a);
@@ -118,7 +118,7 @@ public class Solution {
 		System.out.println(s);
 	}
 	public static String cleanstring(String d1) {
-		Pattern p = Pattern.compile("[0-9_]");
+		Pattern p = Pattern.compile("[0-9_ ]");
 		Matcher m = p.matcher(d1);
 		String newstring = m.replaceAll("");
 		return newstring;
