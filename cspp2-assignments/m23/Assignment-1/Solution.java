@@ -67,9 +67,10 @@ public class Solution {
 		Scanner sc = new Scanner(System.in);
 
 		File folder = new File(sc.next());
-		File[] filesArray = folder.listFiles();
 		String[] filenames = folder.list();
-		// Arrays.sort(filesArray);
+		Arrays.sort(filenames);
+		File[] filesArray = folder.listFiles();
+		Arrays.sort(filesArray);
 		ArrayList<String> filestringslist = new ArrayList<String>();
 		for (File a : filesArray) {
 			System.out.println(a);
@@ -122,7 +123,6 @@ public class Solution {
 				resultlist.add(Math.round(percent));
 			}
 		}
-		Arrays.sort(filenames);
 		String s = "" + "\t" + "\t";
 		for (String k : filenames) {
 			s += k + "\t";
