@@ -65,10 +65,13 @@ public class Solution {
 		Freqdict k1;
 		Plagarise pl = new Plagarise();
 		Scanner sc = new Scanner(System.in);
+
 		File folder = new File(sc.next());
 		File[] filesArray = folder.listFiles();
+		Arrays.sort(filesArray);
 		ArrayList<String> filestringslist = new ArrayList<String>();
 		for (File a : filesArray) {
+			// System.out.println(a);
 			FileReader f = new FileReader(a);
 			BufferedReader b = new BufferedReader(f);
 			String filestring = "";
@@ -98,6 +101,7 @@ public class Solution {
 			}
 		}
 		String[] filenames = folder.list();
+		Arrays.sort(filenames);
 		String s = "" + "\t" + "\t";
 		for (String k : filenames) {
 			s += k + "\t";
