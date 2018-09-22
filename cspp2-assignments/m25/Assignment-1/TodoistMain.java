@@ -6,6 +6,8 @@ import java.util.ArrayList;
   */
 class Task {
     private String Title;
+    private String AssignedTo;
+    private int TimeToComplete;
     public String getTitle() {
         return Title;
     }
@@ -13,7 +15,6 @@ class Task {
     public void setTitle(String Title) {
         this.Title = Title;
     }
-    private String AssignedTo;
     public String getAssignedTo() {
         return AssignedTo;
     }
@@ -21,7 +22,6 @@ class Task {
     public void setAssignedTo(String AssignedTo) {
         this.AssignedTo = AssignedTo;
     }
-    private int TimeToComplete;
     public int getTimeToComplete() {
         return TimeToComplete;
     }
@@ -74,13 +74,9 @@ class Task {
         }
     }
     public String toString() {
-        String str = "";
-        str += Title + ",";
-        return str;
+        return "Hello";
     }
 }
-
-
 
 class Todoist {
     ArrayList<Task> nourgent;
@@ -103,6 +99,7 @@ class Todoist {
             resize();
         }
         tasklist[size++]  = t;
+        System.out.println(t);
     }
 
 
@@ -167,7 +164,7 @@ class Todoist {
     public String toString() {
         String str = "";
         for (Task t : tasklist) {
-            str += t.toString();
+            str += t;
         }
         return str;
     }
@@ -234,7 +231,7 @@ public class TodoistMain {
      */
     public static void testTask(final String[] tokens) {
         try {
-            System.out.println(createTask(tokens));
+            System.out.println(createTask(tokens).toString());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -256,8 +253,7 @@ public class TodoistMain {
         boolean important = tokens[4].equals("y");
         boolean urgent = tokens[5].equals("y");
         String status = tokens[6];
-        return new Task(
-                   title, assignedTo, timeToComplete, important, urgent, status);
+        return (new Task(title, assignedTo, timeToComplete, important, urgent, status));
     }
 
     /**
