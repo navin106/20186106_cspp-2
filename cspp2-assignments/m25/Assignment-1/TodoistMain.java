@@ -5,76 +5,77 @@ import java.util.ArrayList;
   * write your code below this comment
   */
 class Task {
-    private String Title;
-    private String AssignedTo;
-    private int TimeToComplete;
+    private String title;
+    private String assignedTo;
+    private int timeToComplete;
+    private boolean urgent;
+    private boolean important;
+    private String status;
     public String getTitle() {
-        return Title;
+        return title;
     }
 
-    public void setTitle(String Title) {
-        this.Title = Title;
+    public void setTitle(String title) {
+        this.title = title;
     }
-    public String getAssignedTo() {
-        return AssignedTo;
-    }
-
-    public void setAssignedTo(String AssignedTo) {
-        this.AssignedTo = AssignedTo;
-    }
-    public int getTimeToComplete() {
-        return TimeToComplete;
+    public String getassignedTo() {
+        return assignedTo;
     }
 
-    public void setTimeToComplete(int TimeToComplete) {
-        this.TimeToComplete = TimeToComplete;
+    public void setassignedTo(String assignedTo) {
+        this.assignedTo = assignedTo;
     }
-    private boolean Important;
-    public boolean getImportant() {
-        return Important;
-    }
-
-    public void setImportant(boolean Important) {
-        this.Important = Important;
-    }
-    private boolean Urgent;
-    public boolean getUrgent() {
-        return Urgent;
+    public int gettimeToComplete() {
+        return timeToComplete;
     }
 
-    public void setUrgent(boolean Urgent) {
-        this.Urgent = Urgent;
+    public void settimeToComplete(int timeToComplete) {
+        this.timeToComplete = timeToComplete;
     }
-    private String Status;
-    public String getStatus() {
-        return Status;
+    public boolean getimportant() {
+        return important;
     }
 
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setimportant(boolean important) {
+        this.important = important;
+    }
+    public boolean geturgent() {
+        return urgent;
+    }
+
+    public void seturgent(boolean urgent) {
+        this.urgent = urgent;
+    }
+    public String getstatus() {
+        return status;
+    }
+
+    public void setstatus(String status) {
+        this.status = status;
     }
     Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) throws Exception {
         if (title.length() == 0) {
             throw new Exception("Title not provided");
         } else {
-            this.Title = title;
+            this.title = title;
         }
-        this.AssignedTo = assignedTo;
+        this.assignedTo = assignedTo;
         if (timeToComplete < 0) {
             throw new Exception("Invalid timeToComplete " + timeToComplete);
         } else {
-            this.TimeToComplete = timeToComplete;
+            this.timeToComplete = timeToComplete;
         }
-        this.Important = important;
-        this.Urgent = urgent;
-        if (Status.equals("todo") || Status.equals("done")) {
-            this.Status = status;
+        this.important = important;
+        this.urgent = urgent;
+        if (status.equals("todo") || status.equals("done")) {
+            this.status = status;
         } else {
-            throw new Exception("Task status should be either todo or done and can’t have any other value." + Status);
+            throw new Exception("Task status should be either todo or done and can’t have any other value." + status);
         }
     }
+
     public String toString() {
-        return "Hello";
+        return title + "," + assignedTo + "," + timeToComplete + "," + important + "," + urgent + "," + status;
     }
 }
 
@@ -85,9 +86,6 @@ class Todoist {
     int size;
     int nourgentindex = 0;
     int urgentindex = 0;
-
-
-
     Todoist() {
         tasklist = new Task[10];
         size = 0;
@@ -119,10 +117,10 @@ class Todoist {
         nourgent = new ArrayList<Task>();
         urgent = new ArrayList<Task>();
         for (Task t : tasklist) {
-            if (name.equals(t.getAssignedTo())) {
-                if ("todo".equals(t.getStatus())) {
-                    if (t.getImportant()) {
-                        if (!(t.getUrgent())) {
+            if (name.equals(t.getassignedTo())) {
+                if ("todo".equals(t.getstatus())) {
+                    if (t.getimportant()) {
+                        if (!(t.geturgent())) {
                             nourgent.add(t);
                         }
                     }
@@ -133,10 +131,10 @@ class Todoist {
         }
         if (nourgent.size() == 0) {
             for (Task nt : tasklist) {
-                if (name.equals(nt.getAssignedTo())) {
-                    if ("todo".equals(nt.getStatus())) {
-                        if (nt.getImportant()) {
-                            if (nt.getUrgent()) {
+                if (name.equals(nt.getassignedTo())) {
+                    if ("todo".equals(nt.getstatus())) {
+                        if (nt.getimportant()) {
+                            if (nt.geturgent()) {
                                 urgent.add(nt);
                             }
                         }
@@ -157,16 +155,12 @@ class Todoist {
     public int totalTime4Completion() {
         int totalsum = 0;
         for (Task t : tasklist) {
-            totalsum += t.getTimeToComplete();
+            totalsum += t.gettimeToComplete();
         }
         return totalsum;
     }
     public String toString() {
-        String str = "";
-        for (Task t : tasklist) {
-            str += t;
-        }
-        return str;
+        return "helloworld";
     }
 }
 
@@ -231,7 +225,7 @@ public class TodoistMain {
      */
     public static void testTask(final String[] tokens) {
         try {
-            System.out.println(createTask(tokens).toString());
+            System.out.println(createTask(tokens));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
