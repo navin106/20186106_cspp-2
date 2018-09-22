@@ -30,12 +30,12 @@ Your Output:
 null
 
 ----------------------------------------
-########## Testcase 4: Failed ##########
+########## Testcase 4: Passed ##########
 Expected Output: 
 Invalid timeToComplete -1
 
 Your Output: 
-Invalid timeToComplete-1
+Invalid timeToComplete -1
 
 ----------------------------------------
 ########## Testcase 5: Passed ##########
@@ -125,9 +125,9 @@ null
 null
 null
 Exception in thread "main" java.lang.NullPointerException
-	at Todoist.getNextTask(TodoistMain.java:123)
-	at TodoistMain.startTest(TodoistMain.java:198)
-	at TodoistMain.main(TodoistMain.java:267)
+	at Todoist.getNextTask(TodoistMain.java:124)
+	at TodoistMain.startTest(TodoistMain.java:199)
+	at TodoistMain.main(TodoistMain.java:268)
 
 ----------------------------------------
 ########## Testcase 9: Failed ##########
@@ -146,9 +146,9 @@ null
 null
 null
 Exception in thread "main" java.lang.NullPointerException
-	at Todoist.getNextTask(TodoistMain.java:123)
-	at TodoistMain.startTest(TodoistMain.java:198)
-	at TodoistMain.main(TodoistMain.java:267)
+	at Todoist.getNextTask(TodoistMain.java:124)
+	at TodoistMain.startTest(TodoistMain.java:199)
+	at TodoistMain.main(TodoistMain.java:268)
 
 ----------------------------------------
 ########## Testcase 10: Failed ##########
@@ -167,9 +167,9 @@ null
 null
 null
 Exception in thread "main" java.lang.NullPointerException
-	at Todoist.getNextTask(TodoistMain.java:115)
-	at TodoistMain.startTest(TodoistMain.java:202)
-	at TodoistMain.main(TodoistMain.java:267)
+	at Todoist.getNextTask(TodoistMain.java:116)
+	at TodoistMain.startTest(TodoistMain.java:203)
+	at TodoistMain.main(TodoistMain.java:268)
 
 ----------------------------------------
 ########## Testcase 11: Failed ##########
@@ -187,9 +187,9 @@ null
 null
 null
 Exception in thread "main" java.lang.NullPointerException
-	at Todoist.totalTime4Completion(TodoistMain.java:161)
-	at TodoistMain.startTest(TodoistMain.java:206)
-	at TodoistMain.main(TodoistMain.java:267)
+	at Todoist.totalTime4Completion(TodoistMain.java:162)
+	at TodoistMain.startTest(TodoistMain.java:207)
+	at TodoistMain.main(TodoistMain.java:268)
 
 ----------------------------------------
 ########## Testcase 12: Failed ##########
@@ -207,9 +207,9 @@ null
 null
 null
 Exception in thread "main" java.lang.NullPointerException
-	at Todoist.totalTime4Completion(TodoistMain.java:161)
-	at TodoistMain.startTest(TodoistMain.java:206)
-	at TodoistMain.main(TodoistMain.java:267)
+	at Todoist.totalTime4Completion(TodoistMain.java:162)
+	at TodoistMain.startTest(TodoistMain.java:207)
+	at TodoistMain.main(TodoistMain.java:268)
 
 ----------------------------------------
 ########## Testcase 13: Failed ##########
@@ -227,12 +227,12 @@ null
 null
 null
 Exception in thread "main" java.lang.NullPointerException
-	at Todoist.totalTime4Completion(TodoistMain.java:161)
-	at TodoistMain.startTest(TodoistMain.java:206)
-	at TodoistMain.main(TodoistMain.java:267)
+	at Todoist.totalTime4Completion(TodoistMain.java:162)
+	at TodoistMain.startTest(TodoistMain.java:207)
+	at TodoistMain.main(TodoistMain.java:268)
 
 ----------------------------------------
-Result: 1/14 testcases passed.
+Result: 2/14 testcases passed.
 Starting audit...
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:4: First sentence should end with a period. [JavadocStyle]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:8:5: Missing a Javadoc comment. [JavadocVariable]
@@ -287,37 +287,38 @@ Starting audit...
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:56:98: Parameter status should be final. [FinalParameters]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:73: Line is longer than 80 characters (found 118). [LineLength]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:76:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:77: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:83: Missing a Javadoc comment. [JavadocType]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:84:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:84:21: Variable 'nourgent' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:78: Line is longer than 80 characters (found 88). [LineLength]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:78:20: Inner assignments should be avoided. [InnerAssignment]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:84: Missing a Javadoc comment. [JavadocType]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:85:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:85:21: Variable 'urgent' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:86:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:86:12: Variable 'tasklist' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:87:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:87:9: Variable 'size' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:85:21: Variable 'nourgent' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:86:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:86:21: Variable 'urgent' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:87:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:87:12: Variable 'tasklist' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:88:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:88:9: Variable 'nourgentindex' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:88:9: Variable 'size' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:89:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:89:9: Variable 'urgentindex' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:93:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:94:29: '10' is a magic number. [MagicNumber]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:99:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:99:26: Parameter t should be final. [FinalParameters]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:107:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:112:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:112:32: Parameter name should be final. [FinalParameters]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:112:45: Parameter count should be final. [FinalParameters]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:119:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:119:29: Parameter name should be final. [FinalParameters]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:158:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:165:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:177:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:253:54: '3' is a magic number. [MagicNumber]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:254:36: '4' is a magic number. [MagicNumber]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:255:33: '5' is a magic number. [MagicNumber]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:256:32: '6' is a magic number. [MagicNumber]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:258: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:89:9: Variable 'nourgentindex' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:90:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:90:9: Variable 'urgentindex' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:94:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:95:29: '10' is a magic number. [MagicNumber]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:100:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:100:26: Parameter t should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:108:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:113:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:113:32: Parameter name should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:113:45: Parameter count should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:120:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:120:29: Parameter name should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:159:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:166:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:178:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:254:54: '3' is a magic number. [MagicNumber]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:255:36: '4' is a magic number. [MagicNumber]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:256:33: '5' is a magic number. [MagicNumber]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:257:32: '6' is a magic number. [MagicNumber]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:259: Line is longer than 80 characters (found 81). [LineLength]
 Audit done.
-Checkstyle ends with 85 errors.
+Checkstyle ends with 86 errors.

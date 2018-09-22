@@ -61,7 +61,7 @@ class Task {
         }
         this.AssignedTo = assignedTo;
         if (timeToComplete < 0) {
-            throw new Exception("Invalid timeToComplete" + timeToComplete);
+            throw new Exception("Invalid timeToComplete " + timeToComplete);
         } else {
             this.TimeToComplete = timeToComplete;
         }
@@ -74,7 +74,8 @@ class Task {
         }
     }
     public String toString() {
-        return Title + AssignedTo + TimeToComplete + Important + Urgent + Status;
+        String str = "";
+        return str += Title + AssignedTo + TimeToComplete + Important + Urgent + Status;
     }
 }
 
