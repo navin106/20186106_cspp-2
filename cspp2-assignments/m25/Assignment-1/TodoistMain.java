@@ -167,9 +167,13 @@ class Todoist {
         }
         return totalsum;
     }
-    /*public String toString() {
-        return ;
-    }*/
+    public String toString() {
+        String str = "";
+        for (Task k: tasklist) {
+            str += k.toString() + "\n";
+        }
+        return str;
+    }
 }
 
 /**
