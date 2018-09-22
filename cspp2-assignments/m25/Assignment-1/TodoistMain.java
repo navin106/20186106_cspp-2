@@ -167,12 +167,12 @@ class Todoist {
         }
         return totalsum;
     }
-    public String toString() {
+    public void tostring() {
         String str = "";
         for (Task k: tasklist) {
             str += k.toString() + "\n";
         }
-        return str;
+        System.out.println(str);
     }
 }
 

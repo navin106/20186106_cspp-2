@@ -56,12 +56,7 @@ Your Output:
 task1, akshay, 30, Important, Urgent, todo
 task2, manoj, 10, Not Important, Not Urgent, done
 taska, tarun, 120, Important, Not Urgent, todo
-Exception in thread "main" java.lang.NullPointerException
-	at Todoist.toString(TodoistMain.java:173)
-	at java.base/java.lang.String.valueOf(String.java:2788)
-	at java.base/java.io.PrintStream.println(PrintStream.java:897)
-	at TodoistMain.startTest(TodoistMain.java:200)
-	at TodoistMain.main(TodoistMain.java:271)
+Todoist@246ae04d
 
 ----------------------------------------
 ########## Testcase 7: Failed ##########
@@ -110,12 +105,7 @@ task-e, tarun, 120, Important, Not Urgent, todo
 task-h, akshay, 30, Important, Urgent, todo
 task-x, manoj, 10, Not Important, Not Urgent, done
 task-z, tarun, 120, Important, Not Urgent, todo
-Exception in thread "main" java.lang.NullPointerException
-	at Todoist.toString(TodoistMain.java:173)
-	at java.base/java.lang.String.valueOf(String.java:2788)
-	at java.base/java.io.PrintStream.println(PrintStream.java:897)
-	at TodoistMain.startTest(TodoistMain.java:200)
-	at TodoistMain.main(TodoistMain.java:271)
+Todoist@246ae04d
 
 ----------------------------------------
 ########## Testcase 8: Failed ##########
