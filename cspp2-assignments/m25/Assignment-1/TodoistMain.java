@@ -170,7 +170,7 @@ class Todoist {
 	public String toString() {
 		String str = "";
 		for (Task k : tasklist) {
-			if (k != null) {
+			if (k != null ) {
 				str += k + "\n";
 			}
 		}
@@ -199,7 +199,6 @@ public class TodoistMain {
 				testAddTask(todo, tokens);
 				break;
 			case "print-todoist":
-				System.out.println(todo);
 				break;
 			case "get-next":
 				System.out.println(todo.getNextTask(tokens[1]));

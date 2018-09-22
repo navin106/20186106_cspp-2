@@ -42,22 +42,19 @@ Your Output:
 Title not provided
 
 ----------------------------------------
-########## Testcase 6: Failed ##########
+########## Testcase 6: Passed ##########
 Expected Output: 
 task1, akshay, 30, Important, Urgent, todo
 task2, manoj, 10, Not Important, Not Urgent, done
 taska, tarun, 120, Important, Not Urgent, todo
 
 Your Output: 
-task1, akshay, 30, Important, Urgent, todo
-task2, manoj, 10, Not Important, Not Urgent, done
-taska, tarun, 120, Important, Not Urgent, todo
 task1, akshay, 30, Important, Urgent, todo
 task2, manoj, 10, Not Important, Not Urgent, done
 taska, tarun, 120, Important, Not Urgent, todo
 
 ----------------------------------------
-########## Testcase 7: Failed ##########
+########## Testcase 7: Passed ##########
 Expected Output: 
 task-1, akshay, 30, Important, Urgent, todo
 task-2, manoj, 10, Not Important, Not Urgent, done
@@ -82,27 +79,6 @@ task-x, manoj, 10, Not Important, Not Urgent, done
 task-z, tarun, 120, Important, Not Urgent, todo
 
 Your Output: 
-task-1, akshay, 30, Important, Urgent, todo
-task-2, manoj, 10, Not Important, Not Urgent, done
-task-a, tarun, 120, Important, Not Urgent, todo
-task-b, akshay, 30, Important, Urgent, todo
-task-c, manoj, 10, Not Important, Not Urgent, done
-task-p, tarun, 120, Important, Not Urgent, todo
-task-q, akshay, 30, Important, Urgent, todo
-task-r, manoj, 10, Not Important, Not Urgent, done
-task-s, tarun, 120, Important, Not Urgent, todo
-task-9, akshay, 30, Important, Urgent, todo
-task-8, manoj, 10, Not Important, Not Urgent, done
-task-7, tarun, 120, Important, Not Urgent, todo
-task-6, akshay, 30, Important, Urgent, todo
-task-7, manoj, 10, Not Important, Not Urgent, done
-task-4, tarun, 120, Important, Not Urgent, todo
-task-3, akshay, 30, Important, Urgent, todo
-task-t, manoj, 10, Not Important, Not Urgent, done
-task-e, tarun, 120, Important, Not Urgent, todo
-task-h, akshay, 30, Important, Urgent, todo
-task-x, manoj, 10, Not Important, Not Urgent, done
-task-z, tarun, 120, Important, Not Urgent, todo
 task-1, akshay, 30, Important, Urgent, todo
 task-2, manoj, 10, Not Important, Not Urgent, done
 task-a, tarun, 120, Important, Not Urgent, todo
@@ -144,8 +120,8 @@ task-p, tarun, 120, Not Important, Not Urgent, todo
 task-h, tarun, 27, Important, Not Urgent, todo
 Exception in thread "main" java.lang.NullPointerException
 	at Todoist.getNextTask(TodoistMain.java:128)
-	at TodoistMain.startTest(TodoistMain.java:205)
-	at TodoistMain.main(TodoistMain.java:273)
+	at TodoistMain.startTest(TodoistMain.java:204)
+	at TodoistMain.main(TodoistMain.java:272)
 
 ----------------------------------------
 ########## Testcase 9: Failed ##########
@@ -165,8 +141,8 @@ task-tp, tom, 120, Important, Not Urgent, todo
 task-th, tom, 27, Important, Not Urgent, todo
 Exception in thread "main" java.lang.NullPointerException
 	at Todoist.getNextTask(TodoistMain.java:128)
-	at TodoistMain.startTest(TodoistMain.java:205)
-	at TodoistMain.main(TodoistMain.java:273)
+	at TodoistMain.startTest(TodoistMain.java:204)
+	at TodoistMain.main(TodoistMain.java:272)
 
 ----------------------------------------
 ########## Testcase 10: Failed ##########
@@ -186,8 +162,8 @@ task-tp, tom, 120, Important, Not Urgent, todo
 task-th, tom, 27, Important, Not Urgent, todo
 Exception in thread "main" java.lang.NullPointerException
 	at Todoist.getNextTask(TodoistMain.java:120)
-	at TodoistMain.startTest(TodoistMain.java:209)
-	at TodoistMain.main(TodoistMain.java:273)
+	at TodoistMain.startTest(TodoistMain.java:208)
+	at TodoistMain.main(TodoistMain.java:272)
 
 ----------------------------------------
 ########## Testcase 11: Failed ##########
@@ -206,8 +182,8 @@ task-p, tarun, 120, Not Important, Not Urgent, todo
 task-h, tarun, 27, Important, Not Urgent, todo
 Exception in thread "main" java.lang.NullPointerException
 	at Todoist.totalTime4Completion(TodoistMain.java:166)
-	at TodoistMain.startTest(TodoistMain.java:213)
-	at TodoistMain.main(TodoistMain.java:273)
+	at TodoistMain.startTest(TodoistMain.java:212)
+	at TodoistMain.main(TodoistMain.java:272)
 
 ----------------------------------------
 ########## Testcase 12: Failed ##########
@@ -226,8 +202,8 @@ task-p, tarun, 120, Not Important, Not Urgent, done
 task-h, tarun, 27, Important, Not Urgent, done
 Exception in thread "main" java.lang.NullPointerException
 	at Todoist.totalTime4Completion(TodoistMain.java:166)
-	at TodoistMain.startTest(TodoistMain.java:213)
-	at TodoistMain.main(TodoistMain.java:273)
+	at TodoistMain.startTest(TodoistMain.java:212)
+	at TodoistMain.main(TodoistMain.java:272)
 
 ----------------------------------------
 ########## Testcase 13: Failed ##########
@@ -246,11 +222,11 @@ task-p, tarun, 120, Not Important, Not Urgent, todo
 task-h, tarun, 27, Important, Not Urgent, todo
 Exception in thread "main" java.lang.NullPointerException
 	at Todoist.totalTime4Completion(TodoistMain.java:166)
-	at TodoistMain.startTest(TodoistMain.java:213)
-	at TodoistMain.main(TodoistMain.java:273)
+	at TodoistMain.startTest(TodoistMain.java:212)
+	at TodoistMain.main(TodoistMain.java:272)
 
 ----------------------------------------
-Result: 5/14 testcases passed.
+Result: 7/14 testcases passed.
 Starting audit...
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:4: First sentence should end with a period. [JavadocStyle]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:8:1: File contains tab characters (this is the first instance). [FileTabCharacter]
@@ -332,12 +308,13 @@ Starting audit...
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:145: Line is longer than 80 characters (found 94). [LineLength]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:163:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:170:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:173:38: ')' is preceded with whitespace. [ParenPad]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:184:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:227: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:260:62: '3' is a magic number. [MagicNumber]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:261:44: '4' is a magic number. [MagicNumber]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:262:41: '5' is a magic number. [MagicNumber]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:263:40: '6' is a magic number. [MagicNumber]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:264: Line is longer than 80 characters (found 96). [LineLength]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:226: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:259:62: '3' is a magic number. [MagicNumber]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:260:44: '4' is a magic number. [MagicNumber]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:261:41: '5' is a magic number. [MagicNumber]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:262:40: '6' is a magic number. [MagicNumber]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:263: Line is longer than 80 characters (found 96). [LineLength]
 Audit done.
-Checkstyle ends with 87 errors.
+Checkstyle ends with 88 errors.
