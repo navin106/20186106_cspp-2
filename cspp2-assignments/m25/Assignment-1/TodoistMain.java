@@ -8,8 +8,8 @@ class Task {
     private String title;
     private String assignedTo;
     private int timeToComplete;
-    private boolean urgent;
-    private boolean important;
+    private String urgent;
+    private String important;
     private String status;
     public String getTitle() {
         return title;
@@ -32,18 +32,18 @@ class Task {
     public void settimeToComplete(int timeToComplete) {
         this.timeToComplete = timeToComplete;
     }
-    public boolean getimportant() {
+    public String getimportant() {
         return important;
     }
 
-    public void setimportant(boolean important) {
+    public void setimportant(String important) {
         this.important = important;
     }
-    public boolean geturgent() {
+    public String geturgent() {
         return urgent;
     }
 
-    public void seturgent(boolean urgent) {
+    public void seturgent(String urgent) {
         this.urgent = urgent;
     }
     public String getstatus() {
@@ -65,8 +65,16 @@ class Task {
         } else {
             this.timeToComplete = timeToComplete;
         }
-        this.important = important;
-        this.urgent = urgent;
+        if (important == true) {
+        this.important = "Important";
+        } else {
+            this.important = "Not Important";
+        }
+        if (urgent == true) {
+        this.urgent = "Urgent";
+        } else {
+            this.urgent = "Not Urgent";
+        }
         if (status.equals("todo") || status.equals("done")) {
             this.status = status;
         } else {
@@ -75,7 +83,7 @@ class Task {
     }
 
     public String toString() {
-        return title + "," + assignedTo + "," + timeToComplete + "," + important + "," + urgent + "," + status;
+        return title + ", " + assignedTo + ", " + timeToComplete + ", " + important + ", " + urgent + ", " + status;
     }
 }
 
@@ -119,8 +127,8 @@ class Todoist {
         for (Task t : tasklist) {
             if (name.equals(t.getassignedTo())) {
                 if ("todo".equals(t.getstatus())) {
-                    if (t.getimportant()) {
-                        if (!(t.geturgent())) {
+                    if (t.getimportant().equals("Important")) {
+                        if (!(t.geturgent().equals("Urgent"))) {
                             nourgent.add(t);
                         }
                     }
@@ -133,8 +141,8 @@ class Todoist {
             for (Task nt : tasklist) {
                 if (name.equals(nt.getassignedTo())) {
                     if ("todo".equals(nt.getstatus())) {
-                        if (nt.getimportant()) {
-                            if (nt.geturgent()) {
+                        if (nt.getimportant().equals("Important")) {
+                            if (nt.geturgent().equals("Urgent")) {
                                 urgent.add(nt);
                             }
                         }
