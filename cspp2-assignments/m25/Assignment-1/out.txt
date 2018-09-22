@@ -56,7 +56,12 @@ Your Output:
 null
 null
 null
-nullnullnullnullnullnullnullnullnullnull
+Exception in thread "main" java.lang.NullPointerException
+	at Todoist.toString(TodoistMain.java:170)
+	at java.base/java.lang.String.valueOf(String.java:2788)
+	at java.base/java.io.PrintStream.println(PrintStream.java:897)
+	at TodoistMain.startTest(TodoistMain.java:197)
+	at TodoistMain.main(TodoistMain.java:269)
 
 ----------------------------------------
 ########## Testcase 7: Failed ##########
@@ -105,7 +110,12 @@ null
 null
 null
 null
-nullnullnullnullnullnullnullnullnullnull
+Exception in thread "main" java.lang.NullPointerException
+	at Todoist.toString(TodoistMain.java:170)
+	at java.base/java.lang.String.valueOf(String.java:2788)
+	at java.base/java.io.PrintStream.println(PrintStream.java:897)
+	at TodoistMain.startTest(TodoistMain.java:197)
+	at TodoistMain.main(TodoistMain.java:269)
 
 ----------------------------------------
 ########## Testcase 8: Failed ##########

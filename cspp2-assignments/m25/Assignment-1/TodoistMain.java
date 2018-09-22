@@ -167,7 +167,7 @@ class Todoist {
     public String toString() {
         String str = "";
         for (Task t : tasklist) {
-            str += t;
+            str += t.toString();
         }
         return str;
     }
