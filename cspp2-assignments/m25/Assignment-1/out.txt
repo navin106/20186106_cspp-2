@@ -22,12 +22,12 @@ Your Output:
 taska, tarun, 120, Important, Not Urgent, todo
 
 ----------------------------------------
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 Invalid status dud
 
 Your Output: 
-Invalid status dud.dud
+Invalid status dud
 
 ----------------------------------------
 ########## Testcase 4: Passed ##########
@@ -232,7 +232,7 @@ Exception in thread "main" java.lang.NullPointerException
 	at TodoistMain.main(TodoistMain.java:267)
 
 ----------------------------------------
-Result: 5/14 testcases passed.
+Result: 6/14 testcases passed.
 Starting audit...
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:4: First sentence should end with a period. [JavadocStyle]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:8:5: Missing a Javadoc comment. [JavadocVariable]
