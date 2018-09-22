@@ -1,0 +1,323 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+task1, akshay, 30, Important, Urgent, todo
+
+Your Output: 
+null
+
+----------------------------------------
+########## Testcase 1: Failed ##########
+Expected Output: 
+task2, manoj, 10, Not Important, Not Urgent, done
+
+Your Output: 
+null
+
+----------------------------------------
+########## Testcase 2: Failed ##########
+Expected Output: 
+taska, tarun, 120, Important, Not Urgent, todo
+
+Your Output: 
+null
+
+----------------------------------------
+########## Testcase 3: Failed ##########
+Expected Output: 
+Invalid status dud
+
+Your Output: 
+null
+
+----------------------------------------
+########## Testcase 4: Failed ##########
+Expected Output: 
+Invalid timeToComplete -1
+
+Your Output: 
+Invalid timeToComplete-1
+
+----------------------------------------
+########## Testcase 5: Passed ##########
+Expected Output: 
+Title not provided
+
+Your Output: 
+Title not provided
+
+----------------------------------------
+########## Testcase 6: Failed ##########
+Expected Output: 
+task1, akshay, 30, Important, Urgent, todo
+task2, manoj, 10, Not Important, Not Urgent, done
+taska, tarun, 120, Important, Not Urgent, todo
+
+Your Output: 
+null
+null
+null
+nullnullnullnullnullnullnullnullnullnull
+
+----------------------------------------
+########## Testcase 7: Failed ##########
+Expected Output: 
+task-1, akshay, 30, Important, Urgent, todo
+task-2, manoj, 10, Not Important, Not Urgent, done
+task-a, tarun, 120, Important, Not Urgent, todo
+task-b, akshay, 30, Important, Urgent, todo
+task-c, manoj, 10, Not Important, Not Urgent, done
+task-p, tarun, 120, Important, Not Urgent, todo
+task-q, akshay, 30, Important, Urgent, todo
+task-r, manoj, 10, Not Important, Not Urgent, done
+task-s, tarun, 120, Important, Not Urgent, todo
+task-9, akshay, 30, Important, Urgent, todo
+task-8, manoj, 10, Not Important, Not Urgent, done
+task-7, tarun, 120, Important, Not Urgent, todo
+task-6, akshay, 30, Important, Urgent, todo
+task-7, manoj, 10, Not Important, Not Urgent, done
+task-4, tarun, 120, Important, Not Urgent, todo
+task-3, akshay, 30, Important, Urgent, todo
+task-t, manoj, 10, Not Important, Not Urgent, done
+task-e, tarun, 120, Important, Not Urgent, todo
+task-h, akshay, 30, Important, Urgent, todo
+task-x, manoj, 10, Not Important, Not Urgent, done
+task-z, tarun, 120, Important, Not Urgent, todo
+
+Your Output: 
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+nullnullnullnullnullnullnullnullnullnull
+
+----------------------------------------
+########## Testcase 8: Failed ##########
+Expected Output: 
+task-b, akshay, 30, Important, Not Urgent, todo
+null
+task-h, tarun, 27, Important, Not Urgent, todo
+
+Your Output: 
+null
+null
+null
+null
+null
+null
+null
+null
+null
+Exception in thread "main" java.lang.NullPointerException
+	at Todoist.getNextTask(TodoistMain.java:123)
+	at TodoistMain.startTest(TodoistMain.java:198)
+	at TodoistMain.main(TodoistMain.java:267)
+
+----------------------------------------
+########## Testcase 9: Failed ##########
+Expected Output: 
+task-j1, john, 30, Important, Not Urgent, todo
+task-ta, tom, 120, Important, Not Urgent, todo
+
+Your Output: 
+null
+null
+null
+null
+null
+null
+null
+null
+null
+Exception in thread "main" java.lang.NullPointerException
+	at Todoist.getNextTask(TodoistMain.java:123)
+	at TodoistMain.startTest(TodoistMain.java:198)
+	at TodoistMain.main(TodoistMain.java:267)
+
+----------------------------------------
+########## Testcase 10: Failed ##########
+Expected Output: 
+[task-j1, john, 30, Important, Not Urgent, todo, task-j6, john, 130, Important, Not Urgent, todo, task-j2, john, 10, Important, Not Urgent, todo]
+[task-tp, tom, 120, Important, Not Urgent, todo, task-th, tom, 27, Important, Not Urgent, todo, null]
+
+Your Output: 
+null
+null
+null
+null
+null
+null
+null
+null
+null
+Exception in thread "main" java.lang.NullPointerException
+	at Todoist.getNextTask(TodoistMain.java:115)
+	at TodoistMain.startTest(TodoistMain.java:202)
+	at TodoistMain.main(TodoistMain.java:267)
+
+----------------------------------------
+########## Testcase 11: Failed ##########
+Expected Output: 
+337
+
+Your Output: 
+null
+null
+null
+null
+null
+null
+null
+null
+null
+Exception in thread "main" java.lang.NullPointerException
+	at Todoist.totalTime4Completion(TodoistMain.java:161)
+	at TodoistMain.startTest(TodoistMain.java:206)
+	at TodoistMain.main(TodoistMain.java:267)
+
+----------------------------------------
+########## Testcase 12: Failed ##########
+Expected Output: 
+0
+
+Your Output: 
+null
+null
+null
+null
+null
+null
+null
+null
+null
+Exception in thread "main" java.lang.NullPointerException
+	at Todoist.totalTime4Completion(TodoistMain.java:161)
+	at TodoistMain.startTest(TodoistMain.java:206)
+	at TodoistMain.main(TodoistMain.java:267)
+
+----------------------------------------
+########## Testcase 13: Failed ##########
+Expected Output: 
+487
+
+Your Output: 
+null
+null
+null
+null
+null
+null
+null
+null
+null
+Exception in thread "main" java.lang.NullPointerException
+	at Todoist.totalTime4Completion(TodoistMain.java:161)
+	at TodoistMain.startTest(TodoistMain.java:206)
+	at TodoistMain.main(TodoistMain.java:267)
+
+----------------------------------------
+Result: 1/14 testcases passed.
+Starting audit...
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:4: First sentence should end with a period. [JavadocStyle]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:8:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:8:20: Name 'Title' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:9:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:13:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:13:26: Parameter Title should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:13:33: 'Title' hides a field. [HiddenField]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:13:33: Name 'Title' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:16:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:16:20: Name 'AssignedTo' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:17:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:21:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:21:31: Parameter AssignedTo should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:21:38: 'AssignedTo' hides a field. [HiddenField]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:21:38: Name 'AssignedTo' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:24:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:24:17: Name 'TimeToComplete' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:25:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:29:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:29:35: Parameter TimeToComplete should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:29:39: 'TimeToComplete' hides a field. [HiddenField]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:29:39: Name 'TimeToComplete' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:32:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:32:21: Name 'Important' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:33:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:37:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:37:30: Parameter Important should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:37:38: 'Important' hides a field. [HiddenField]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:37:38: Name 'Important' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:40:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:40:21: Name 'Urgent' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:41:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:45:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:45:27: Parameter Urgent should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:45:35: 'Urgent' hides a field. [HiddenField]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:45:35: Name 'Urgent' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:48:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:48:20: Name 'Status' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:49:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:53:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:53:27: Parameter Status should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:53:34: 'Status' hides a field. [HiddenField]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:53:34: Name 'Status' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:56: Line is longer than 80 characters (found 130). [LineLength]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:56:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:56:10: Parameter title should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:56:24: Parameter assignedTo should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:56:43: Parameter timeToComplete should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:56:63: Parameter important should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:56:82: Parameter urgent should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:56:98: Parameter status should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:73: Line is longer than 80 characters (found 118). [LineLength]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:76:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:77: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:83: Missing a Javadoc comment. [JavadocType]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:84:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:84:21: Variable 'nourgent' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:85:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:85:21: Variable 'urgent' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:86:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:86:12: Variable 'tasklist' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:87:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:87:9: Variable 'size' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:88:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:88:9: Variable 'nourgentindex' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:89:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:89:9: Variable 'urgentindex' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:93:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:94:29: '10' is a magic number. [MagicNumber]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:99:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:99:26: Parameter t should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:107:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:112:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:112:32: Parameter name should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:112:45: Parameter count should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:119:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:119:29: Parameter name should be final. [FinalParameters]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:158:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:165:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:177:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:253:54: '3' is a magic number. [MagicNumber]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:254:36: '4' is a magic number. [MagicNumber]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:255:33: '5' is a magic number. [MagicNumber]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:256:32: '6' is a magic number. [MagicNumber]
+[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:258: Line is longer than 80 characters (found 81). [LineLength]
+Audit done.
+Checkstyle ends with 85 errors.
