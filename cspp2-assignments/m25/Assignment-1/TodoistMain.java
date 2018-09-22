@@ -78,7 +78,7 @@ class Task {
         if (status.equals("todo") || status.equals("done")) {
             this.status = status;
         } else {
-            throw new Exception("Task status should be either todo or done and can’t have any other value." + status);
+            throw new Exception("Invalid status dud." + status);
         }
     }
 

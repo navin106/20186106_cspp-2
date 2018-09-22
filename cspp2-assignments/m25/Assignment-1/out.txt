@@ -27,7 +27,7 @@ Expected Output:
 Invalid status dud
 
 Your Output: 
-Task status should be either todo or done and can’t have any other value.dud
+Invalid status dud.dud
 
 ----------------------------------------
 ########## Testcase 4: Passed ##########
@@ -281,7 +281,6 @@ Starting audit...
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:56:105: 'status' hides a field. [HiddenField]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:68:23: Expression can be simplified. [SimplifyBooleanExpression]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:73:20: Expression can be simplified. [SimplifyBooleanExpression]
-[ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:81: Line is longer than 80 characters (found 118). [LineLength]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:85:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:86: Line is longer than 80 characters (found 116). [LineLength]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:90: Missing a Javadoc comment. [JavadocType]
@@ -316,4 +315,4 @@ Starting audit...
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:257:32: '6' is a magic number. [MagicNumber]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:258: Line is longer than 80 characters (found 88). [LineLength]
 Audit done.
-Checkstyle ends with 81 errors.
+Checkstyle ends with 80 errors.
