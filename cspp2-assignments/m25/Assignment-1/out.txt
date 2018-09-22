@@ -30,8 +30,12 @@ Your Output:
 Invalid status dud
 
 ----------------------------------------
-########## Testcase 4: Failed ##########
-Something is wrong with the testcase.
+########## Testcase 4: Passed ##########
+Expected Output: 
+Invalid timeToComplete -1
+
+Your Output: 
+Invalid timeToComplete -1
 
 ----------------------------------------
 ########## Testcase 5: Passed ##########
@@ -226,7 +230,7 @@ Exception in thread "main" java.lang.NullPointerException
 	at TodoistMain.main(TodoistMain.java:272)
 
 ----------------------------------------
-Result: 7/14 testcases passed.
+Result: 8/14 testcases passed.
 Starting audit...
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:4: First sentence should end with a period. [JavadocStyle]
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:8:1: File contains tab characters (this is the first instance). [FileTabCharacter]
