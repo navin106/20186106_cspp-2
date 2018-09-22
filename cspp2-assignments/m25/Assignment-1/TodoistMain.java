@@ -78,7 +78,7 @@ class Task {
         if (status.equals("todo") || status.equals("done")) {
             this.status = status;
         } else {
-            throw new Exception("Invalid status dud." + status);
+            throw new Exception("Invalid status " + status);
         }
     }
 
@@ -167,9 +167,9 @@ class Todoist {
         }
         return totalsum;
     }
-    public String toString() {
-        return "helloworld";
-    }
+    /*public String toString() {
+        return ;
+    }*/
 }
 
 /**
