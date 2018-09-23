@@ -126,7 +126,7 @@ public class Solution {
             y = -1;
         }
         x = -1;
-        String s = "" + "\t" + "\t";
+        String s = "      " + "\t\t";
         for (String k : filenames) {
             s += k + "\t";
         }
