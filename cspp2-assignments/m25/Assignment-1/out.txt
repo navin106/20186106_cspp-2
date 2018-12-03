@@ -322,3 +322,9 @@ Starting audit...
 [ERROR] /home/naveen/Documents/cspp2_20186106/cspp2-assignments/m25/Assignment-1/TodoistMain.java:263: Line is longer than 80 characters (found 96). [LineLength]
 Audit done.
 Checkstyle ends with 88 errors.
+
+
+[master b7a3302] "check_style_score -> 8 of 14 passed. style score: 0/1 "
+ 3 files changed, 9 insertions(+), 4 deletions(-)
+
+

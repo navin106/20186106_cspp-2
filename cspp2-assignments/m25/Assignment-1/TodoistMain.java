@@ -81,7 +81,6 @@ class Task {
 			throw new Exception("Invalid status " + status);
 		}
 	}
-
 	public String toString() {
 		return title + ", " + assignedTo + ", " + timeToComplete + ", " + important + ", " + urgent + ", " + status;
 	}
@@ -199,6 +198,7 @@ public class TodoistMain {
 				testAddTask(todo, tokens);
 				break;
 			case "print-todoist":
+				System.out.println(todo);
 				break;
 			case "get-next":
 				System.out.println(todo.getNextTask(tokens[1]));
